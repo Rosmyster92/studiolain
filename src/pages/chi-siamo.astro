@@ -1,0 +1,133 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Timeline from '~/components/widgets/Timeline.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Chi siamo',
+  description:
+    'Studio Lain & Partners: Consulenza del Lavoro a Malo (VI). Fondato nel 1997 da Paola e Massimo Lain; dal 2017 con Alessandro Roso.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Chi siamo"
+    actions={[
+      { variant: 'primary', text: 'I servizi', href: getPermalink('/servizi') },
+      { text: 'Contatti', href: getPermalink('/contatti') },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+      alt: 'Ufficio professionale',
+    }}
+  >
+    <Fragment slot="title">
+      Uno studio di <span class="text-accent dark:text-white">Consulenza del Lavoro</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Fondato nel 1997 a Malo (VI), Studio Lain & Partners affianca imprese e professionisti con competenza, continuità e
+      un approccio istituzionale agli adempimenti e alla gestione del personale.
+    </Fragment>
+  </Hero>
+
+  <Stats
+    title="Numeri che raccontano il percorso"
+    stats={[
+      { title: 'Fondazione', amount: '1997' },
+      { title: 'Ordine CdL', amount: 'VI' },
+      { title: 'Sede', amount: 'Malo' },
+      { title: 'Partner HR', amount: 'SI' },
+    ]}
+  />
+
+  <Timeline
+    tagline="La storia"
+    title="Dal 1997 a oggi"
+    subtitle="Crescita professionale e radicamento sul territorio vicentino."
+    items={[
+      {
+        date: '1996–1997',
+        title: 'Nascita dello Studio',
+        description:
+          'La Dott.ssa Paola Lain (Economia e Organizzazione Aziendale, Ordine dei Consulenti del Lavoro di Vicenza dal 1996) e il Dott. Massimo Lain (Economia e Commercio, H.R.) fondano lo Studio.',
+        icon: 'tabler:flag',
+      },
+      {
+        date: '1997–2017',
+        title: 'Consolidamento',
+        description:
+          'Anni di attività sul territorio: diritto del lavoro, amministrazione del personale e supporto alle imprese locali.',
+        icon: 'tabler:building',
+      },
+      {
+        date: '2017',
+        title: 'Nuove competenze',
+        description:
+          'Entra il Dott. Alessandro Roso (Economia e Direzione Aziendale), poi iscritto all’Ordine dei Consulenti del Lavoro di Vicenza dal 2021.',
+        icon: 'tabler:user-plus',
+        highlight: true,
+      },
+      {
+        date: 'Oggi',
+        title: 'Servizi integrati',
+        description:
+          'Consulenza del lavoro, costi e politiche retributive; ricerca e selezione con Eurointerim S.p.A.; sicurezza sul lavoro con Eurointerim Servizi S.p.A.',
+        icon: 'tabler:checkup-list',
+      },
+    ]}
+  />
+
+  <Features2
+    title="I professionisti"
+    subtitle="Competenze complementari a servizio di imprese e lavoratori."
+    columns={3}
+    items={[
+      {
+        title: 'Dott.ssa Paola Lain',
+        description:
+          'Economia e Organizzazione Aziendale. Iscritta all’Ordine dei Consulenti del Lavoro di Vicenza dal 1996. Co-fondatrice dello Studio.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Dott. Massimo Lain',
+        description:
+          'Economia e Commercio, esperienza in Human Resources. Co-fondatore dello Studio e riferimento per i temi organizzativi e HR.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Dott. Alessandro Roso',
+        description:
+          'Economia e Direzione Aziendale. Iscritto all’Ordine dei Consulenti del Lavoro di Vicenza dal 2021. In Studio dal 2017.',
+        icon: 'tabler:user',
+      },
+    ]}
+  />
+
+  <Steps2
+    title="Come lavoriamo"
+    subtitle="Metodo chiaro, aggiornamento normativo e relazione diretta con il cliente."
+    items={[
+      {
+        title: 'Ascolto delle esigenze',
+        description: 'Analizziamo il contesto aziendale, i contratti applicati e gli obiettivi di gestione del personale.',
+        icon: 'tabler:ear',
+      },
+      {
+        title: 'Consulenza operativa',
+        description: 'Traduciamo la normativa in azioni concrete: adempimenti, documenti, processi e indicatori.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Continuità nel tempo',
+        description: 'Restiamo al fianco dell’impresa con aggiornamenti, scadenze e supporto nelle fasi critiche.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+</Layout>

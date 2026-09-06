@@ -1,0 +1,78 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contatti',
+  description:
+    'Contatta Studio Lain & Partners: Via Marano, 8 — 36034 Malo (VI). Tel. 0445 602944 — studiolain@studiolain.com',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Contatti" title="Come raggiungerci" />
+
+  <ContactUs
+    id="form"
+    title="Scrivete allo Studio"
+    subtitle="Compilate il modulo oppure utilizzate telefono ed e-mail. Risponderemo nel più breve tempo possibile."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nome e cognome',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'E-mail',
+      },
+    ]}
+    textarea={{
+      label: 'Messaggio',
+    }}
+    disclaimer={{
+      label:
+        'Inviando il modulo autorizzi il trattamento dei dati personali per rispondere alla richiesta, ai sensi della normativa privacy vigente.',
+    }}
+    description="Preferite una risposta rapida? Chiamate lo 0445 602944."
+  />
+
+  <Features2
+    title="Recapiti"
+    items={[
+      {
+        title: 'Sede',
+        description: 'Via Marano, 8 — 36034 Malo (VI)',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Telefono',
+        description: '0445 602944',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'E-mail',
+        description: 'studiolain@studiolain.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Privacy',
+        description: 'Informativa privacy disponibile sul portale Teleconsul.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Orari',
+        description: 'Contattateci per fissare un appuntamento in sede o in modalità remota.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'News',
+        description: 'Aggiornamenti normativi e note operative nella sezione News del sito.',
+        icon: 'tabler:news',
+      },
+    ]}
+  />
+</Layout>

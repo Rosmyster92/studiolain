@@ -1,0 +1,114 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Servizi',
+  description:
+    'Servizi di Consulenza del Lavoro: diritto del lavoro, gestione del personale, costi e politiche retributive, ricerca e selezione, sicurezza sul lavoro.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Servizi"
+    title="Consulenza del Lavoro per imprese e professionisti"
+    subtitle="Un’offerta completa per adempiere agli obblighi, gestire il personale e ottimizzare i costi del lavoro, con partnership dedicate per selezione e sicurezza."
+    actions={[{ variant: 'primary', text: 'Contattaci', href: getPermalink('/contatti') }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+      alt: 'Consulenza aziendale',
+    }}
+  />
+
+  <Features2
+    title="Le nostre aree di intervento"
+    subtitle="Supporto specialistico lungo tutto il ciclo di vita del rapporto di lavoro."
+    columns={3}
+    items={[
+      {
+        title: 'Diritto del lavoro',
+        description:
+          'Consulenza su contrattualistica, disciplina del rapporto di lavoro, procedure e adempimenti collegati alle scelte aziendali.',
+        icon: 'tabler:scale',
+      },
+      {
+        title: 'Gestione del personale',
+        description:
+          'Amministrazione del personale, scadenze, comunicazioni obbligatorie e supporto quotidiano alla direzione.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Analisi costi del lavoro',
+        description:
+          'Lettura del costo del lavoro, simulazioni e interventi di ottimizzazione coerenti con normativa e budget.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Politiche retributive',
+        description:
+          'Progettazione e revisione di strutture retributive, premi, welfare e strumenti di retention.',
+        icon: 'tabler:report-money',
+      },
+      {
+        title: 'Ricerca e selezione',
+        description:
+          'In collaborazione con Eurointerim S.p.A.: individuazione e selezione di candidati allineati al profilo richiesto.',
+        icon: 'tabler:user-search',
+      },
+      {
+        title: 'Sicurezza sul lavoro',
+        description:
+          'Con Eurointerim Servizi S.p.A.: supporto agli obblighi di salute e sicurezza nei luoghi di lavoro.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+  <Content
+    items={[
+      {
+        title: 'Approccio integrato',
+        description:
+          'Colleghiamo adempimenti, costi e organizzazione del lavoro per dare risposte coerenti alla direzione aziendale.',
+      },
+      {
+        title: 'Aggiornamento normativo',
+        description:
+          'Monitoriamo le novità di legge, prassi e contrattazione per ridurre rischi e supportare decisioni tempestive.',
+      },
+      {
+        title: 'Partnership di fiducia',
+        description:
+          'Per ricerca/selezione e sicurezza operiamo con partner specializzati, mantenendo un unico punto di riferimento per il cliente.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+      alt: 'Collaborazione professionale',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Perché scegliere lo Studio</h3>
+      Esperienza ventennale, sede a Malo (VI) e relazioni consolidate con le imprese del territorio.
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Parla con lo Studio',
+        href: getPermalink('/contatti'),
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+    <Fragment slot="title">Serve un supporto su un caso concreto?</Fragment>
+    <Fragment slot="subtitle">Scriveteci o chiamateci: valuteremo insieme le priorità della vostra organizzazione.</Fragment>
+  </CallToAction>
+</Layout>
