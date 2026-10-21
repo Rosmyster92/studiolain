@@ -1,0 +1,64 @@
+---
+import { Icon } from 'astro-icon/components';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  showPageLink?: boolean;
+  id?: string;
+  classes?: Record<string, string>;
+}
+
+const {
+  title = 'Link utili',
+  subtitle = 'Fonti istituzionali e di approfondimento su lavoro, previdenza e sicurezza.',
+  tagline = 'Risorse',
+  showPageLink = true,
+  id,
+  classes = {},
+} = Astro.props;
+
+const links = [
+  { text: 'INPS', href: 'https://www.inps.it/', desc: 'Previdenza e adempimenti contributivi' },
+  { text: 'Ministero del Lavoro', href: 'https://www.lavoro.gov.it/', desc: 'Normativa e politiche del lavoro' },
+  { text: 'INAIL', href: 'https://www.inail.it/', desc: 'Assicurazione e sicurezza sul lavoro' },
+  { text: 'Il Sole 24 Ore', href: 'https://www.ilsole24ore.com/', desc: 'Approfondimenti economici e del lavoro' },
+];
+---
+
+<WidgetWrapper id={id} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+  <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      links.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col h-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-900/40 px-4 py-4 hover:border-primary/50 transition"
+          >
+            <span class="font-semibold text-heading flex items-center gap-2">
+              {item.text}
+              <Icon name="tabler:external-link" class="w-4 h-4 opacity-60" />
+            </span>
+            <span class="text-sm text-muted dark:text-slate-400 mt-1">{item.desc}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  {
+    showPageLink && (
+      <p class="mt-6 text-center text-sm">
+        <a class="text-primary hover:underline" href={getPermalink('/link-utili')}>
+          Vedi tutti i link utili →
+        </a>
+      </p>
+    )
+  }
+</WidgetWrapper>

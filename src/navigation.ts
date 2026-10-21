@@ -19,6 +19,10 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
+      text: 'Link utili',
+      href: getPermalink('/link-utili'),
+    },
+    {
       text: 'Contatti',
       href: getPermalink('/contatti'),
     },
@@ -35,16 +39,27 @@ export const footerData = {
         { text: 'Chi siamo', href: getPermalink('/chi-siamo') },
         { text: 'Servizi', href: getPermalink('/servizi') },
         { text: 'News', href: getBlogPermalink() },
+        { text: 'Link utili', href: getPermalink('/link-utili') },
       ],
     },
     {
       title: 'Servizi',
       links: [
-        { text: 'Diritto del lavoro', href: getPermalink('/servizi') },
-        { text: 'Gestione del personale', href: getPermalink('/servizi') },
+        { text: 'Consulenza del lavoro', href: getPermalink('/servizi') },
+        { text: 'Gestione paghe', href: getPermalink('/servizi') },
+        { text: 'HR / personale', href: getPermalink('/servizi') },
         { text: 'Costi e politiche retributive', href: getPermalink('/servizi') },
         { text: 'Ricerca e selezione', href: getPermalink('/servizi') },
         { text: 'Sicurezza sul lavoro', href: getPermalink('/servizi') },
+      ],
+    },
+    {
+      title: 'Link utili',
+      links: [
+        { text: 'INPS', href: 'https://www.inps.it/' },
+        { text: 'Ministero del Lavoro', href: 'https://www.lavoro.gov.it/' },
+        { text: 'INAIL', href: 'https://www.inail.it/' },
+        { text: 'Il Sole 24 Ore', href: 'https://www.ilsole24ore.com/' },
       ],
     },
     {
@@ -59,6 +74,7 @@ export const footerData = {
   ],
   secondaryLinks: [
     { text: 'Privacy', href: 'https://privacy.teleconsul.it/home/tcweb' },
+    { text: 'Link utili', href: getPermalink('/link-utili') },
   ],
   socialLinks: [
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },

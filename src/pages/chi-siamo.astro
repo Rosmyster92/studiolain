@@ -1,9 +1,7 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Timeline from '~/components/widgets/Timeline.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getPermalink } from '~/utils/permalinks';
 
@@ -15,73 +13,29 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero
+  <HeroText
     tagline="Chi siamo"
-    actions={[
-      { variant: 'primary', text: 'I servizi', href: getPermalink('/servizi') },
-      { text: 'Contatti', href: getPermalink('/contatti') },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
-      alt: 'Ufficio professionale',
-    }}
+    callToAction={{ variant: 'primary', text: 'I servizi', href: getPermalink('/servizi') }}
+    callToAction2={{ text: 'Contatti', href: getPermalink('/contatti') }}
   >
     <Fragment slot="title">
       Uno studio di <span class="text-accent dark:text-white">Consulenza del Lavoro</span>
     </Fragment>
-
     <Fragment slot="subtitle">
-      Fondato nel 1997 a Malo (VI), Studio Lain & Partners affianca imprese e professionisti con competenza, continuità e
-      un approccio istituzionale agli adempimenti e alla gestione del personale.
+      Lo Studio Lain nasce nel 1997 per iniziativa della Dott.ssa Paola Lain, laureata in Economia e Organizzazione
+      Aziendale e iscritta all’Ordine dei Consulenti del Lavoro di Vicenza dal 1996, e del Dott. Massimo Lain, laureato
+      in Economia e Commercio e H.R. Dal 2017, l’attività si è arricchita del contributo del Dott. Alessandro Roso,
+      laureato in Economia e Direzione Aziendale e iscritto all’Ordine dei Consulenti del Lavoro di Vicenza dal 2021.
     </Fragment>
-  </Hero>
+  </HeroText>
 
-  <Stats
-    title="Numeri che raccontano il percorso"
-    stats={[
-      { title: 'Fondazione', amount: '1997' },
-      { title: 'Ordine CdL', amount: 'VI' },
-      { title: 'Sede', amount: 'Malo' },
-      { title: 'Partner HR', amount: 'SI' },
-    ]}
-  />
-
-  <Timeline
-    tagline="La storia"
-    title="Dal 1997 a oggi"
-    subtitle="Crescita professionale e radicamento sul territorio vicentino."
-    items={[
-      {
-        date: '1996–1997',
-        title: 'Nascita dello Studio',
-        description:
-          'La Dott.ssa Paola Lain (Economia e Organizzazione Aziendale, Ordine dei Consulenti del Lavoro di Vicenza dal 1996) e il Dott. Massimo Lain (Economia e Commercio, H.R.) fondano lo Studio.',
-        icon: 'tabler:flag',
-      },
-      {
-        date: '1997–2017',
-        title: 'Consolidamento',
-        description:
-          'Anni di attività sul territorio: diritto del lavoro, amministrazione del personale e supporto alle imprese locali.',
-        icon: 'tabler:building',
-      },
-      {
-        date: '2017',
-        title: 'Nuove competenze',
-        description:
-          'Entra il Dott. Alessandro Roso (Economia e Direzione Aziendale), poi iscritto all’Ordine dei Consulenti del Lavoro di Vicenza dal 2021.',
-        icon: 'tabler:user-plus',
-        highlight: true,
-      },
-      {
-        date: 'Oggi',
-        title: 'Servizi integrati',
-        description:
-          'Consulenza del lavoro, costi e politiche retributive; ricerca e selezione con Eurointerim S.p.A.; sicurezza sul lavoro con Eurointerim Servizi S.p.A.',
-        icon: 'tabler:checkup-list',
-      },
-    ]}
-  />
+  <section class="px-4 sm:px-6 max-w-3xl mx-auto pb-8 md:pb-12 -mt-4 md:-mt-8">
+    <p class="text-lg text-muted dark:text-slate-300 text-pretty">
+      Con sede a Malo (VI), lo Studio si distingue per l’elevata professionalità e la capacità di offrire soluzioni
+      personalizzate nella consulenza del lavoro e nella gestione delle risorse umane. Completano l’offerta ricerca e
+      selezione con Eurointerim S.p.A. e sicurezza sul lavoro con Eurointerim Servizi S.p.A.
+    </p>
+  </section>
 
   <Features2
     title="I professionisti"
@@ -91,13 +45,13 @@ const metadata = {
       {
         title: 'Dott.ssa Paola Lain',
         description:
-          'Economia e Organizzazione Aziendale. Iscritta all’Ordine dei Consulenti del Lavoro di Vicenza dal 1996. Co-fondatrice dello Studio.',
+          'Economia e Organizzazione Aziendale. Iscritta all’Ordine dei Consulenti del Lavoro di Vicenza dal 1996. Co-fondatrice.',
         icon: 'tabler:user',
       },
       {
         title: 'Dott. Massimo Lain',
         description:
-          'Economia e Commercio, esperienza in Human Resources. Co-fondatore dello Studio e riferimento per i temi organizzativi e HR.',
+          'Economia e Commercio, esperienza in Human Resources. Co-fondatore e riferimento per temi organizzativi e HR.',
         icon: 'tabler:user',
       },
       {
@@ -109,25 +63,17 @@ const metadata = {
     ]}
   />
 
-  <Steps2
-    title="Come lavoriamo"
-    subtitle="Metodo chiaro, aggiornamento normativo e relazione diretta con il cliente."
-    items={[
+  <CallToAction
+    actions={[
       {
-        title: 'Ascolto delle esigenze',
-        description: 'Analizziamo il contesto aziendale, i contratti applicati e gli obiettivi di gestione del personale.',
-        icon: 'tabler:ear',
-      },
-      {
-        title: 'Consulenza operativa',
-        description: 'Traduciamo la normativa in azioni concrete: adempimenti, documenti, processi e indicatori.',
-        icon: 'tabler:clipboard-check',
-      },
-      {
-        title: 'Continuità nel tempo',
-        description: 'Restiamo al fianco dell’impresa con aggiornamenti, scadenze e supporto nelle fasi critiche.',
-        icon: 'tabler:refresh',
+        variant: 'primary',
+        text: 'Richiedi una consulenza',
+        href: getPermalink('/contatti'),
+        icon: 'tabler:mail',
       },
     ]}
-  />
+  >
+    <Fragment slot="title">Parliamo della vostra azienda</Fragment>
+    <Fragment slot="subtitle">Siamo a Malo (VI): Via Marano, 8 — Tel. 0445 602944</Fragment>
+  </CallToAction>
 </Layout>

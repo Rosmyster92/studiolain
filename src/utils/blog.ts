@@ -168,6 +168,17 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 };
 
 /** */
+export const findCategories = async (): Promise<Array<Taxonomy>> => {
+  const posts = await fetchPosts();
+  const categories: Record<string, Taxonomy> = {};
+  posts.forEach((post) => {
+    if (post.category?.slug) {
+      categories[post.category.slug] = post.category;
+    }
+  });
+  return Object.values(categories).sort((a, b) => a.title.localeCompare(b.title, 'it'));
+};
+
 export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
   const _count = count || 4;
   const posts = await fetchPosts();

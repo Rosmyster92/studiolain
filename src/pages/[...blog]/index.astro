@@ -38,7 +38,6 @@ const image = (await findImage(post.image)) as ImageMetadata | string | undefine
 const metadata = merge(
   {
     title: post.title,
-    // Search engines cut descriptions at about 155 characters; the full excerpt stays visible on the page.
     description: truncateAtWord(post.excerpt, 155),
     robots: {
       index: blogPostRobots?.index,
@@ -63,7 +62,6 @@ const metadata = merge(
 
 const imageUrl = typeof image === 'string' ? image : image?.src;
 
-// Article structured data. The breadcrumb trail below carries its own BreadcrumbList.
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -81,7 +79,7 @@ const articleSchema = {
 
 const breadcrumbs = [
   { text: 'Home', href: getPermalink('/') },
-  ...(isBlogListRouteEnabled ? [{ text: 'Blog', href: getBlogPermalink() }] : []),
+  ...(isBlogListRouteEnabled ? [{ text: 'News', href: getBlogPermalink() }] : []),
   ...(post.category && isBlogCategoryRouteEnabled
     ? [{ text: post.category.title, href: getPermalink(post.category.slug, 'category') }]
     : []),

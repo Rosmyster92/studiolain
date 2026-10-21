@@ -1,0 +1,37 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import LinkUtili from '~/components/widgets/LinkUtili.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Link utili',
+  description:
+    'Collegamenti a INPS, Ministero del Lavoro, INAIL e Il Sole 24 Ore — risorse per imprese e professionisti.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Risorse"
+    title="Link utili"
+    subtitle="Una selezione di siti istituzionali e di approfondimento su lavoro, previdenza e sicurezza."
+  />
+
+  <LinkUtili showPageLink={false} classes={{ container: 'pt-0 md:pt-0' }} />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Richiedi una consulenza',
+        href: getPermalink('/contatti'),
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">Serve un chiarimento normativo?</Fragment>
+    <Fragment slot="subtitle">Contattate Studio Lain & Partners per una consulenza personalizzata.</Fragment>
+  </CallToAction>
+</Layout>

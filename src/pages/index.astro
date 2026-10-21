@@ -1,12 +1,11 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
-import Content from '~/components/widgets/Content.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Stats from '~/components/widgets/Stats.astro';
+import LinkUtili from '~/components/widgets/LinkUtili.astro';
 import StructuredData from '~/components/common/StructuredData.astro';
 import { SITE, I18N } from 'astrowind:config';
 import favIconSvg from '~/assets/favicons/favicon.svg';
@@ -54,133 +53,82 @@ const structuredData = [
 <Layout metadata={metadata}>
   <StructuredData slot="head" schema={structuredData} />
 
-  <Hero
-    tagline="Consulenza del Lavoro"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'I nostri servizi',
-        href: getPermalink('/servizi'),
-        icon: 'tabler:briefcase',
-      },
-      { text: 'Contattaci', href: getPermalink('/contatti') },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Consulenza professionale per imprese',
+  <HeroText
+    tagline="Consulenza del Lavoro · Malo (VI)"
+    callToAction={{
+      variant: 'primary',
+      text: 'I nostri servizi',
+      href: getPermalink('/servizi'),
+      icon: 'tabler:briefcase',
+    }}
+    callToAction2={{
+      text: 'Contattaci',
+      href: getPermalink('/contatti'),
     }}
   >
     <Fragment slot="title">
       Studio Lain & Partners<br />
       <span class="text-accent dark:text-white">al fianco delle imprese</span>
     </Fragment>
-
     <Fragment slot="subtitle">
-      Dal 1997 accompagniamo aziende e professionisti in materia di diritto del lavoro, gestione del personale e
-      ottimizzazione dei costi del lavoro. Sede a Malo (VI).
+      Dal 1997 accompagniamo aziende e professionisti in diritto del lavoro, gestione del personale e costi del lavoro.
     </Fragment>
-  </Hero>
+  </HeroText>
 
-  <Stats
-    title="La nostra esperienza"
-    stats={[
-      { title: 'Anno di fondazione', amount: '1997' },
-      { title: 'Sede', amount: 'Malo' },
-      { title: 'Professionisti', amount: '3+' },
-      { title: 'Province', amount: 'VI' },
-    ]}
-  />
-
-  <Features
+  <Features2
     id="servizi"
     tagline="Servizi"
-    title="Cosa possiamo fare per la vostra azienda"
-    subtitle="Soluzioni integrate di consulenza del lavoro, con partnership consolidate per ricerca, selezione e sicurezza sul lavoro."
-    columns={2}
+    title="Cosa possiamo fare per voi"
+    subtitle="Consulenza del lavoro e HR, con partnership per ricerca, selezione e sicurezza."
+    columns={3}
     items={[
       {
-        title: 'Diritto del lavoro',
-        description:
-          'Consulenza normativa e contrattuale, gestione dei rapporti di lavoro, supporti in fase di assunzione, trasformazione e cessazione.',
+        title: 'Consulenza del lavoro',
+        description: 'Diritto del lavoro, contrattualistica e supporto nelle fasi del rapporto di lavoro.',
         icon: 'tabler:scale',
       },
       {
-        title: 'Gestione del personale',
-        description:
-          'Amministrazione del personale, adempimenti periodici, supporto operativo alla direzione HR e allineamento alle prassi aziendali.',
+        title: 'Gestione paghe e adempimenti',
+        description: 'Amministrazione del personale, scadenze e comunicazioni obbligatorie.',
+        icon: 'tabler:file-invoice',
+      },
+      {
+        title: 'HR / gestione del personale',
+        description: 'Supporto operativo alla direzione HR e allineamento alle prassi aziendali.',
         icon: 'tabler:users',
       },
       {
-        title: 'Costi del lavoro',
-        description:
-          'Analisi e ottimizzazione del costo del lavoro, simulazioni e monitoraggio degli indicatori retributivi e contributivi.',
+        title: 'Costi e politiche retributive',
+        description: 'Analisi del costo del lavoro, welfare e sistemi di incentivazione.',
         icon: 'tabler:chart-bar',
       },
       {
-        title: 'Politiche retributive',
-        description:
-          'Definizione e revisione di sistemi retributivi, welfare e strumenti di incentivazione coerenti con obiettivi e budget.',
-        icon: 'tabler:coin',
-      },
-      {
         title: 'Ricerca e selezione',
-        description:
-          'In collaborazione con Eurointerim S.p.A.: ricerca, selezione e inserimento di profili in linea con le esigenze aziendali.',
+        description: 'In collaborazione con Eurointerim S.p.A.',
         icon: 'tabler:user-search',
       },
       {
         title: 'Sicurezza sul lavoro',
-        description:
-          'Con Eurointerim Servizi S.p.A.: supporto agli obblighi in materia di salute e sicurezza nei luoghi di lavoro.',
+        description: 'Con Eurointerim Servizi S.p.A.',
         icon: 'tabler:shield-check',
       },
     ]}
   />
 
-  <Content
-    isReversed
-    tagline="Chi siamo"
-    title="Uno studio radicato nel territorio"
-    items={[
-      {
-        title: 'Fondato nel 1997',
-        description:
-          'Dalla Dott.ssa Paola Lain e dal Dott. Massimo Lain, con un percorso professionale consolidato in consulenza del lavoro e risorse umane.',
-      },
-      {
-        title: 'Continuità e competenza',
-        description:
-          'Dal 2017 il Dott. Alessandro Roso rafforza lo Studio con competenze in economia e direzione aziendale e iscrizione all’Ordine dei Consulenti del Lavoro di Vicenza.',
-      },
-      {
-        title: 'Approccio istituzionale',
-        description:
-          'Linguaggio chiaro, aggiornamento normativo costante e relazioni di fiducia con imprese e professionisti del territorio.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
-      alt: 'Team professionale in riunione',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Studio Lain & Partners</h3>
-      Consulenza del Lavoro · Via Marano, 8 — 36034 Malo (VI)
-    </Fragment>
-  </Content>
-
   <BlogLatestPosts
-    title="Ultime news normative"
+    title="Ultime news"
     linkText="Vedi tutte le news"
-    information="Aggiornamenti su lavoro, contributi, adempimenti e prassi utili alle aziende, in tono istituzionale e operativo."
-    count={4}
+    information="Aggiornamenti su lavoro, contributi e adempimenti utili alle aziende."
+    count={3}
   />
+
+  <LinkUtili />
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Richiedi un incontro',
+        text: 'Richiedi una consulenza',
         href: getPermalink('/contatti'),
         icon: 'tabler:mail',
       },
@@ -192,7 +140,7 @@ const structuredData = [
   >
     <Fragment slot="title">Parliamone insieme</Fragment>
     <Fragment slot="subtitle">
-      Contattate lo Studio per una consulenza su personale, costi del lavoro e adempimenti.
+      Contattate lo Studio per un preventivo o una consulenza su personale e adempimenti.
     </Fragment>
   </CallToAction>
 </Layout>
