@@ -33,7 +33,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
 
         // PREVIEW mode (SITE_PREVIEW=true): GitHub Pages project URL, noindex everywhere.
         if (PREVIEW) {
-          const r = rawJsonConfig as any;
+          const r = rawJsonConfig as Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
           r.site = { ...(r.site || {}), site: PREVIEW_SITE, base: PREVIEW_BASE };
           r.metadata = { ...(r.metadata || {}), robots: { index: false, follow: false } };
           for (const k of ['post', 'list', 'category', 'tag']) {

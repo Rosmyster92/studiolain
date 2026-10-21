@@ -1,9 +1,9 @@
 ---
 publishDate: 2026-08-20T00:00:00Z
-author: "Studio Lain & Partners"
-title: "Novità sui contratti di lavoro: cosa devono monitorare le imprese"
-excerpt: "Sintesi operativa delle principali novità contrattuali e degli adempimenti da verificare con il consulente del lavoro."
-category: "Lavoro"
+author: 'Studio Lain & Partners'
+title: 'Novità sui contratti di lavoro: cosa devono monitorare le imprese'
+excerpt: 'Sintesi operativa delle principali novità contrattuali e degli adempimenti da verificare con il consulente del lavoro.'
+category: 'Lavoro'
 tags:
   - contratti
   - diritto del lavoro

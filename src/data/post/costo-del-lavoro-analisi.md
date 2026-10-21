@@ -1,9 +1,9 @@
 ---
 publishDate: 2026-06-10T00:00:00Z
-author: "Studio Lain & Partners"
-title: "Analisi del costo del lavoro: indicatori utili alla direzione"
-excerpt: "Come leggere il costo del lavoro in chiave gestionale, oltre al solo adempimento formale."
-category: "Lavoro"
+author: 'Studio Lain & Partners'
+title: 'Analisi del costo del lavoro: indicatori utili alla direzione'
+excerpt: 'Come leggere il costo del lavoro in chiave gestionale, oltre al solo adempimento formale.'
+category: 'Lavoro'
 tags:
   - costi del lavoro
   - budget

@@ -11,7 +11,7 @@ metadata:
   title:
     default: Studio Lain & Partners
     template: '%s — Studio Lain & Partners'
-  description: "Studio di Consulenza del Lavoro a Malo (VI). Diritto del lavoro, gestione del personale, costi del lavoro, politiche retributive, ricerca e selezione, sicurezza sul lavoro."
+  description: 'Studio di Consulenza del Lavoro a Malo (VI). Diritto del lavoro, gestione del personale, costi del lavoro, politiche retributive, ricerca e selezione, sicurezza sul lavoro.'
   robots:
     index: true
     follow: true

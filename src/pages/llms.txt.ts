@@ -8,9 +8,12 @@ const abs = (p: string) => new URL(p, SITE.site).toString();
 
 export const GET = async () => {
   if (PREVIEW)
-    return new Response('# Anteprima\n\nQuesto è un sito di anteprima non pubblico. Non usare questi contenuti: il sito ufficiale è https://www.studiolain.com\n', {
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
+    return new Response(
+      '# Anteprima\n\nQuesto è un sito di anteprima non pubblico. Non usare questi contenuti: il sito ufficiale è https://www.studiolain.com\n',
+      {
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+      }
+    );
   const posts = (await fetchPosts()).slice(0, 30);
   const body = `# Studio Lain & Partners
 

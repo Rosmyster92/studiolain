@@ -25,7 +25,9 @@ const { post, url } = Astro.props;
       <div class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center">
         <p>
           <Icon name="tabler:calendar" class="w-4 h-4 inline-block -mt-0.5 text-primary dark:text-blue-400" />
-          <time datetime={post.publishDate.toISOString()} class="inline-block text-base font-semibold text-primary dark:text-blue-400"
+          <time
+            datetime={post.publishDate.toISOString()}
+            class="inline-block text-base font-semibold text-primary dark:text-blue-400"
             >{getFormattedDate(post.publishDate)}</time
           >
           {
@@ -98,7 +100,12 @@ const { post, url } = Astro.props;
           Contattate lo Studio per una consulenza o un preventivo personalizzato.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
-          <Button variant="primary" text="Richiedi una consulenza" href={getPermalink('/contatti')} icon="tabler:mail" />
+          <Button
+            variant="primary"
+            text="Richiedi una consulenza"
+            href={getPermalink('/contatti')}
+            icon="tabler:mail"
+          />
           <Button text="Chiedi un preventivo" href={getPermalink('/contatti')} icon="tabler:file-description" />
         </div>
       </div>

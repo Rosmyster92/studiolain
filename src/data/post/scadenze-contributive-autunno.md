@@ -1,9 +1,9 @@
 ---
 publishDate: 2026-07-15T00:00:00Z
-author: "Studio Lain & Partners"
-title: "Scadenze contributive e adempimenti di autunno: checklist per le aziende"
-excerpt: "Checklist pratica per non trascurare versamenti, comunicazioni e controlli interni nel secondo semestre."
-category: "Previdenza"
+author: 'Studio Lain & Partners'
+title: 'Scadenze contributive e adempimenti di autunno: checklist per le aziende'
+excerpt: 'Checklist pratica per non trascurare versamenti, comunicazioni e controlli interni nel secondo semestre.'
+category: 'Previdenza'
 tags:
   - contributi
   - scadenze

@@ -76,9 +76,7 @@ export const footerData = {
     { text: 'Privacy', href: 'https://privacy.teleconsul.it/home/tcweb' },
     { text: 'Link utili', href: getPermalink('/link-utili') },
   ],
-  socialLinks: [
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-  ],
+  socialLinks: [{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') }],
   footNote: `
     © 2026 <a class="text-blue-600 underline dark:text-muted" href="https://www.studiolain.com">Studio Lain & Partners</a> · Consulenza del Lavoro · Malo (VI)
   `,

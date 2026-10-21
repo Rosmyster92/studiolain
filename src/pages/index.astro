@@ -36,9 +36,13 @@ const structuredData = [
     name: SITE?.name,
     url: SITE?.site,
     logo: new URL(favIconSvg.src, SITE?.site).toString(),
-    description: 'Studio di consulenza del lavoro: amministrazione del personale, elaborazione paghe, consulenza contrattuale e previdenziale.',
+    description:
+      'Studio di consulenza del lavoro: amministrazione del personale, elaborazione paghe, consulenza contrattuale e previdenziale.',
     vatID: 'IT02569290246',
-    areaServed: [{ '@type': 'AdministrativeArea', name: 'Provincia di Vicenza' }, { '@type': 'State', name: 'Veneto' }],
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Provincia di Vicenza' },
+      { '@type': 'State', name: 'Veneto' },
+    ],
     telephone: '+390445602944',
     email: 'studiolain@studiolain.com',
     address: {

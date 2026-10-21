@@ -60,7 +60,7 @@ jobs:
   indexnow:
     needs: publish
     # Attivare impostando la variabile di repository INDEXNOW_ENABLED=true quando il sito è live sul dominio definitivo
-    if: env.SITE_PREVIEW != 'true' && vars.INDEXNOW_ENABLED == 'true'
+    if: vars.INDEXNOW_ENABLED == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -70,4 +70,5 @@ jobs:
         with:
           node-version: 22
       - name: Ping IndexNow
+        if: env.SITE_PREVIEW != 'true'
         run: node scripts/indexnow.mjs ${{ github.event.before || 'HEAD~1' }}

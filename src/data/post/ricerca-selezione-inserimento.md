@@ -1,9 +1,9 @@
 ---
 publishDate: 2026-03-18T00:00:00Z
-author: "Studio Lain & Partners"
-title: "Ricerca e selezione: dal profilo al corretto inserimento in azienda"
-excerpt: "Come collegare ricerca del personale, scelta contrattuale e onboarding per ridurre tempi e rischi."
-category: "Lavoro"
+author: 'Studio Lain & Partners'
+title: 'Ricerca e selezione: dal profilo al corretto inserimento in azienda'
+excerpt: 'Come collegare ricerca del personale, scelta contrattuale e onboarding per ridurre tempi e rischi.'
+category: 'Lavoro'
 tags:
   - ricerca e selezione
   - assunzioni
