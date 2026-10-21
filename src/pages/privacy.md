@@ -1,4 +1,5 @@
 ---
+layout: '~/layouts/MarkdownLayout.astro'
 title: 'Privacy'
 description: 'Informativa privacy di Studio Lain & Partners.'
 ---

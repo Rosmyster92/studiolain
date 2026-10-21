@@ -5,6 +5,10 @@ import type { AstroConfig, AstroIntegration } from 'astro';
 import configBuilder, { type Config } from './utils/configBuilder';
 import loadConfig from './utils/loadConfig';
 
+const PREVIEW = process.env.SITE_PREVIEW === 'true';
+const PREVIEW_SITE = process.env.PREVIEW_SITE || 'https://rosmyster92.github.io';
+const PREVIEW_BASE = process.env.PREVIEW_BASE || '/studiolain';
+
 export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegration => {
   let cfg: AstroConfig;
   return {
@@ -26,6 +30,17 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
         const resolvedVirtualModuleId = '\0' + virtualModuleId;
 
         const rawJsonConfig = (await loadConfig(_themeConfig)) as Config;
+
+        // PREVIEW mode (SITE_PREVIEW=true): GitHub Pages project URL, noindex everywhere.
+        if (PREVIEW) {
+          const r = rawJsonConfig as any;
+          r.site = { ...(r.site || {}), site: PREVIEW_SITE, base: PREVIEW_BASE };
+          r.metadata = { ...(r.metadata || {}), robots: { index: false, follow: false } };
+          for (const k of ['post', 'list', 'category', 'tag']) {
+            if (r.apps?.blog?.[k]) r.apps.blog[k].robots = { index: false, follow: false };
+          }
+          buildLogger.warn(`PREVIEW mode: ${PREVIEW_SITE}${PREVIEW_BASE} (noindex, robots Disallow)`);
+        }
         const { SITE, I18N, METADATA, APP_BLOG, UI, ANALYTICS } = configBuilder(rawJsonConfig);
 
         updateConfig({
@@ -52,6 +67,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
                     export const APP_BLOG = ${JSON.stringify(APP_BLOG)};
                     export const UI = ${JSON.stringify(UI)};
                     export const ANALYTICS = ${JSON.stringify(ANALYTICS)};
+                    export const PREVIEW = ${JSON.stringify(PREVIEW)};
                     `;
                   }
                 },
@@ -92,7 +108,16 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
             cfg.integrations?.find((e) => e?.name === '@astrojs/sitemap') !== undefined;
           const sitemapExists = fs.existsSync(sitemapFile);
 
-          if (hasIntegration && sitemapExists) {
+          if (PREVIEW) {
+            fs.writeFileSync(
+              robotsTxtFileInOut,
+              `# PREVIEW: sito di anteprima, non indicizzare${os.EOL}User-agent: *${os.EOL}Disallow: /${os.EOL}`,
+              { encoding: 'utf8', flag: 'w' }
+            );
+            for (const f of fs.readdirSync(outDir)) {
+              if (/^[a-f0-9]{32}\.txt$/.test(f)) fs.rmSync(new URL(f, outDir)); // IndexNow key not published in preview
+            }
+          } else if (hasIntegration && sitemapExists) {
             const robotsTxt = fs.readFileSync(robotsTxtFile, { encoding: 'utf8', flag: 'a+' });
             const sitemapUrl = new URL(sitemapName, String(new URL(cfg.base, cfg.site)));
             const pattern = /^Sitemap:(.*)$/m;

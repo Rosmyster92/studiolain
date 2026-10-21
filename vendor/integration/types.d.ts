@@ -1,4 +1,5 @@
 declare module 'astrowind:config' {
+  export const PREVIEW: boolean;
   // Inline `import()` types: a relative `import` statement is not allowed
   // inside an ambient module declaration.
   export const SITE: import('./utils/configBuilder').SiteConfig;

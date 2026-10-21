@@ -4,7 +4,7 @@ import { SEO } from 'astro-seo';
 
 import type { SEOProps } from 'astro-seo';
 
-import { SITE, METADATA, I18N } from 'astrowind:config';
+import { SITE, METADATA, I18N, PREVIEW } from 'astrowind:config';
 import type { MetaData, MetaDataOpenGraph } from '~/types';
 import { getCanonical } from '~/utils/permalinks';
 
@@ -109,6 +109,10 @@ const seoProps: SEOProps = {
   twitter: mergedTwitter,
   surpressWarnings: true,
 };
+if (PREVIEW) {
+  seoProps.noindex = true;
+  seoProps.nofollow = true;
+}
 ---
 
 <SEO {...seoProps} />

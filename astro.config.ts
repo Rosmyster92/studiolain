@@ -49,7 +49,7 @@ export default defineConfig({
   ],
 
   integrations: [
-    sitemap(),
+    ...(process.env.SITE_PREVIEW === 'true' ? [] : [sitemap()]),
     mdx(),
     icon({
       // Local SVG icons (used as <Icon name="file-name" />) live next to the other assets.

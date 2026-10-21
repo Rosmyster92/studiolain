@@ -11,6 +11,11 @@ permissions:
   pages: write
   id-token: write
 
+# PREVIEW: 'true' = anteprima su rosmyster92.github.io/studiolain (noindex, niente IndexNow).
+# Mettere 'false' per la produzione su www.studiolain.com.
+env:
+  SITE_PREVIEW: 'true'
+
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -33,6 +38,8 @@ jobs:
 
       - name: Compile site
         run: npm run build
+        env:
+          SITE_PREVIEW: ${{ env.SITE_PREVIEW }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -53,7 +60,7 @@ jobs:
   indexnow:
     needs: publish
     # Attivare impostando la variabile di repository INDEXNOW_ENABLED=true quando il sito è live sul dominio definitivo
-    if: vars.INDEXNOW_ENABLED == 'true'
+    if: env.SITE_PREVIEW != 'true' && vars.INDEXNOW_ENABLED == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
