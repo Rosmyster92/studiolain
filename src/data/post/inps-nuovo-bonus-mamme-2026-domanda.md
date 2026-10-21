@@ -52,6 +52,3 @@ Dopo l'invio, nello stesso servizio si possono consultare ricevute ed esito e ag
 
 INPS, messaggio n. 3343 del 20 ottobre 2026: [testo ufficiale su inps.it](https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.10.messaggio-numero-3343-del-20-10-2026_16395.html)
 
----
-
-Volete sapere quali dipendenti possono richiedere il bonus, o organizzare un'informativa per il personale? [Contattate lo Studio](/contatti) per una consulenza o un preventivo.
