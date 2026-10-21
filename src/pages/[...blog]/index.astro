@@ -64,13 +64,20 @@ const imageUrl = typeof image === 'string' ? image : image?.src;
 
 const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': post.source ? 'NewsArticle' : 'BlogPosting',
+  inLanguage: 'it-IT',
   headline: post.title,
   description: post.excerpt,
   datePublished: post.publishDate.toISOString(),
   dateModified: (post.updateDate ?? post.publishDate).toISOString(),
-  ...(post.author ? { author: { '@type': 'Person', name: post.author } } : {}),
-  publisher: { '@type': 'Organization', name: SITE?.name },
+  author: { '@type': 'Organization', name: SITE?.name, url: SITE?.site },
+  publisher: { '@type': 'Organization', '@id': `${SITE?.site}/#organization`, name: SITE?.name, url: SITE?.site },
+  ...(post.source
+    ? {
+        isBasedOn: post.source.url,
+        citation: { '@type': 'CreativeWork', name: post.source.name, url: post.source.url },
+      }
+    : {}),
   ...(imageUrl ? { image: imageUrl.startsWith('http') ? imageUrl : new URL(imageUrl, Astro.site).toString() } : {}),
   ...(post.category ? { articleSection: post.category.title } : {}),
   ...(post.tags?.length ? { keywords: post.tags.map((tag) => tag.title).join(', ') } : {}),

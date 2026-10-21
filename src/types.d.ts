@@ -25,6 +25,7 @@ export interface Post {
   author?: string;
 
   metadata?: MetaData;
+  source?: { name: string; url: string };
 
   draft?: boolean;
 

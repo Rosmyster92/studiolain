@@ -63,6 +63,8 @@ const postCollection = defineCollection({
     category: z.string().optional(),
     tags: z.array(z.string()).optional(),
     author: z.string().optional(),
+    /** Fonte primaria ufficiale (per citation / isBasedOn). */
+    source: z.object({ name: z.string(), url: z.string().url() }).optional(),
 
     metadata: metadataDefinition(),
   }),

@@ -15,12 +15,17 @@ const strip = (h) =>
    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(n)).replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 
 const AREE_ALTRE = ['piemonte','torino','lombardia','milano','bergamo','brescia','liguria','genova','emilia','romagna','bologna','modena','toscana','firenze','umbria','marche','macerata','ancona','lazio','roma','abruzzo','molise','campania','napoli','puglia','bari','basilicata','calabria','sicilia','sardegna','trentino','bolzano','trento','friuli','trieste','udine','valle d\'aosta','padova','verona','treviso','venezia','rovigo','belluno','calabria centrale','pavia','como','varese','monza','cremona','mantova','parma','reggio','piacenza','ferrara','ravenna','rimini','pisa','lucca','siena','perugia','pescara','salerno','caserta','lecce','taranto','foggia','palermo','catania','cagliari'];
+// Area per ente emittente (ordine = priorità di riconoscimento sulla fonte citata, poi sul testo).
 const NAZ = [
+  [/agenzia delle entrate/i, 'Agenzia delle Entrate', 'fisco'],
   [/\binps\b/i, 'INPS', 'previdenza'], [/\binail\b/i, 'INAIL', 'previdenza'],
-  [/ministero del lavoro|ministro del lavoro/i, 'Ministero del Lavoro', 'lavoro'], [/ispettorato|\binl\b/i, 'Ispettorato Nazionale del Lavoro', 'lavoro'],
-  [/agenzia delle entrate/i, 'Agenzia delle Entrate', 'fisco'], [/\bd\.\s?l\.|\bd\.\s?lgs|decreto[- ]legge|gazzetta ufficiale|\bl\. n\./i, 'Gazzetta Ufficiale / Governo', 'lavoro'],
-  [/consiglio dei ministri/i, 'Governo', 'lavoro'],
+  [/ministero del lavoro|ministro del lavoro/i, 'Ministero del Lavoro', 'lavoro'],
+  [/ispettorato|\binl\b/i, 'Ispettorato Nazionale del Lavoro', 'lavoro'],
+  [/\bd\.\s?l\.|\bd\.\s?lgs|decreto[- ]legge|gazzetta ufficiale|\bl\. n\.|consiglio dei ministri/i, 'Gazzetta Ufficiale / Governo', 'lavoro'],
 ];
+// Temi societari/tributari puri: esclusi salvo collegamento con lavoro, paghe o ritenute.
+const OFF_TOPIC = /\bires\b|tuir.{0,40}interessi|imposta di registro|crisi d.impresa|esdebitazione|sovraindebitat|partite iva inattive|made in italy|ministero delle imprese|\bmimit\b|nuove imprese a tasso zero|rottamazione|\biva\b/i;
+const LABOUR = /lavorator|dipendent|retribuzion|busta paga|cedolin|sostituto d.imposta|ritenut|\bcu\b|certificazione unica|730|tfr|premi(o)? di risultato|welfare aziendale|fringe|assunzion|contributi previdenziali|contribuzione/i;
 const isCcnl = (t) => /\bccnl\b|\bccrl\b|\bcipl\b|rinnovo|contratto (collettivo|integrativo)|accordo (integrativo|di rinnovo|territoriale|regionale|provinciale)|verbale di accordo|minimi retributivi|tabelle retributive|parti (stipulanti|sociali)|oo\.ss\.|piattaforma|sindacati|ente bilaterale|associazioni datoriali/i.test(t);
 
 function sourceRef(text) {
@@ -44,7 +49,10 @@ function classify(post) {
     if (altra && !nostra) return { ...item, tipo: 'ccnl', ccnl: ccnl.id, keep: false, motivo: `accordo territoriale fuori zona (${altra})` };
     return { ...item, tipo: 'ccnl', ccnl: ccnl.id, categoria: 'lavoro', keep: true, motivo: `CCNL seguito: ${ccnl.nome}` };
   }
-  const n = NAZ.find(([re]) => re.test(text));
+  const n = (item.fonte_citata && NAZ.find(([re]) => re.test(item.fonte_citata))) || NAZ.find(([re]) => re.test(text));
+  const head = text.slice(0, 500);
+  if (n && OFF_TOPIC.test(head) && !LABOUR.test(head))
+    return { ...item, tipo: 'norma-nazionale', ente: n[1], keep: false, motivo: `tema societario/tributario non legato al lavoro (${n[1]})` };
   if (n) return { ...item, tipo: 'norma-nazionale', ente: n[1], categoria: n[2], keep: true, motivo: `norma/prassi nazionale (${n[1]})` };
   return { ...item, tipo: 'altro', keep: false, motivo: 'né fonte istituzionale nazionale né CCNL seguito' };
 }

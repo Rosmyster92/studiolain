@@ -4,6 +4,9 @@ author: "Studio Lain & Partners"
 title: "Nuovo bonus mamme 2026: aperto il servizio INPS per la domanda"
 excerpt: "Domanda entro il 31 dicembre 2026 (31 gennaio 2027 se il requisito matura a dicembre): 60 euro al mese fino a 720 euro, pagati in unica soluzione a dicembre."
 category: "Previdenza"
+source:
+  name: "INPS, messaggio n. 3343 del 20 ottobre 2026"
+  url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.10.messaggio-numero-3343-del-20-10-2026_16395.html"
 tags:
   - INPS
   - bonus mamme

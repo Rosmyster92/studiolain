@@ -49,3 +49,18 @@ jobs:
       - name: Publish
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: publish
+    # Attivare impostando la variabile di repository INDEXNOW_ENABLED=true quando il sito è live sul dominio definitivo
+    if: vars.INDEXNOW_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Ping IndexNow
+        run: node scripts/indexnow.mjs ${{ github.event.before || 'HEAD~1' }}
