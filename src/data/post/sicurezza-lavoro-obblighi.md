@@ -3,7 +3,7 @@ publishDate: 2026-05-05T00:00:00Z
 author: "Studio Lain & Partners"
 title: "Sicurezza sul lavoro: obblighi ricorrenti per il datore di lavoro"
 excerpt: "Richiamo agli obblighi principali in materia di salute e sicurezza e al coordinamento con i consulenti."
-category: "Sicurezza"
+category: "Lavoro"
 tags:
   - sicurezza sul lavoro
   - obblighi

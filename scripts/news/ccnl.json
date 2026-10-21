@@ -1,0 +1,25 @@
+{
+  "territorio": { "regione": "Veneto", "provincia": "Vicenza", "keywords": ["veneto", "vicenza", "vicentin"] },
+  "ccnl": [
+    { "id": "metalmeccanici-industria", "nome": "Metalmeccanici industria (operai e impiegati)", "keywords": ["metalmeccanic", "federmeccanica", "fim-cisl, fiom", "industria metalmeccanica"] },
+    { "id": "metalmeccanici-confapi", "nome": "Metalmeccanici PMI Confapi", "keywords": ["unionmeccanica", "confapi"] },
+    { "id": "gomma-plastica", "nome": "Gomma-plastica", "keywords": ["gomma", "plastica"] },
+    { "id": "alimentari-industria", "nome": "Alimentari industria", "keywords": ["industria alimentare", "alimentari industria", "ccnl alimentari", "industrie alimentari"] },
+    { "id": "panificazione-artigiani", "nome": "Alimentari e panificazione artigiani", "keywords": ["panificazione", "panifici", "alimentari artigian", "alimentazione e panificazione"] },
+    { "id": "panificazione-fiesa", "nome": "Panificazione FIESA", "keywords": ["fiesa", "assopanificatori"] },
+    { "id": "editoria-industria", "nome": "Editoria industria", "keywords": ["editoria", "grafici editoriali", "aie, asig"] },
+    { "id": "edilizia-industria", "nome": "Edilizia industria (operai e impiegati)", "keywords": ["edilizia", "edili", "ance ", "feneal", "filca", "fillea"] },
+    { "id": "area-meccanica-artigiani", "nome": "Area meccanica artigiani / CCRL Veneto", "keywords": ["area meccanica", "metalmeccanica artigian", "meccanica artigian", "installazione di impianti", "orafi"] },
+    { "id": "legno-arredamento-artigiani", "nome": "Legno-arredamento artigianato", "keywords": ["legno", "arredamento", "lapidei"] },
+    { "id": "tessili-abbigliamento", "nome": "Tessili, abbigliamento, pelli, confezioni", "keywords": ["tessil", "abbigliamento", "pelli", "calzatur", "confezioni", "federmoda"] },
+    { "id": "grafica-comunicazione-artigiani", "nome": "Grafica e comunicazione artigiani", "keywords": ["comunicazione", "grafica", "grafici"] },
+    { "id": "acconciatura-estetica", "nome": "Acconciatura ed estetica", "keywords": ["acconciatura", "estetica", "benessere"] },
+    { "id": "lapidei-artigiani", "nome": "Lapidei artigiani", "keywords": ["lapidei", "escavazione"] },
+    { "id": "studi-professionali", "nome": "Studi professionali", "keywords": ["studi professionali", "confprofessioni"] },
+    { "id": "commercio-terziario", "nome": "Commercio e terziario (incl. viaggiatori e piazzisti)", "keywords": ["terziario", "commercio", "confcommercio", "filcams", "fisascat", "uiltucs", "viaggiatori e piazzisti", "distribuzione e servizi"] },
+    { "id": "dirigenti-commercio", "nome": "Dirigenti commercio", "keywords": ["dirigenti", "manageritalia"] },
+    { "id": "farmacie-private", "nome": "Farmacie private", "keywords": ["farmacie", "federfarma"] },
+    { "id": "alberghi-campeggi", "nome": "Alberghi minori e campeggi (turismo)", "keywords": ["alberghi", "campeggi", "turismo", "federalberghi", "faita"] },
+    { "id": "uneba", "nome": "UNEBA socio-assistenziale", "keywords": ["uneba"] }
+  ]
+}

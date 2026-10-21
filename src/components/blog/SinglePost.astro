@@ -24,8 +24,8 @@ const { post, url } = Astro.props;
     <header class="intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
       <div class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center">
         <p>
-          <Icon name="tabler:clock" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
-          <time datetime={post.publishDate.toISOString()} class="inline-block"
+          <Icon name="tabler:calendar" class="w-4 h-4 inline-block -mt-0.5 text-primary dark:text-blue-400" />
+          <time datetime={post.publishDate.toISOString()} class="inline-block text-base font-semibold text-primary dark:text-blue-400"
             >{getFormattedDate(post.publishDate)}</time
           >
           {

@@ -27,3 +27,4 @@ pnpm-workspace.yaml
 
 .astro
 _build-out.txt
+scripts/news/out/

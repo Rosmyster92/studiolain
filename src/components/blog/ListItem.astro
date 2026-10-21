@@ -1,10 +1,6 @@
 ---
-import { Icon } from 'astro-icon/components';
-import PostTags from '~/components/blog/Tags.astro';
-
 import { APP_BLOG } from 'astrowind:config';
 import type { Post } from '~/types';
-
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
@@ -13,47 +9,30 @@ export interface Props {
 }
 
 const { post } = Astro.props;
-
 const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : '';
 ---
 
-<article class="max-w-md mx-auto md:max-w-none border-b border-slate-200 dark:border-slate-800 pb-8 mb-2 last:border-0">
-  <header>
-    <div class="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted dark:text-slate-400">
-      <span>
-        <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5" />
-        <time datetime={post.publishDate.toISOString()} class="inline-block">{getFormattedDate(post.publishDate)}</time>
-      </span>
+<article class="flex gap-4 py-3 border-b border-slate-200 dark:border-slate-800">
+  <time
+    datetime={post.publishDate.toISOString()}
+    class="shrink-0 w-24 pt-0.5 text-sm font-semibold tabular-nums text-primary dark:text-blue-400"
+  >
+    {getFormattedDate(post.publishDate)}
+  </time>
+  <div class="min-w-0">
+    <h2 class="text-base sm:text-lg font-semibold leading-snug font-heading dark:text-slate-200">
+      {link ? <a class="hover:text-primary dark:hover:text-blue-400 transition" href={link}>{post.title}</a> : post.title}
       {
         post.category && (
           <a
-            class="inline-block rounded bg-gray-100 dark:bg-slate-700 px-2 py-0.5 text-xs font-medium hover:text-primary"
+            class="ml-1 align-middle inline-block rounded bg-gray-100 dark:bg-slate-700 px-1.5 py-0.5 text-[11px] font-medium uppercase tracking-wide text-muted hover:text-primary"
             href={getPermalink(post.category.slug, 'category')}
           >
             {post.category.title}
           </a>
         )
       }
-    </div>
-    <h2 class="text-xl sm:text-2xl font-semibold leading-snug mb-2 font-heading dark:text-slate-200">
-      {
-        link ? (
-          <a class="inline-block hover:text-primary dark:hover:text-blue-400 transition" href={link}>
-            {post.title}
-          </a>
-        ) : (
-          post.title
-        )
-      }
     </h2>
-  </header>
-
-  {post.excerpt && <p class="text-muted dark:text-slate-400 text-base leading-relaxed">{post.excerpt}</p>}
-  {
-    post.tags && Array.isArray(post.tags) && post.tags.length > 0 && (
-      <footer class="mt-3">
-        <PostTags tags={post.tags} class="text-xs" />
-      </footer>
-    )
-  }
+    {post.excerpt && <p class="mt-1 text-sm text-muted dark:text-slate-400 leading-relaxed line-clamp-2">{post.excerpt}</p>}
+  </div>
 </article>
