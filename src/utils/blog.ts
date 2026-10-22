@@ -187,7 +187,12 @@ export const findCategories = async (): Promise<Array<Taxonomy>> => {
       categories[post.category.slug] = post.category;
     }
   });
-  return Object.values(categories).sort((a, b) => a.title.localeCompare(b.title, 'it'));
+  const order = ['lavoro', 'previdenza', 'fisco', 'circolari-studio', 'guide'];
+  const rank = (c: Taxonomy) => {
+    const i = order.indexOf(c.slug);
+    return i === -1 ? order.length : i;
+  };
+  return Object.values(categories).sort((a, b) => rank(a) - rank(b) || a.title.localeCompare(b.title, 'it'));
 };
 
 export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {

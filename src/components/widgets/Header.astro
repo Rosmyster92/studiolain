@@ -96,7 +96,7 @@ const persistKey = `header-${Array.from(
         </div>
       </div>
       <nav
-        class="items-center w-full lg:w-auto hidden lg:flex lg:mx-5 text-default overflow-y-auto overflow-x-hidden lg:overflow-visible lg:justify-self-center"
+        class="items-center w-full lg:w-auto hidden lg:flex lg:ml-auto lg:mr-6 text-default overflow-y-auto overflow-x-hidden lg:overflow-visible"
         aria-label="Main navigation"
       >
         <ul
@@ -104,7 +104,7 @@ const persistKey = `header-${Array.from(
         >
           {
             links.map(({ text, href, links }) => (
-              <li class={links?.length ? 'dropdown' : ''}>
+              <li class={links?.length ? 'dropdown nav-sep' : 'nav-sep'}>
                 {links?.length ? (
                   <>
                     <button
@@ -307,3 +307,10 @@ const persistKey = `header-${Array.from(
     customElements.define('aw-header', AwHeader);
   }
 </script>
+
+<style is:global>
+  @media (min-width: 1024px) {
+    .nav-sep { display: flex; align-items: center; }
+    .nav-sep + .nav-sep::before { content: '|'; color: #b5b5b5; font-weight: 300; }
+  }
+</style>
