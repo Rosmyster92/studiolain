@@ -6,7 +6,6 @@ import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
-import LinkUtili from '~/components/widgets/LinkUtili.astro';
 import PostTags from '~/components/blog/Tags.astro';
 import { getPermalink, getBlogPermalink } from '~/utils/permalinks';
 
@@ -27,12 +26,12 @@ const allCategories = await findCategories();
 const breadcrumbs = [
   { text: 'Home', href: getPermalink('/') },
   ...(currentPage > 1
-    ? [{ text: 'News', href: getBlogPermalink() }, { text: `Pagina ${currentPage}` }]
-    : [{ text: 'News' }]),
+    ? [{ text: 'Novità', href: getBlogPermalink() }, { text: `Pagina ${currentPage}` }]
+    : [{ text: 'Novità' }]),
 ];
 
 const metadata = {
-  title: `News${currentPage > 1 ? ` — Pagina ${currentPage}` : ''}`,
+  title: `Novità${currentPage > 1 ? ` — Pagina ${currentPage}` : ''}`,
   description:
     'Aggiornamenti su diritto del lavoro, adempimenti, costi del lavoro e prassi utili alle imprese — Studio Lain & Partners.',
   robots: {
@@ -53,7 +52,7 @@ const metadata = {
   <Breadcrumbs bar items={breadcrumbs} />
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline subtitle="Note operative e aggiornamenti su lavoro, contributi e gestione del personale.">
-      News
+      Novità
     </Headline>
 
     {
@@ -67,6 +66,4 @@ const metadata = {
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
-
-  <LinkUtili classes={{ container: 'max-w-4xl' }} />
 </Layout>

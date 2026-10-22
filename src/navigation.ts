@@ -15,12 +15,8 @@ export const headerData = {
       href: getPermalink('/servizi'),
     },
     {
-      text: 'News',
+      text: 'Novità',
       href: getBlogPermalink(),
-    },
-    {
-      text: 'Link utili',
-      href: getPermalink('/link-utili'),
     },
     {
       text: 'Contatti',
@@ -38,8 +34,7 @@ export const footerData = {
         { text: 'Home', href: getPermalink('/') },
         { text: 'Chi siamo', href: getPermalink('/chi-siamo') },
         { text: 'Servizi', href: getPermalink('/servizi') },
-        { text: 'News', href: getBlogPermalink() },
-        { text: 'Link utili', href: getPermalink('/link-utili') },
+        { text: 'Novità', href: getBlogPermalink() },
       ],
     },
     {
@@ -54,15 +49,6 @@ export const footerData = {
       ],
     },
     {
-      title: 'Link utili',
-      links: [
-        { text: 'INPS', href: 'https://www.inps.it/' },
-        { text: 'Ministero del Lavoro', href: 'https://www.lavoro.gov.it/' },
-        { text: 'INAIL', href: 'https://www.inail.it/' },
-        { text: 'Il Sole 24 Ore', href: 'https://www.ilsole24ore.com/' },
-      ],
-    },
-    {
       title: 'Contatti',
       links: [
         { text: 'Via Marano, 8 — Malo (VI)', href: getPermalink('/contatti') },
@@ -74,7 +60,6 @@ export const footerData = {
   ],
   secondaryLinks: [
     { text: 'Privacy', href: 'https://privacy.teleconsul.it/home/tcweb' },
-    { text: 'Link utili', href: getPermalink('/link-utili') },
   ],
   socialLinks: [{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') }],
   footNote: `

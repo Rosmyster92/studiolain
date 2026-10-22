@@ -25,7 +25,7 @@ const allCategories = await findCategories();
 
 const breadcrumbs = [
   { text: 'Home', href: getPermalink('/') },
-  { text: 'News', href: getBlogPermalink() },
+  { text: 'Novità', href: getBlogPermalink() },
   ...(currentPage > 1
     ? [{ text: category.title, href: getPermalink(category.slug, 'category') }, { text: `Pagina ${currentPage}` }]
     : [{ text: category.title }]),
@@ -33,7 +33,7 @@ const breadcrumbs = [
 
 const metadata = {
   title: `${category.title}${currentPage > 1 ? ` — Pagina ${currentPage}` : ''}`,
-  description: `Articoli nella categoria ${category.title} — News Studio Lain & Partners.`,
+  description: `Articoli nella categoria ${category.title} — Novità Studio Lain & Partners.`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,

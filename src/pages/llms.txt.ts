@@ -26,13 +26,12 @@ Sede: Via Marano, 8 - 36034 Malo (VI). Tel. 0445 602944. E-mail studiolain@studi
 - [Chi siamo](${abs(getPermalink('/chi-siamo'))}): lo studio e il team
 - [Servizi](${abs(getPermalink('/servizi'))}): consulenza del lavoro, paghe e adempimenti, gestione HR, analisi del costo del lavoro, ricerca e selezione, sicurezza sul lavoro
 - [Contatti](${abs(getPermalink('/contatti'))}): recapiti e richiesta di consulenza o preventivo
-- [Link utili](${abs(getPermalink('/link-utili'))}): siti istituzionali (INPS, INAIL, Ministero del Lavoro, Agenzia delle Entrate)
 
-## News
+## Novità
 
 Notizie normative selezionate e riscritte dallo studio, sempre con link alla fonte ufficiale.
 
-- [Tutte le news](${abs(getPermalink('/news'))})
+- [Tutte le novità](${abs(getPermalink('/news'))})
 - [Lavoro](${abs(getPermalink('lavoro', 'category'))}): Ministero del Lavoro, Ispettorato, decreti, CCNL applicati dallo studio e accordi di Veneto e Vicenza
 - [Previdenza](${abs(getPermalink('previdenza', 'category'))}): circolari e messaggi INPS e INAIL
 - [Fisco](${abs(getPermalink('fisco', 'category'))}): prassi dell'Agenzia delle Entrate rilevante per lavoro dipendente e sostituti d'imposta

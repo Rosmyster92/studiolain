@@ -2,10 +2,15 @@
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+const { inputs, textarea, disclaimer, button = 'Invia', description = '', action, cc, subject } = Astro.props;
 ---
 
-<form>
+<form action={action} method={action ? 'POST' : undefined}>
+  {action && <input type="hidden" name="_subject" value={subject || 'Nuovo messaggio dal sito'} />}
+  {action && cc && <input type="hidden" name="_cc" value={cc} />}
+  {action && <input type="hidden" name="_template" value="table" />}
+  {action && <input type="hidden" name="_captcha" value="true" />}
+  {action && <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />}
   {
     inputs &&
       inputs.map(
@@ -23,6 +28,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
                 id={name}
                 autocomplete={autocomplete}
                 placeholder={placeholder}
+                required
                 class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
               />
             </div>
@@ -40,6 +46,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
           id="textarea"
           name={textarea.name ? textarea.name : 'message'}
           rows={textarea.rows ? textarea.rows : 4}
+          required
           placeholder={textarea.placeholder}
           class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
         />
@@ -55,6 +62,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
             id="disclaimer"
             name="disclaimer"
             type="checkbox"
+            required
             class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
           />
         </div>

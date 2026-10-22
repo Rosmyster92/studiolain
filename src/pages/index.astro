@@ -5,7 +5,6 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import LinkUtili from '~/components/widgets/LinkUtili.astro';
 import StructuredData from '~/components/common/StructuredData.astro';
 import { SITE, I18N } from 'astrowind:config';
 import favIconSvg from '~/assets/favicons/favicon.svg';
@@ -123,13 +122,11 @@ const structuredData = [
   />
 
   <BlogLatestPosts
-    title="Ultime news"
-    linkText="Vedi tutte le news"
+    title="Ultime novità"
+    linkText="Vedi tutte le novità"
     information="Aggiornamenti su lavoro, contributi e adempimenti utili alle aziende."
     count={3}
   />
-
-  <LinkUtili />
 
   <CallToAction
     actions={[

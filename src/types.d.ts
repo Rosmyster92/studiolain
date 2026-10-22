@@ -193,6 +193,11 @@ export interface Form {
   disclaimer?: Disclaimer;
   button?: string;
   description?: string;
+  /** Endpoint del form (es. FormSubmit). */
+  action?: string;
+  /** Destinatari in copia (FormSubmit _cc). */
+  cc?: string;
+  subject?: string;
 }
 
 // WIDGETS
