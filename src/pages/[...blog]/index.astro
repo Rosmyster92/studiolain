@@ -111,7 +111,7 @@ const faqSchema = post.faq?.length
 
 const breadcrumbs = [
   { text: 'Home', href: getPermalink('/') },
-  ...(isBlogListRouteEnabled ? [{ text: 'Novità', href: getBlogPermalink() }] : []),
+  ...(isBlogListRouteEnabled ? [{ text: 'Novità normative', href: getBlogPermalink() }] : []),
   ...(post.category && isBlogCategoryRouteEnabled
     ? [{ text: post.category.title, href: getPermalink(post.category.slug, 'category') }]
     : []),

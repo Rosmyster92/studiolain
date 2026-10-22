@@ -41,7 +41,7 @@ const columnsClass =
                 class="group block w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 data-aw-gallery-open={lightbox ? index : undefined}
                 disabled={!lightbox}
-                aria-label={lightbox ? `Open image: ${alt || caption || index + 1}` : undefined}
+                aria-label={lightbox ? `Apri immagine: ${alt || caption || index + 1}` : undefined}
               >
                 <Image
                   class="aspect-[4/3] w-full object-cover transition group-hover:scale-[1.03]"
@@ -83,7 +83,7 @@ const columnsClass =
             <button
               type="submit"
               class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80"
-              aria-label="Close"
+              aria-label="Chiudi"
             >
               <Icon name="tabler:x" class="h-5 w-5" />
             </button>
@@ -92,7 +92,7 @@ const columnsClass =
             type="button"
             class="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80"
             data-aw-gallery-prev
-            aria-label="Previous image"
+            aria-label="Immagine precedente"
           >
             <Icon name="tabler:chevron-left" class="h-5 w-5" />
           </button>
@@ -100,7 +100,7 @@ const columnsClass =
             type="button"
             class="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80"
             data-aw-gallery-next
-            aria-label="Next image"
+            aria-label="Immagine successiva"
           >
             <Icon name="tabler:chevron-right" class="h-5 w-5" />
           </button>

@@ -19,7 +19,7 @@ export const GET = async () => {
   const posts = await fetchPosts();
 
   const rss = await getRssString({
-    title: `${SITE.name} – Novità`,
+    title: `${SITE.name} – Novità normative`,
     description: METADATA?.description || '',
     site: import.meta.env.SITE,
 

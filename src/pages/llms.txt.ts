@@ -29,7 +29,7 @@ Sede: Via Marano, 8 - 36034 Malo (VI). Tel. 0445 602944. E-mail studiolain@studi
 - [Servizi](${abs(getPermalink('/servizi'))}): consulenza del lavoro, paghe e adempimenti, gestione HR, analisi del costo del lavoro, ricerca e selezione, sicurezza sul lavoro
 - [Contatti](${abs(getPermalink('/contatti'))}): recapiti e richiesta di consulenza o preventivo
 
-## Novità
+## Novità normative
 
 Notizie normative selezionate e riscritte dallo studio, sempre con link alla fonte ufficiale.
 

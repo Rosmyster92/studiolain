@@ -26,12 +26,12 @@ const allCategories = await findCategories();
 const breadcrumbs = [
   { text: 'Home', href: getPermalink('/') },
   ...(currentPage > 1
-    ? [{ text: 'Novità', href: getBlogPermalink() }, { text: `Pagina ${currentPage}` }]
-    : [{ text: 'Novità' }]),
+    ? [{ text: 'Novità normative', href: getBlogPermalink() }, { text: `Pagina ${currentPage}` }]
+    : [{ text: 'Novità normative' }]),
 ];
 
 const metadata = {
-  title: `Novità${currentPage > 1 ? ` — Pagina ${currentPage}` : ''}`,
+  title: `Novità normative${currentPage > 1 ? ` — Pagina ${currentPage}` : ''}`,
   description:
     'Aggiornamenti su diritto del lavoro, adempimenti, costi del lavoro e prassi utili alle imprese — Studio Lain & Partners.',
   robots: {
@@ -52,7 +52,7 @@ const metadata = {
   <Breadcrumbs bar items={breadcrumbs} />
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline subtitle="Note operative e aggiornamenti su lavoro, contributi e gestione del personale.">
-      Novità
+      Novità normative
     </Headline>
 
     {

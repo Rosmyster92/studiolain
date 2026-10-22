@@ -15,7 +15,7 @@ export const headerData = {
       href: getPermalink('/servizi'),
     },
     {
-      text: 'Novità',
+      text: 'Novità normative',
       href: getBlogPermalink(),
     },
     {
@@ -38,7 +38,7 @@ export const footerData = {
         { text: 'Home', href: getPermalink('/') },
         { text: 'Chi siamo', href: getPermalink('/chi-siamo') },
         { text: 'Servizi', href: getPermalink('/servizi') },
-        { text: 'Novità', href: getBlogPermalink() },
+        { text: 'Novità normative', href: getBlogPermalink() },
         { text: 'Guide', href: getPermalink('guide', 'category') },
       ],
     },

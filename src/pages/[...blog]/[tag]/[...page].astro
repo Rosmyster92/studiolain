@@ -23,15 +23,15 @@ const currentPage = page.currentPage ?? 1;
 
 const breadcrumbs = [
   { text: 'Home', href: getPermalink('/') },
-  { text: 'Blog', href: getBlogPermalink() },
+  { text: 'Novità normative', href: getBlogPermalink() },
   ...(currentPage > 1
-    ? [{ text: `Tag: ${tag.title}`, href: getPermalink(tag.slug, 'tag') }, { text: `Page ${currentPage}` }]
-    : [{ text: `Tag: ${tag.title}` }]),
+    ? [{ text: `Argomento: ${tag.title}`, href: getPermalink(tag.slug, 'tag') }, { text: `Pagina ${currentPage}` }]
+    : [{ text: `Argomento: ${tag.title}` }]),
 ];
 
 const metadata = {
-  title: `Posts by tag '${tag.title}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
-  description: `Notizie con tag ${tag.title} — Studio Lain & Partners.`,
+  title: `Articoli con etichetta «${tag.title}»${currentPage > 1 ? ` — Pagina ${currentPage}` : ''}`,
+  description: `Articoli sull’argomento «${tag.title}» — Studio Lain & Partners.`,
   robots: {
     index: blogTagRobots?.index,
     follow: blogTagRobots?.follow,
@@ -42,7 +42,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <Breadcrumbs bar items={breadcrumbs} />
   <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline>Tag: {tag.title}</Headline>
+    <Headline>Argomento: {tag.title}</Headline>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
