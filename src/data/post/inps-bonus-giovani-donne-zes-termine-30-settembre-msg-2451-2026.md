@@ -40,9 +40,6 @@ _Fonte della tabella: INPS, messaggio n. 2451/2026._
 
 Le istruzioni sulle singole misure si trovano nelle circolari INPS n. 90 e n. 91 del 12 maggio 2025, nel messaggio n. 1935 del 18 giugno 2025 e nella circolare n. 10 del 3 febbraio 2026.
 
-## Cosa significa per le imprese venete
-
-
 ## Cosa fare per l'azienda
 
 - **Verificare con lo Studio** se ci sono assunzioni del periodo settembre 2024 - dicembre 2025 per cui l'esonero non è stato chiesto: dopo il 30 settembre 2026 la domanda non è più possibile.
