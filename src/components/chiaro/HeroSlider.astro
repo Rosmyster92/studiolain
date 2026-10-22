@@ -1,0 +1,138 @@
+---
+import { getPermalink, getBlogPermalink } from '~/utils/permalinks';
+
+const slides = [
+  {
+    kicker: 'Servizi paghe',
+    title: 'Elaborazione paghe precisa, puntuale, senza sorprese',
+    text: 'Cedolini, contributi, F24 e comunicazioni obbligatorie gestiti dallo Studio per aziende di ogni dimensione.',
+    cta: { text: 'Scopri i servizi', href: getPermalink('/servizi') },
+    bg: 'linear-gradient(120deg, #1f2a44 0%, #2f4a7a 100%)',
+  },
+  {
+    kicker: 'Consulenza del lavoro',
+    title: 'Al fianco delle imprese dal 1997',
+    text: 'Diritto del lavoro, contratti, gestione del personale e politiche retributive, con un unico interlocutore a Malo (VI).',
+    cta: { text: 'Chi siamo', href: getPermalink('/chi-siamo') },
+    bg: 'linear-gradient(120deg, #7a1e2c 0%, #b03a48 100%)',
+  },
+  {
+    kicker: 'Novità',
+    title: 'Le norme che cambiano, spiegate dalla fonte',
+    text: 'Ogni giorno selezioniamo le novità su lavoro, fisco e previdenza che contano davvero per le aziende venete.',
+    cta: { text: 'Leggi le novità', href: getBlogPermalink() },
+    bg: 'linear-gradient(120deg, #14453d 0%, #2a7a6b 100%)',
+  },
+  {
+    kicker: 'Circolari Studio',
+    title: 'Le circolari dello Studio, aperte a tutti',
+    text: 'Approfondimenti e note operative preparati dallo Studio per clienti e imprese del territorio.',
+    cta: { text: 'Vai alle circolari', href: getPermalink('circolari-studio', 'category') },
+    bg: 'linear-gradient(120deg, #3b3b3b 0%, #6b6258 100%)',
+  },
+];
+---
+
+<section class="hs not-prose" aria-roledescription="carosello" aria-label="In evidenza">
+  <div class="hs-track">
+    {
+      slides.map((s, i) => (
+        <div
+          class="hs-slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label={`${i + 1} di ${slides.length}`}
+          aria-hidden={i === 0 ? 'false' : 'true'}
+          style={`background:${s.bg}`}
+          data-active={i === 0 ? 'true' : 'false'}
+        >
+          <div class="hs-inner">
+            <p class="hs-kicker">{s.kicker}</p>
+            <h2 class="hs-title">{s.title}</h2>
+            <p class="hs-text">{s.text}</p>
+            <a class="hs-cta" href={s.cta.href} tabindex={i === 0 ? 0 : -1}>
+              {s.cta.text} <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="hs-controls">
+    <button type="button" class="hs-btn hs-prev" aria-label="Slide precedente">‹</button>
+    <div class="hs-dots" role="tablist">
+      {
+        slides.map((s, i) => (
+          <button
+            type="button"
+            class="hs-dot"
+            role="tab"
+            aria-label={`Vai a: ${s.kicker}`}
+            aria-selected={i === 0 ? 'true' : 'false'}
+            data-i={i}
+          />
+        ))
+      }
+    </div>
+    <button type="button" class="hs-btn hs-next" aria-label="Slide successiva">›</button>
+    <button type="button" class="hs-btn hs-pause" aria-label="Metti in pausa lo scorrimento">❚❚</button>
+  </div>
+</section>
+
+<style>
+  .hs { position: relative; width: 100%; color: #fff; overflow: hidden; }
+  .hs-track { position: relative; min-height: 34rem; }
+  .hs-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility .7s; display: flex; align-items: center; }
+  .hs-slide[data-active='true'] { opacity: 1; visibility: visible; }
+  .hs-inner { max-width: 80rem; margin: 0 auto; padding: 5rem 1.5rem 9rem; width: 100%; }
+  .hs-kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; font-weight: 600; opacity: .85; margin-bottom: 1.25rem; }
+  .hs-title { font-size: clamp(2.25rem, 5vw, 4.25rem); line-height: 1.05; font-weight: 600; max-width: 18ch; margin-bottom: 1.5rem; letter-spacing: -.02em; }
+  .hs-text { font-size: clamp(1.05rem, 1.6vw, 1.3rem); max-width: 42rem; opacity: .9; margin-bottom: 2.25rem; line-height: 1.55; }
+  .hs-cta { display: inline-block; border: 2px solid #fff; padding: .85rem 1.6rem; font-weight: 600; transition: background .2s, color .2s; }
+  .hs-cta:hover, .hs-cta:focus-visible { background: #fff; color: #1a1a1a; }
+  .hs-controls { position: absolute; left: 0; right: 0; bottom: 2rem; max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; display: flex; gap: .75rem; align-items: center; }
+  .hs-dots { display: flex; gap: .5rem; }
+  .hs-dot { width: 2.5rem; height: 4px; background: rgba(255,255,255,.4); border: 0; cursor: pointer; }
+  .hs-dot[aria-selected='true'] { background: #fff; }
+  .hs-btn { width: 2.5rem; height: 2.5rem; border: 1px solid rgba(255,255,255,.6); color: #fff; background: transparent; font-size: 1.1rem; line-height: 1; cursor: pointer; }
+  .hs-btn:hover, .hs-btn:focus-visible, .hs-dot:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { .hs-slide { transition: none; } }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.hs').forEach((root) => {
+    const slides = [...root.querySelectorAll<HTMLElement>('.hs-slide')];
+    const dots = [...root.querySelectorAll<HTMLElement>('.hs-dot')];
+    const pause = root.querySelector<HTMLButtonElement>('.hs-pause')!;
+    let cur = 0;
+    let timer: number | undefined;
+    let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const show = (n: number) => {
+      cur = (n + slides.length) % slides.length;
+      slides.forEach((s, i) => {
+        const on = i === cur;
+        s.dataset.active = String(on);
+        s.setAttribute('aria-hidden', String(!on));
+        s.querySelectorAll('a').forEach((a) => (a.tabIndex = on ? 0 : -1));
+      });
+      dots.forEach((d, i) => d.setAttribute('aria-selected', String(i === cur)));
+    };
+    const stop = () => { if (timer) clearInterval(timer); timer = undefined; };
+    const start = () => { stop(); if (!paused) timer = window.setInterval(() => show(cur + 1), 6500); };
+    const setPaused = (p: boolean) => {
+      paused = p;
+      pause.textContent = p ? '▶' : '❚❚';
+      pause.setAttribute('aria-label', p ? 'Riprendi lo scorrimento' : 'Metti in pausa lo scorrimento');
+      start();
+    };
+    root.querySelector('.hs-prev')!.addEventListener('click', () => { show(cur - 1); start(); });
+    root.querySelector('.hs-next')!.addEventListener('click', () => { show(cur + 1); start(); });
+    dots.forEach((d) => d.addEventListener('click', () => { show(Number(d.dataset.i)); start(); }));
+    pause.addEventListener('click', () => setPaused(!paused));
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', start);
+    setPaused(paused);
+  });
+</script>

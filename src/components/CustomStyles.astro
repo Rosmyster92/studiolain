@@ -46,6 +46,26 @@
     }
   }
 
+  /* ---- Tema chiaro (THEME=chiaro): neutro, molto leggibile, spazi ampi ---- */
+  html.theme-chiaro {
+    --aw-font-heading: Georgia, 'Times New Roman', serif;
+    --aw-color-primary: rgb(176 30 46);
+    --aw-color-secondary: rgb(140 22 36);
+    --aw-color-accent: rgb(176 30 46);
+    --aw-color-text-heading: rgb(20 20 20);
+    --aw-color-text-default: rgb(38 38 38);
+    --aw-color-text-muted: rgb(38 38 38 / 70%);
+    --aw-color-bg-page: rgb(255 255 255);
+    font-size: 17px;
+  }
+  html.theme-chiaro body { line-height: 1.65; }
+  html.theme-chiaro h1, html.theme-chiaro h2, html.theme-chiaro h3 { font-weight: 500; letter-spacing: -0.015em; }
+  html.theme-chiaro section:not(.hs) { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  html.theme-chiaro header { border-bottom: 1px solid rgb(0 0 0 / 8%); background: #fff; }
+  html.theme-chiaro footer { background: rgb(246 245 243); }
+  html.theme-chiaro .bg-white, html.theme-chiaro .shadow { box-shadow: none; }
+  html.theme-chiaro article, html.theme-chiaro .rounded-lg { border-radius: 2px; }
+
   body {
     letter-spacing: -0.011em;
     font-weight: 400;

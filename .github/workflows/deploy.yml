@@ -41,6 +41,19 @@ jobs:
         env:
           SITE_PREVIEW: ${{ env.SITE_PREVIEW }}
 
+      # Variante grafica chiara (fork), servita sotto /chiaro accanto al tema attuale
+      - name: Compile tema chiaro
+        if: env.SITE_PREVIEW == 'true'
+        run: |
+          mv dist dist-main
+          npm run build
+          mv dist dist-main/chiaro
+          mv dist-main dist
+        env:
+          SITE_PREVIEW: ${{ env.SITE_PREVIEW }}
+          THEME: chiaro
+          PREVIEW_BASE: /studiolain/chiaro
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

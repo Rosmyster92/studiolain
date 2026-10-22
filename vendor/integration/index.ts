@@ -41,6 +41,12 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
           }
           buildLogger.warn(`PREVIEW mode: ${PREVIEW_SITE}${PREVIEW_BASE} (noindex, robots Disallow)`);
         }
+        // THEME=chiaro: variante chiara (fork grafico) servita sotto /chiaro.
+        if (process.env.THEME === 'chiaro') {
+          const r = rawJsonConfig as Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+          r.ui = { ...(r.ui || {}), theme: 'light:only' };
+          buildLogger.warn('THEME chiaro: light:only');
+        }
         const { SITE, I18N, METADATA, APP_BLOG, UI, ANALYTICS } = configBuilder(rawJsonConfig);
 
         updateConfig({

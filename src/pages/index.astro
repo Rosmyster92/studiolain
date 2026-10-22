@@ -5,6 +5,7 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import HeroSlider from '~/components/chiaro/HeroSlider.astro';
 import StructuredData from '~/components/common/StructuredData.astro';
 import { SITE, I18N } from 'astrowind:config';
 import favIconSvg from '~/assets/favicons/favicon.svg';
@@ -17,6 +18,7 @@ const metadata = {
     'Studio di Consulenza del Lavoro fondato nel 1997. Diritto del lavoro, gestione del personale, costi del lavoro, ricerca e selezione, sicurezza sul lavoro.',
 };
 
+const CHIARO = process.env.THEME === 'chiaro';
 const organizationId = `${SITE?.site}/#organization`;
 const structuredData = [
   {
@@ -59,6 +61,8 @@ const structuredData = [
 <Layout metadata={metadata}>
   <StructuredData slot="head" schema={structuredData} />
 
+  {CHIARO && <HeroSlider />}
+  {!CHIARO && (
   <HeroText
     tagline="Consulenza del Lavoro · Malo (VI)"
     callToAction={{
@@ -80,6 +84,7 @@ const structuredData = [
       Dal 1997 accompagniamo aziende e professionisti in diritto del lavoro, gestione del personale e costi del lavoro.
     </Fragment>
   </HeroText>
+  )}
 
   <Features2
     id="servizi"
