@@ -10,6 +10,7 @@ import { getPermalink, getAsset } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 import type { Post } from '~/types';
+import { AUTHOR } from '~/utils/author';
 
 export interface Props {
   post: Post;
@@ -17,6 +18,9 @@ export interface Props {
 }
 
 const { post, url } = Astro.props;
+const isCircolare = post.category?.title === 'Circolari Studio';
+const showToc = !isCircolare && (post.wordCount ?? 0) > 1000 && (post.headings?.length ?? 0) >= 3;
+const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
 ---
 
 <section class="py-8 sm:py-16 lg:py-20 mx-auto">
@@ -31,11 +35,32 @@ const { post, url } = Astro.props;
             >{getFormattedDate(post.publishDate)}</time
           >
           {
-            post.author && (
+            post.updateDate && post.updateDate.getTime() !== post.publishDate.getTime() && (
+              <>
+                {' '}
+                ·{' '}
+                <span class="inline-block">
+                  Aggiornato il{' '}
+                  <time datetime={post.updateDate.toISOString()}>{getFormattedDate(post.updateDate)}</time>
+                </span>
+              </>
+            )
+          }
+          {
+            isCircolare ? (
+              post.author && (
+                <>
+                  {' '}
+                  · <span class="inline-block">{post.author}</span>
+                </>
+              )
+            ) : (
               <>
                 {' '}
                 · <Icon name="tabler:user" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
-                <span class="inline-block">{post.author}</span>
+                <a class="inline-block hover:underline" href={authorHref} rel="author">
+                  {AUTHOR.name}
+                </a>
               </>
             )
           }
@@ -86,9 +111,39 @@ const { post, url } = Astro.props;
       }
     </header>
     <div
-      class:list={[post.category?.title === 'Circolari Studio' ? 'circolare-body' : 'lg:prose-xl', "mx-auto px-6 sm:px-6 max-w-3xl prose dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"]}
+      class:list={[
+        post.category?.title === 'Circolari Studio' ? 'circolare-body' : 'lg:prose-xl',
+        'mx-auto px-6 sm:px-6 max-w-3xl prose dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0',
+      ]}
     >
+      {
+        showToc && (
+          <nav class="toc not-prose" aria-label="Indice">
+            <p class="toc-title">Indice</p>
+            <ol>
+              {post.headings!.map((h) => (
+                <li class={h.depth === 3 ? 'toc-sub' : ''}>
+                  <a href={`#${h.slug}`}>{h.text}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )
+      }
       <slot />
+      {
+        post.faq?.length ? (
+          <section class="faq" aria-labelledby="faq-title">
+            <h2 id="faq-title">Domande frequenti</h2>
+            {post.faq.map((f) => (
+              <details>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </section>
+        ) : null
+      }
     </div>
 
     {
@@ -123,6 +178,22 @@ const { post, url } = Astro.props;
       )
     }
 
+    {
+      !isCircolare && (
+        <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8">
+          <div class="author-box border-l-2 border-primary pl-4 text-sm sm:text-base">
+            <p class="font-semibold text-heading">
+              <a href={authorHref} rel="author" class="hover:underline">
+                {AUTHOR.name}
+              </a>{' '}
+              · {AUTHOR.jobTitle}
+            </p>
+            <p class="text-muted dark:text-slate-400 mt-1">{AUTHOR.bio}</p>
+          </div>
+        </div>
+      )
+    }
+
     <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-12">
       <div
         class="rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 p-6 sm:p-8 text-center"
@@ -151,13 +222,162 @@ const { post, url } = Astro.props;
 </section>
 
 <style is:global>
-  .circolare-body { font-size: 15px; line-height: 1.45; }
-  .circolare-body p, .circolare-body ul, .circolare-body ol, .circolare-body table { margin-top: 0.35em; margin-bottom: 0.35em; }
-  .circolare-body li { margin-top: 0.1em; margin-bottom: 0.1em; }
-  .circolare-body li > p { margin: 0; }
-  .circolare-body ul ul, .circolare-body ol ol, .circolare-body ul ol, .circolare-body ol ul { margin-top: 0.1em; margin-bottom: 0.1em; }
-  .circolare-body h1, .circolare-body h2, .circolare-body h3, .circolare-body h4 { font-size: 1.1em; line-height: 1.3; margin-top: 1em; margin-bottom: 0.3em; letter-spacing: 0; }
-  .circolare-body table { font-size: 14px; border-collapse: collapse; width: 100%; }
-  .circolare-body th, .circolare-body td { border: 1px solid currentColor; border-color: rgb(148 163 184 / 0.6); padding: 4px 6px; vertical-align: top; }
-  .circolare-body td p, .circolare-body th p { margin: 0; }
+  .circolare-body {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  .circolare-body p,
+  .circolare-body ul,
+  .circolare-body ol,
+  .circolare-body table {
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+  }
+  .circolare-body li {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  .circolare-body li > p {
+    margin: 0;
+  }
+  .circolare-body ul ul,
+  .circolare-body ol ol,
+  .circolare-body ul ol,
+  .circolare-body ol ul {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  .circolare-body h1,
+  .circolare-body h2,
+  .circolare-body h3,
+  .circolare-body h4 {
+    font-size: 1.1em;
+    line-height: 1.3;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    letter-spacing: 0;
+  }
+  .circolare-body table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .circolare-body th,
+  .circolare-body td {
+    border: 1px solid currentColor;
+    border-color: rgb(148 163 184 / 0.6);
+    padding: 4px 6px;
+    vertical-align: top;
+  }
+  .circolare-body td p,
+  .circolare-body th p {
+    margin: 0;
+  }
+  /* Tabelle: stesso carattere, corpo, peso e interlinea del testo (articoli e circolari, entrambi i temi) */
+  article .prose table,
+  article .prose thead,
+  article .prose tbody,
+  article .prose tr,
+  article .prose th,
+  article .prose td,
+  article .prose th *,
+  article .prose td * {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+  article .prose td,
+  article .prose td * {
+    font-weight: inherit !important;
+  }
+  article .prose th {
+    background: rgb(127 127 127 / 8%);
+  }
+  /* Indice */
+  .toc {
+    border: 1px solid rgb(127 127 127 / 25%);
+    padding: 0.9rem 1.2rem;
+    margin: 0 0 2rem;
+    font-size: 0.95rem;
+  }
+  .toc-title {
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .toc ol {
+    list-style: decimal;
+    padding-left: 1.3rem;
+    margin: 0;
+  }
+  .toc li {
+    margin: 0.15rem 0;
+  }
+  .toc li.toc-sub {
+    list-style: none;
+    margin-left: 1rem;
+    font-size: 0.92em;
+  }
+  .toc a {
+    text-decoration: none;
+    color: var(--aw-color-primary);
+  }
+  .toc a:hover {
+    text-decoration: underline;
+  }
+  /* Riquadri */
+  .prose aside.callout {
+    border-left: 4px solid;
+    padding: 0.6rem 1rem;
+    margin: 1.4em 0;
+    background: rgb(127 127 127 / 6%);
+  }
+  .prose aside.callout > :first-child {
+    margin-top: 0;
+  }
+  .prose aside.callout > :last-child {
+    margin-bottom: 0;
+  }
+  .prose aside.callout .callout-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85em;
+    margin-bottom: 0.3em;
+  }
+  .prose aside.callout-attenzione {
+    border-color: #c2410c;
+  }
+  .prose aside.callout-attenzione .callout-title {
+    color: #c2410c;
+  }
+  .prose aside.callout-nota {
+    border-color: #2563eb;
+  }
+  .prose aside.callout-nota .callout-title {
+    color: #2563eb;
+  }
+  .prose aside.callout-azienda {
+    border-color: #15803d;
+  }
+  .prose aside.callout-azienda .callout-title {
+    color: #15803d;
+  }
+  .prose aside.callout-inbreve {
+    border-color: var(--aw-color-primary);
+    background: rgb(127 127 127 / 9%);
+  }
+  .prose aside.callout-inbreve .callout-title {
+    color: var(--aw-color-primary);
+  }
+  /* FAQ */
+  .prose .faq details {
+    border-top: 1px solid rgb(127 127 127 / 25%);
+    padding: 0.6rem 0;
+  }
+  .prose .faq summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .prose .faq details p {
+    margin: 0.4rem 0 0;
+  }
 </style>

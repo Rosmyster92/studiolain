@@ -14,7 +14,9 @@ export const GET = async () => {
         headers: { 'Content-Type': 'text/plain; charset=utf-8' },
       }
     );
-  const posts = (await fetchPosts()).slice(0, 30);
+  const all = await fetchPosts();
+  const guides = all.filter((p) => p.category?.title === 'Guide');
+  const posts = all.filter((p) => p.category?.title !== 'Guide').slice(0, 30);
   const body = `# Studio Lain & Partners
 
 > Studio di consulenza del lavoro a Malo (VI): amministrazione del personale, elaborazione paghe, consulenza contrattuale, previdenziale e di diritto del lavoro per aziende della provincia di Vicenza e del Veneto.
@@ -34,8 +36,15 @@ Notizie normative selezionate e riscritte dallo studio, sempre con link alla fon
 - [Tutte le novità](${abs(getPermalink('/news'))})
 - [Lavoro](${abs(getPermalink('lavoro', 'category'))}): Ministero del Lavoro, Ispettorato, decreti, CCNL applicati dallo studio e accordi di Veneto e Vicenza
 - [Previdenza](${abs(getPermalink('previdenza', 'category'))}): circolari e messaggi INPS e INAIL
+- [Guide](${abs(getPermalink('guide', 'category'))}): guide operative complete per le aziende
 - [Fisco](${abs(getPermalink('fisco', 'category'))}): prassi dell'Agenzia delle Entrate rilevante per lavoro dipendente e sostituti d'imposta
 - [Feed RSS](${abs('/rss.xml')})
+
+## Guide
+
+Guide operative complete, con riferimenti normativi, tabelle e domande frequenti.
+
+${guides.map((p) => `- [${p.title}](${abs(getPermalink(p.permalink, 'post'))}) (aggiornata ${(p.updateDate ?? p.publishDate).toISOString().slice(0, 10)})${p.excerpt ? `: ${p.excerpt}` : ''}`).join('\n') || '- (in preparazione)'}
 
 ## Articoli recenti
 

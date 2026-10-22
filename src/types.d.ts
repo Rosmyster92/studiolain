@@ -27,6 +27,9 @@ export interface Post {
   metadata?: MetaData;
   source?: { name: string; url: string };
   pdf?: string;
+  faq?: Array<{ q: string; a: string }>;
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+  wordCount?: number;
 
   draft?: boolean;
 

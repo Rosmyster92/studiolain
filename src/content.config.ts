@@ -69,6 +69,8 @@ const postCollection = defineCollection({
       source: z.object({ name: z.string(), url: z.url() }).optional(),
       /** PDF della circolare in public/circolari/ (es. /circolari/2026-01.pdf). */
       pdf: z.string().optional(),
+      /** Domande frequenti: mostrate a fine articolo e come FAQPage JSON-LD. */
+      faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
 
       metadata: metadataDefinition(),
     })

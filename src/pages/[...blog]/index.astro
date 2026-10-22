@@ -21,6 +21,7 @@ import RelatedPosts from '~/components/blog/RelatedPosts.astro';
 import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
 import StructuredData from '~/components/common/StructuredData.astro';
 import { SITE } from 'astrowind:config';
+import { AUTHOR } from '~/utils/author';
 
 export const prerender = true;
 
@@ -70,7 +71,19 @@ const articleSchema = {
   description: post.excerpt,
   datePublished: post.publishDate.toISOString(),
   dateModified: (post.updateDate ?? post.publishDate).toISOString(),
-  author: { '@type': 'Organization', name: SITE?.name, url: SITE?.site },
+  author:
+    post.category?.title === 'Circolari Studio'
+      ? { '@type': 'Organization', '@id': `${SITE?.site}/#organization`, name: SITE?.name, url: SITE?.site }
+      : {
+          '@type': 'Person',
+          '@id': `${SITE?.site}/#${AUTHOR.anchor}`,
+          name: AUTHOR.name,
+          jobTitle: AUTHOR.jobTitle,
+          description: AUTHOR.bio,
+          hasCredential: { '@type': 'EducationalOccupationalCredential', name: AUTHOR.credential },
+          worksFor: { '@id': `${SITE?.site}/#organization` },
+          url: new URL(getPermalink('/chi-siamo') + '#' + AUTHOR.anchor, SITE?.site).toString(),
+        },
   publisher: { '@type': 'Organization', '@id': `${SITE?.site}/#organization`, name: SITE?.name, url: SITE?.site },
   ...(post.source
     ? {
@@ -84,6 +97,18 @@ const articleSchema = {
   mainEntityOfPage: String(url),
 };
 
+const faqSchema = post.faq?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: post.faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+  : null;
+
 const breadcrumbs = [
   { text: 'Home', href: getPermalink('/') },
   ...(isBlogListRouteEnabled ? [{ text: 'Novità', href: getBlogPermalink() }] : []),
@@ -95,7 +120,7 @@ const breadcrumbs = [
 ---
 
 <Layout metadata={metadata}>
-  <StructuredData slot="head" schema={articleSchema} />
+  <StructuredData slot="head" schema={faqSchema ? [articleSchema, faqSchema] : articleSchema} />
   <Breadcrumbs bar hideCurrent items={breadcrumbs} />
   <SinglePost post={{ ...post, image: image }} url={url}>
     {post.Content && <post.Content />}

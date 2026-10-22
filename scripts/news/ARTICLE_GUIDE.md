@@ -19,10 +19,14 @@ Questo formato vale per ogni articolo prodotto dalla routine giornaliera. Il rif
 ```yaml
 ---
 publishDate: 2026-10-20T08:00:00Z     # data dell'atto (o della notizia, per i CCNL)
-author: "Studio Lain & Partners"
+author: "Studio Lain & Partners"   # il template mostra comunque la firma del Dott. Alessandro Roso
 title: "Titolo specifico con atto e oggetto"          # max ~80 caratteri
 excerpt: "1-2 frasi con i dati chiave (importi, scadenze, platea)."
-category: "Lavoro" | "Previdenza" | "Fisco"
+category: "Lavoro" | "Previdenza" | "Fisco" | "Guide"
+updateDate: 2026-10-22T08:00:00Z     # solo se l'articolo viene aggiornato: è mostrata in pagina e in dateModified
+faq:                                  # 4-8 domande (obbligatorie per le Guide, consigliate per le news)
+  - q: "Domanda reale, come la scriverebbe un datore di lavoro?"
+    a: "Risposta completa in 1-3 frasi, autosufficiente, con riferimento normativo."
 source:
   name: "INPS, messaggio n. 3343 del 20 ottobre 2026"
   url: "https://www.inps.it/..."
@@ -35,14 +39,33 @@ metadata:
 
 Categoria in base all'ente: Agenzia Entrate → Fisco; INPS/INAIL → Previdenza; Ministero, INL, decreti sul lavoro e CCNL → Lavoro.
 
-## 4. Struttura del testo (350-700 parole)
+## 4. Struttura del testo
+
+Modello: le circolari dello studio (punti elenco + tabelle), con questa sequenza.
 
 1. **Apertura** (1-2 paragrafi): atto, numero e data, norma di riferimento, cosa cambia e da quando. Tono istituzionale e impersonale.
-2. **## In sintesi**: 4-7 punti con i dati chiave in grassetto.
-3. **Approfondimento** (uno o più `##`): requisiti, casi particolari, procedura, esempi di calcolo.
-4. **Tabella** ogni volta che ci sono importi, percentuali, minimi, scadenze o fasi.
-5. **## Cosa fare per l'azienda**: 3-5 azioni concrete per il datore di lavoro, in forma di elenco.
-6. Fonte e CTA vengono aggiunte in automatico dal template.
+2. **Riquadro "In breve"** subito dopo l'apertura: 60-90 parole che rispondono alla domanda del titolo in modo autosufficiente (chi, cosa, da quando, quanto). Sintassi:
+   ```md
+   > [!INBREVE]
+   > Testo di 60-90 parole...
+   ```
+3. **Tabella riassuntiva** subito sotto il riquadro (regola / valore / decorrenza).
+4. **Titoli H2/H3 a domanda**, come le domande reali degli utenti: "Chi ne ha diritto?", "Da quando si applica?", "Come si calcola?", "Cosa succede se…?".
+5. **Approfondimento**: requisiti, casi particolari, procedura; tabelle ogni volta che ci sono importi, percentuali, minimi, scadenze o fasi.
+6. **Riquadri** dove servono:
+   - `> [!ATTENZIONE]` errori frequenti, rischi, sanzioni;
+   - `> [!NOTA]` precisazioni (Nota bene);
+   - `> [!AZIENDA]` "Cosa deve fare l'azienda": checklist di 3-6 azioni concrete (sostituisce la vecchia sezione "Cosa fare per l'azienda").
+7. **FAQ**: 4-8 domande nel campo `faq` del frontmatter (il template le mostra in fondo e genera il FAQPage JSON-LD). Non ripeterle nel testo.
+8. Fonte, firma dell'autore, indice (oltre 1.000 parole) e CTA vengono aggiunti in automatico dal template.
+
+**Riferimenti precisi, sempre:** articolo, comma e lettera; numero e data dell'atto; G.U. (numero, data, eventuale S.O.) o numero e data della circolare/messaggio; data di entrata in vigore e decorrenza degli effetti.
+
+**Lunghezza:**
+
+- news su atti semplici: 500-900 parole;
+- news su norme di peso: 900-1.500 parole;
+- **Guide** (categoria `Guide`, temi complessi e duraturi): 1.500-2.500+ parole, con link alle news collegate e dalle news alla guida.
 
 ## 5. Controlli finali
 
@@ -56,3 +79,5 @@ Categoria in base all'ente: Agenzia Entrate → Fisco; INPS/INAIL → Previdenza
 2. **Tabelle ed esempi di calcolo:** ammessi solo se tratti (a) da una circolare di Studio Lain & Partners (categoria Circolari Studio, `public/circolari/`), purché il testo sia chiaro e senza dubbi, oppure (b) da un sito ufficiale istituzionale (Agenzia Entrate, INPS, INAIL, Ministero, INL, Gazzetta Ufficiale…). Mai da concorrenti diretti (altri studi, Jet HR, Zucchetti, software house, portali di consulenza). Citare la fonte sotto la tabella. Se non c'è fonte ammessa, non inserire la tabella o l'esempio.
 3. **Interpretazioni:** solo se la norma è inequivocabile. In caso di dubbio non interpretare né aggiungere conseguenze: riportare fedelmente ciò che dice la norma.
 4. **Solo accordi firmati:** pubblicare solo contratti, accordi e verbali già sottoscritti dalle parti (o atti normativi/amministrativi già emanati). Niente piattaforme sindacali, bozze, ipotesi non ancora firmate o notizie sull'avvio/andamento di trattative. Un accordo firmato che richiama un'ipotesi già sottoscritta è ammesso.
+5. **Punti dubbi: non pubblicarli.** Se fasce, scaglioni, soglie o decorrenze non sono chiari nella fonte, o la norma si presta a più letture (ordine di applicazione delle maggiorazioni, casi non disciplinati espressamente, coordinamento con altre norme), **quel punto non va pubblicato**: elencarlo nel resoconto al titolare con la citazione della norma, perché decida lui.
+6. **Mai copiare concorrenti** (altri studi, portali, software house): si possono usare solo per capire quali domande coprire, mai per testi, tabelle o esempi.

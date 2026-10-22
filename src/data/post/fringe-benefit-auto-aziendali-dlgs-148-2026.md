@@ -63,3 +63,6 @@ _Fonte della tabella: [circolare Studio Lain & Partners del 31/08/2026 "Auto ad 
 - **Ricalcolare il benefit 2026** con le nuove percentuali e le maggiorazioni, e sistemare le differenze con il conguaglio di fine anno.
 - **Controllare i veicoli in regime transitorio** che superano il quinto anno dall'immatricolazione: da quel momento scatta l'aumento del 50%.
 - **Rivedere le policy auto e gli eventuali riaddebiti** al dipendente, perché le somme trattenute riducono il benefit imponibile.
+
+> [!NOTA]
+> Per il quadro completo (regimi per data di assegnazione, maggiorazioni, riassegnazioni, trattenute e domande frequenti) leggi la [guida completa al fringe benefit auto aziendali 2026](/fringe-benefit-auto-aziendali-2026-guida-completa).
