@@ -2,8 +2,39 @@
 import { SITE } from 'astrowind:config';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  {SITE?.name}
+<span class="logo-brand self-center ml-2 rtl:ml-0 rtl:mr-2 whitespace-nowrap text-gray-900 dark:text-white">
+  <span class="logo-name">{SITE?.name}</span>
+  <span class="logo-sub">Consulenza del Lavoro</span>
 </span>
+
+<style>
+  .logo-brand {
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-family: Lora, Georgia, serif;
+  }
+  .logo-name {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .logo-sub {
+    display: none;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    margin-top: 2px;
+    opacity: 0.8;
+  }
+  @media (min-width: 768px) {
+    .logo-name {
+      font-size: 16px;
+      letter-spacing: 0.2em;
+    }
+    .logo-sub {
+      display: block;
+    }
+  }
+</style>
