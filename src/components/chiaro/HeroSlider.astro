@@ -1,5 +1,8 @@
 ---
 import { getPermalink, getBlogPermalink } from '~/utils/permalinks';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const ov = 'linear-gradient(90deg, rgb(15 20 30 / 82%) 0%, rgb(15 20 30 / 60%) 55%, rgb(15 20 30 / 35%) 100%)';
+const ph = (f: string) => `${ov}, url(${base}images/studio/${f}) center/cover no-repeat`;
 
 const slides = [
   {
@@ -7,28 +10,28 @@ const slides = [
     title: 'Elaborazione paghe precisa, puntuale, senza sorprese',
     text: 'Cedolini, contributi, F24 e comunicazioni obbligatorie gestiti dallo Studio per aziende di ogni dimensione.',
     cta: { text: 'Scopri i servizi', href: getPermalink('/servizi') },
-    bg: 'linear-gradient(120deg, #1f2a44 0%, #2f4a7a 100%)',
+    bg: ph('ufficio-1.webp'),
   },
   {
     kicker: 'Consulenza del lavoro',
     title: 'Al fianco delle imprese dal 1997',
     text: 'Diritto del lavoro, contratti, gestione del personale e politiche retributive, con un unico interlocutore a Malo (VI).',
     cta: { text: 'Chi siamo', href: getPermalink('/chi-siamo') },
-    bg: 'linear-gradient(120deg, #7a1e2c 0%, #b03a48 100%)',
+    bg: ph('studio-about.webp'),
   },
   {
     kicker: 'Novità',
     title: 'Le norme che cambiano, spiegate dalla fonte',
     text: 'Ogni giorno selezioniamo le novità su lavoro, fisco e previdenza che contano davvero per le aziende venete.',
     cta: { text: 'Leggi le novità', href: getBlogPermalink() },
-    bg: 'linear-gradient(120deg, #14453d 0%, #2a7a6b 100%)',
+    bg: ph('ufficio-2.webp'),
   },
   {
     kicker: 'Circolari Studio',
     title: 'Le circolari dello Studio, aperte a tutti',
     text: 'Approfondimenti e note operative preparati dallo Studio per clienti e imprese del territorio.',
     cta: { text: 'Vai alle circolari', href: getPermalink('circolari-studio', 'category') },
-    bg: 'linear-gradient(120deg, #3b3b3b 0%, #6b6258 100%)',
+    bg: ph('ufficio-3.webp'),
   },
 ];
 ---

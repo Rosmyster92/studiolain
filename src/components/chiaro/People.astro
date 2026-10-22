@@ -1,0 +1,47 @@
+---
+import { team } from '~/utils/team';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<section class="pp not-prose" aria-labelledby="pp-title">
+  <div class="pp-wrap">
+    <p class="pp-kicker">Le persone</p>
+    <h2 id="pp-title" class="pp-h">I professionisti dello Studio</h2>
+    <div class="pp-grid">
+      {team.map((p) => (
+        <article class="pp-card">
+          <div class="pp-photo">
+            {p.photo ? <img src={base + p.photo} alt={p.name} loading="lazy" width="552" height="827" /> : <span aria-hidden="true">{p.initials}</span>}
+          </div>
+          <h3 class="pp-name">{p.name}</h3>
+          <p class="pp-role">{p.role}</p>
+          <p class="pp-sub">{p.profileTitle}</p>
+          <p class="pp-bio">{p.profile}</p>
+          <details class="pp-more">
+            <summary>Curriculum completo</summary>
+            <p class="pp-sub">Aree di specializzazione</p>
+            {p.areas.map((a) => (<div class="pp-area"><strong>{a.title}</strong><ul>{a.items.map((i) => <li>{i}</li>)}</ul></div>))}
+            {p.extra && (<><p class="pp-sub">{p.extraTitle}</p><ul>{p.extra.map((i) => <li>{i}</li>)}</ul></>)}
+          </details>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .pp { padding: 4rem 0; }
+  .pp-wrap { max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
+  .pp-kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-weight: 600; color: var(--aw-color-primary); margin-bottom: .75rem; }
+  .pp-h { font-family: var(--aw-font-heading); font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; margin-bottom: 3rem; color: var(--aw-color-text-heading); }
+  .pp-grid { display: grid; gap: 3rem 2.5rem; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); }
+  .pp-photo { aspect-ratio: 4/5; background: linear-gradient(135deg, rgb(120 120 120 / 18%), rgb(120 120 120 / 6%)); display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 1.5rem; }
+  .pp-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .pp-photo span { font-family: var(--aw-font-heading); font-size: 4rem; color: var(--aw-color-primary); opacity: .7; }
+  .pp-name { font-family: var(--aw-font-heading); font-size: 1.6rem; color: var(--aw-color-text-heading); }
+  .pp-role { color: var(--aw-color-primary); font-weight: 600; margin: .25rem 0 1rem; }
+  .pp-sub { text-transform: uppercase; letter-spacing: .08em; font-size: .75rem; font-weight: 700; margin: 1rem 0 .4rem; opacity: .75; }
+  .pp-bio { line-height: 1.65; color: var(--aw-color-text-default); }
+  .pp-more { margin-top: 1rem; border-top: 1px solid rgb(127 127 127 / 25%); padding-top: .75rem; }
+  .pp-more summary { cursor: pointer; font-weight: 600; color: var(--aw-color-primary); }
+  .pp-more ul { list-style: disc; padding-left: 1.2rem; margin: .3rem 0 .8rem; line-height: 1.55; }
+  .pp-area strong { display: block; margin-top: .6rem; color: var(--aw-color-text-heading); }
+</style>

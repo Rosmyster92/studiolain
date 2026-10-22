@@ -1,10 +1,12 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
+import People from '~/components/chiaro/People.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getPermalink } from '~/utils/permalinks';
 
+const CHIARO = process.env.THEME === 'chiaro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const metadata = {
   title: 'Chi siamo',
   description:
@@ -37,31 +39,13 @@ const metadata = {
     </p>
   </section>
 
-  <Features2
-    title="I professionisti"
-    subtitle="Competenze complementari a servizio di imprese e lavoratori."
-    columns={3}
-    items={[
-      {
-        title: 'Dott.ssa Paola Lain',
-        description:
-          'Economia e Organizzazione Aziendale. Iscritta all’Ordine dei Consulenti del Lavoro di Vicenza dal 1996. Co-fondatrice.',
-        icon: 'tabler:user',
-      },
-      {
-        title: 'Dott. Massimo Lain',
-        description:
-          'Economia e Commercio, esperienza in Human Resources. Co-fondatore e riferimento per temi organizzativi e HR.',
-        icon: 'tabler:user',
-      },
-      {
-        title: 'Dott. Alessandro Roso',
-        description:
-          'Economia e Direzione Aziendale. Iscritto all’Ordine dei Consulenti del Lavoro di Vicenza dal 2021. In Studio dal 2017.',
-        icon: 'tabler:user',
-      },
-    ]}
-  />
+  {CHIARO && (
+    <section class="px-4 sm:px-6 max-w-7xl mx-auto pb-4">
+      <img src={base + 'images/studio/studio-about.webp'} alt="Lo Studio" class="w-full h-[22rem] md:h-[28rem] object-cover" loading="lazy" />
+    </section>
+  )}
+
+  <People />
 
   <CallToAction
     actions={[
