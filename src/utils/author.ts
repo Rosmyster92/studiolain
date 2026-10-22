@@ -1,4 +1,4 @@
-// Autore degli articoli (dati da https://www.studiolain.com/team/, ottobre 2026).
+// Autore degli articoli (ottobre 2026).
 export const AUTHOR = {
   name: 'Dott. Alessandro Roso',
   jobTitle: 'Consulente del Lavoro',

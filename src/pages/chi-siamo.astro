@@ -5,8 +5,6 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getPermalink } from '~/utils/permalinks';
 
-const CHIARO = process.env.THEME === 'chiaro';
-const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const metadata = {
   title: 'Chi siamo',
   description:
@@ -33,12 +31,11 @@ const metadata = {
 
   <section class="px-4 sm:px-6 max-w-3xl mx-auto pb-8 md:pb-12 -mt-4 md:-mt-8">
     <p class="text-lg text-muted dark:text-slate-300 text-pretty">
-      Lo Studio si distingue per l’elevata professionalità e la capacità di offrire soluzioni
-      personalizzate nella consulenza del lavoro e nella gestione delle risorse umane. Completano l’offerta ricerca e
-      selezione con Eurointerim S.p.A. e sicurezza sul lavoro con Eurointerim Servizi S.p.A.
+      Lo Studio si distingue per l’elevata professionalità e la capacità di offrire soluzioni personalizzate nella
+      consulenza del lavoro e nella gestione delle risorse umane. Completano l’offerta ricerca e selezione con
+      Eurointerim S.p.A. e sicurezza sul lavoro con Eurointerim Servizi S.p.A.
     </p>
   </section>
-
 
   <People />
 

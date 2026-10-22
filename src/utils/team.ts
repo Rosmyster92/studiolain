@@ -1,4 +1,4 @@
-// Profili riportati fedelmente da https://www.studiolain.com/team/ (ottobre 2026).
+// Profili riportati fedelmente (ottobre 2026).
 export interface Area {
   title: string;
   items: string[];

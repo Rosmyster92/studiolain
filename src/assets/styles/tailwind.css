@@ -150,3 +150,48 @@
   color: var(--shiki-dark) !important;
   background-color: var(--shiki-dark-bg) !important;
 }
+
+/* Titolo di testata: Lora, come la testata storica dello Studio (font ospitato sul sito) */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/lora-latin-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/lora-latin-700.woff2') format('woff2');
+}
+.brand-title {
+  display: block;
+  font-family: Lora, Georgia, serif !important;
+  font-size: 34px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 10px !important;
+  text-indent: 10px;
+  text-transform: uppercase;
+}
+.brand-sub {
+  display: block;
+  font-family: Lora, Georgia, serif !important;
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: normal !important;
+  margin-top: 0.5rem;
+}
+@media (max-width: 640px) {
+  .brand-title {
+    font-size: 24px !important;
+    letter-spacing: 6px !important;
+    text-indent: 6px;
+  }
+  .brand-sub {
+    font-size: 22px !important;
+  }
+}

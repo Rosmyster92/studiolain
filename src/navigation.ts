@@ -61,6 +61,6 @@ export const footerData = {
   secondaryLinks: [{ text: 'Privacy', href: getPermalink('/privacy') }],
   socialLinks: [{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') }],
   footNote: `
-    © 2026 <a class="text-blue-600 underline dark:text-muted" href="https://www.studiolain.com">Studio Lain & Partners</a> · Consulenza del Lavoro · Malo (VI)
+    © 2026 Studio Lain & Partners · Consulenza del Lavoro · Malo (VI)
   `,
 };

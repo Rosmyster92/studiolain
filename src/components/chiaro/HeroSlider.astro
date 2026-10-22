@@ -50,6 +50,17 @@ const slides = [
           data-active={i === 0 ? 'true' : 'false'}
         >
           <div class="hs-inner">
+            {i === 0 ? (
+              <h1 class="hs-brand">
+                <span class="brand-title">Studio Lain & Partners</span>
+                <span class="brand-sub">Consulenza del Lavoro</span>
+              </h1>
+            ) : (
+              <p class="hs-brand" aria-hidden="true">
+                <span class="brand-title">Studio Lain & Partners</span>
+                <span class="brand-sub">Consulenza del Lavoro</span>
+              </p>
+            )}
             <p class="hs-kicker">{s.kicker}</p>
             <h2 class="hs-title">{s.title}</h2>
             <p class="hs-text">{s.text}</p>
@@ -107,6 +118,10 @@ const slides = [
   .hs-slide[data-active='true'] {
     opacity: 1;
     visibility: visible;
+  }
+  .hs-brand {
+    color: #fff;
+    margin: 0 0 1.5rem;
   }
   .hs-inner {
     max-width: 80rem;
