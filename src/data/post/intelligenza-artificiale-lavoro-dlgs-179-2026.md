@@ -40,7 +40,7 @@ Il **D.Lgs. 7 ottobre 2026, n. 179**, pubblicato nella Gazzetta Ufficiale n. 234
 | Diritti privacy               | Restano fermi gli artt. 13, 15 e 22 del GDPR (informativa, accesso, decisioni automatizzate)                                       |
 | Conseguenze                   | Licenziamento nullo; decisioni nulle                                                                                               |
 
-Licenziamento nullo significa che il lavoratore ha diritto alla reintegrazione nel posto di lavoro, indipendentemente dalle dimensioni dell'azienda.
+Il decreto stabilisce che, in caso di violazione, il licenziamento e le altre decisioni adottate sono **nulli**; il testo non aggiunge ulteriori indicazioni sulle conseguenze, per le quali si rinvia alla disciplina generale.
 
 ## IA e sicurezza: l'art. 42
 

@@ -39,8 +39,6 @@ Le nuove regole si applicano **dal periodo d'imposta 2026**. I datori di lavoro 
 | Elettrico a batteria                                                        |                           10% |                                   15% |
 | Accessori o allestimenti non valorizzati da ACI e non pagati dal lavoratore | +5% sul valore così calcolato |                                   +5% |
 
-Ad esempio, per un'auto a gasolio con costo ACI di 0,60 euro/km il benefit annuo è 15.000 × 0,60 × 50% = **4.500 euro**. La stessa auto, oltre il quinto anno dalla prima immatricolazione, vale 6.750 euro. Con accessori non valorizzati la cifra va aumentata di un ulteriore 5%.
-
 ## Regime transitorio
 
 Il decreto riscrive anche l'art. 1, comma 48-bis, della legge n. 207/2024. Continuano a seguire le **regole in vigore al 31 dicembre 2024**, basate sulle emissioni di CO₂, i veicoli:
@@ -56,6 +54,8 @@ Il regime transitorio vale fino al 31 dicembre del quinto anno successivo alla p
 | oltre 60 e fino a 160 g/km           |             30% |
 | oltre 160 e fino a 190 g/km          |             50% |
 | oltre 190 g/km                       |             60% |
+
+_Fonte della tabella: [circolare Studio Lain & Partners del 31/08/2026 "Auto ad uso promiscuo – calcolo fringe benefit"](/circolari/2026-09-01-auto-novita-fringe-benefit.pdf), che riporta gli scaglioni CO₂ in vigore al 31/12/2024 (art. 51, c. 4, lett. a, TUIR, nel testo previgente)._
 
 ## Cosa fare per l'azienda
 

@@ -49,3 +49,9 @@ Categoria in base all'ente: Agenzia Entrate → Fisco; INPS/INAIL → Previdenza
 - `SITE_PREVIEW=true npx -y node@22 node_modules/astro/bin/astro.mjs build` deve passare.
 - Prettier ed ESLint devono passare (lo verifica la CI).
 - Nessuna frase copiata da Teleconsul; numeri verificati sull'atto.
+
+## 6. Regole sulle fonti (indicazioni del titolare)
+
+1. **Minimi CCNL:** si possono prendere dai siti ufficiali dei sindacati firmatari (es. Filcams, Fisascat, Uiltucs, Fiom, Fim, Uilm) se già pubblicati in forma tabellare. Citare la pagina del sindacato come fonte.
+2. **Tabelle ed esempi di calcolo:** ammessi solo se tratti (a) da una circolare di Studio Lain & Partners (categoria Circolari Studio, `public/circolari/`), purché il testo sia chiaro e senza dubbi, oppure (b) da un sito ufficiale istituzionale (Agenzia Entrate, INPS, INAIL, Ministero, INL, Gazzetta Ufficiale…). Mai da concorrenti diretti (altri studi, Jet HR, Zucchetti, software house, portali di consulenza). Citare la fonte sotto la tabella. Se non c'è fonte ammessa, non inserire la tabella o l'esempio.
+3. **Interpretazioni:** solo se la norma è inequivocabile. In caso di dubbio non interpretare né aggiungere conseguenze: riportare fedelmente ciò che dice la norma.
