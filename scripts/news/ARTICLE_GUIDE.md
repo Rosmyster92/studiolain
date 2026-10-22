@@ -1,6 +1,6 @@
 # Guida agli articoli news (Lavoro, Previdenza, Fisco)
 
-Questo formato vale per ogni articolo prodotto dalla routine giornaliera. Il riferimento per lunghezza e tono sono le news Teleconsul pubblicate su studiolain.com (di solito 150-700 parole, più paragrafi, con atti, importi, date, destinatari e procedure). Teleconsul serve **solo** per capire cosa è importante: il testo non si copia mai.
+Questo formato vale per ogni articolo prodotto dalla routine giornaliera. Il riferimento per lunghezza e tono sono le news del feed di preselezione (di solito 150-700 parole, più paragrafi, con atti, importi, date, destinatari e procedure). Il feed serve **solo** per capire cosa è importante: il testo non si copia mai.
 
 ## 1. Selezione
 
@@ -71,7 +71,7 @@ Modello: le circolari dello studio (punti elenco + tabelle), con questa sequenza
 
 - `SITE_PREVIEW=true npx -y node@22 node_modules/astro/bin/astro.mjs build` deve passare.
 - Prettier ed ESLint devono passare (lo verifica la CI).
-- Nessuna frase copiata da Teleconsul; numeri verificati sull'atto.
+- Nessuna frase copiata dal feed di preselezione; numeri verificati sull'atto.
 
 ## 6. Regole sulle fonti (indicazioni del titolare)
 

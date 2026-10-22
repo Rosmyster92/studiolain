@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Preselezione Teleconsul (via studiolain.com WP REST) -> candidati JSON.
-// Usa SOLO data, oggetto e riferimento alla fonte primaria citata: il testo Teleconsul non viene mai riusato.
+// Preselezione feed (via studiolain.com WP REST) -> candidati JSON.
+// Usa SOLO data, oggetto e riferimento alla fonte primaria citata: il testo del feed non viene mai riusato.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';

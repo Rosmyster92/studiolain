@@ -14,6 +14,5 @@ Comandi: install, dev, build (package scripts).
 Via Marano, 8 - 36034 Malo (VI)
 Telefono: 0445602944
 Email: studiolain at studiolain.com
-Privacy Teleconsul: privacy.teleconsul.it/home/tcweb
 
 Workflow Pages: .github/workflows/deploy.yml

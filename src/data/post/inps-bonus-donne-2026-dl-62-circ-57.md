@@ -4,6 +4,7 @@ author: 'Studio Lain & Partners'
 title: 'Bonus Donne 2026: esonero fino a 650 euro al mese per le assunzioni (circ. INPS 57/2026)'
 excerpt: "Il D.L. 62/2026 prevede l'esonero del 100% dei contributi datoriali, fino a 650 euro al mese (800 nella ZES unica), per le assunzioni a tempo indeterminato nel 2026 di donne svantaggiate di qualsiasi età."
 category: 'Previdenza'
+updateDate: 2026-10-22T08:00:00Z
 faq:
   - q: 'Per quali assunzioni spetta il Bonus Donne 2026?'
     a: "Per le assunzioni a tempo indeterminato dal 1° gennaio al 31 dicembre 2026 di donne di qualsiasi età prive di impiego regolarmente retribuito da almeno 24 mesi, o da almeno 12 mesi se appartengono alle categorie b)-g) dell'art. 2, punto 4, del reg. UE 651/2014, oppure svantaggiate (art. 1 D.L. 62/2026; INPS circ. 57/2026, par. 1)."
@@ -45,6 +46,9 @@ L'agevolazione si applica nel rispetto del **regolamento (UE) 651/2014** e richi
 | Durata                             | 24 mesi (molto svantaggiate) o 12 mesi (svantaggiate)  | Circ. 57/2026, par. 4      |
 
 _Fonte della tabella: INPS, circolare n. 57 del 14 maggio 2026._
+
+> [!NOTA]
+> **Aggiornamento dopo la conversione.** La legge 25 giugno 2026, n. 112 (G.U. n. 147 del 27 giugno 2026), ha convertito il D.L. 62/2026 confermando l'impianto dell'art. 1. Le modifiche riguardano la formulazione dei rinvii alle categorie di svantaggio dell'art. 2, punto 4, reg. UE 651/2014 (lettere da b) a g) per le donne prive di impiego da 12 mesi e da a) a g) per l'esonero di 12 mesi, come già indicato in tabella), il limite di spesa per il 2027 e la precisazione che il divieto di licenziamenti nei sei mesi precedenti e la revoca riguardano le assunzioni effettuate beneficiando dell'esonero. Importi, durata e requisiti illustrati in questo articolo restano invariati. Vedi anche la [scheda sulla legge 112/2026](/legge-112-2026-conversione-decreto-lavoro-dl-62-novita).
 
 ## Quali lavoratrici danno diritto all'esonero?
 

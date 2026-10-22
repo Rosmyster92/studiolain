@@ -4,6 +4,7 @@ author: 'Studio Lain & Partners'
 title: 'Bonus Giovani 2026: esonero fino a 500 euro al mese per gli under 35 (circ. INPS 55/2026)'
 excerpt: "Il D.L. 62/2026 prevede l'esonero del 100% dei contributi datoriali, fino a 500 euro al mese per 24 mesi, per le assunzioni a tempo indeterminato nel 2026 di under 35 svantaggiati. Domanda sul Portale delle Agevolazioni."
 category: 'Previdenza'
+updateDate: 2026-10-22T08:00:00Z
 faq:
   - q: 'Per quali assunzioni spetta il Bonus Giovani 2026?'
     a: 'Per le assunzioni a tempo indeterminato dal 1° gennaio al 31 dicembre 2026 di giovani che non hanno compiuto 35 anni e sono privi di impiego regolarmente retribuito da almeno 24 mesi, o da almeno 12 mesi se appartengono a determinate categorie di svantaggio (art. 2 D.L. 62/2026; INPS circ. 55/2026, par. 3).'
@@ -48,6 +49,9 @@ L'esonero riguarda le **assunzioni a tempo indeterminato** effettuate **dal 1° 
 | Esclusi                 | Lavoro domestico, apprendistato, contratti a termine, trasformazioni | Circ. 55/2026, par. 1 e 4  |
 
 _Fonte della tabella: INPS, circolare n. 55 del 14 maggio 2026._
+
+> [!NOTA]
+> **Aggiornamento dopo la conversione.** La legge 25 giugno 2026, n. 112 (G.U. n. 147 del 27 giugno 2026), ha convertito il D.L. 62/2026 confermando l'impianto dell'art. 2. Le modifiche riguardano la formulazione dei rinvii alle categorie di svantaggio dell'art. 2, punto 4, reg. UE 651/2014 (lettere c), e), f) e g) per i giovani privi di impiego da 12 mesi e da a) a c) ed e) a g) per l'esonero di 12 mesi, come già indicato in tabella), il limite di spesa per il 2027 e la precisazione che il divieto di licenziamenti nei sei mesi precedenti e la revoca riguardano le assunzioni effettuate beneficiando dell'esonero. Importi, durata e requisiti illustrati in questo articolo restano invariati. Vedi anche la [scheda sulla legge 112/2026](/legge-112-2026-conversione-decreto-lavoro-dl-62-novita).
 
 ## Quali giovani danno diritto all'esonero?
 

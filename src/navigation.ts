@@ -19,10 +19,6 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
-      text: 'Guide',
-      href: getPermalink('guide', 'category'),
-    },
-    {
       text: 'Contatti',
       href: getPermalink('/contatti'),
     },
@@ -39,7 +35,6 @@ export const footerData = {
         { text: 'Chi siamo', href: getPermalink('/chi-siamo') },
         { text: 'Servizi', href: getPermalink('/servizi') },
         { text: 'Novità normative', href: getBlogPermalink() },
-        { text: 'Guide', href: getPermalink('guide', 'category') },
       ],
     },
     {
@@ -63,7 +58,7 @@ export const footerData = {
       ],
     },
   ],
-  secondaryLinks: [{ text: 'Privacy', href: 'https://privacy.teleconsul.it/home/tcweb' }],
+  secondaryLinks: [{ text: 'Privacy', href: getPermalink('/privacy') }],
   socialLinks: [{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') }],
   footNote: `
     © 2026 <a class="text-blue-600 underline dark:text-muted" href="https://www.studiolain.com">Studio Lain & Partners</a> · Consulenza del Lavoro · Malo (VI)
