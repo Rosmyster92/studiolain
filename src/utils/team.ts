@@ -29,7 +29,7 @@ export const team: Person[] = [
     ],
   },
   {
-    name: 'Massimo Lain', role: 'Socio/Titolare', initials: 'ML',
+    name: 'Massimo Lain', role: 'Socio/Titolare', photo: 'images/studio/massimo-lain.webp', initials: 'ML',
     profileTitle: 'Profilo Professionale',
     profile: 'Laureato in Economia e Commercio presso l’Università degli studi di Verona, con una solida formazione in ambito economico e gestionale. Cofondatore dello Studio Lain nel 1997, ho anche maturato una vasta esperienza lavorativa nelle risorse umane presso Eurointerim spa, dove dal 2000 ricopro il ruolo di responsabile di filiale. In questa posizione, coordino il team, gestisco la selezione del personale e le attività commerciali, e mi occupo della stesura dei contratti e delle pratiche amministrative. Ho completato numerosi corsi di formazione, tra cui praticantati per dottore commercialista e consulente del lavoro, e ho ottenuto certificazioni su tematiche di sicurezza e prevenzione aziendale. Come Operatore del Mercato del Lavoro Accreditato fornisco servizi di counseling, bilancio delle competenze e orientamento professionale.',
     areas: [
@@ -41,7 +41,7 @@ export const team: Person[] = [
     ],
   },
   {
-    name: 'Alessandro Roso', role: 'Socio/Titolare', initials: 'AR',
+    name: 'Alessandro Roso', role: 'Socio/Titolare', photo: 'images/studio/alessandro-roso.webp', initials: 'AR',
     profileTitle: 'Professione',
     profile: 'Consulente del Lavoro iscritto all’ordine dei consulenti del lavoro di Vicenza al n. 872 dal 2021. Laurea magistrale in Direzione Aziendale presso l’Università degli Studi di Verona 2014-2017 e Laurea Triennale in Economia Aziendale presso l’Università degli Studi di Verona 2011-2014. Dal 2021 a tutt’oggi svolge l’attività di consulente del lavoro con studio in Malo (VI) – Via Marano, 8. L’attività è inerente alla consulenza aziendale e l’elaborazione dei cedolini paga di azienda private e società partecipate pubbliche.',
     areas: [
