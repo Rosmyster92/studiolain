@@ -4,7 +4,10 @@ author: 'Studio Lain & Partners'
 title: 'Fondo di Tesoreria INPS: soglia a 60 dipendenti nel 2026-2027 (circ. 12/2026)'
 excerpt: "Con la legge di Bilancio 2026 l'obbligo di versare il TFR al Fondo di Tesoreria scatta anche per chi supera la soglia dopo il primo anno di attività: 60 addetti nel 2026-2027, 50 dal 2028 al 2031, 40 dal 2032."
 category: 'Previdenza'
+updateDate: 2026-10-22T08:00:00Z
 faq:
+  - q: 'Dal 2028 la soglia scende a 50 dipendenti?'
+    a: "Sì. La circolare INPS n. 12/2026 indica che per i periodi di paga dal 2028 al 2031 la soglia è una media annua di almeno 50 addetti nell'anno solare precedente; dal 1° gennaio 2032 scende a 40."
   - q: 'Quale soglia di dipendenti fa scattare il versamento al Fondo di Tesoreria nel 2026?'
     a: "Per i periodi di paga del 2026 e del 2027 la soglia è una media annuale di almeno 60 addetti nell'anno solare precedente, per le aziende che la raggiungono dopo l'anno di inizio attività (art. 1, comma 756, L. 296/2006, come modificato dall'art. 1, comma 203, L. 199/2025; INPS circ. 12/2026, par. 2)."
   - q: 'Come si conta la media dei dipendenti?'
@@ -55,6 +58,8 @@ Il versamento riguarda i lavoratori che **non aderiscono** a una forma di previd
 ## Come si calcola la soglia dimensionale?
 
 La verifica si fa sempre sulla **media annuale dei lavoratori in forza nell'anno solare precedente**. Per i periodi di paga del 2026 si guarda la media del 2025; per quelli del 2027 la media del 2026.
+
+La soglia scende nel tempo, come indicato dalla **circolare INPS n. 12/2026**: **60 addetti** per i periodi di paga 2026 e 2027, **50 addetti** dal 2028 al 2031 e **40 addetti** dal 1° gennaio 2032.
 
 - Si contano **tutti i lavoratori subordinati**, qualunque sia il contratto e l'orario.
 - I **part-time** si contano in proporzione all'orario, sommando mensilmente gli orari individuali e rapportandoli all'orario a tempo pieno (art. 9 D.Lgs. 81/2015).
