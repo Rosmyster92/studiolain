@@ -13,28 +13,23 @@ export const readingTimeRemarkPlugin: RemarkPlugin = () => {
   };
 };
 
-export const responsiveTablesRehypePlugin: RehypePlugin = () => {
-  return function (tree) {
-    if (!tree.children) return;
-
-    for (let i = 0; i < tree.children.length; i++) {
-      const child = tree.children[i];
-
-      if (child.type === 'element' && child.tagName === 'table') {
-        tree.children[i] = {
-          type: 'element',
-          tagName: 'div',
-          properties: {
-            style: 'overflow:auto',
-          },
-          children: [child],
-        };
-
-        i++;
-      }
-    }
-  };
+// Avvolge ogni tabella (anche annidata o da HTML delle circolari) in un contenitore scorrevole.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const wrapTables = (node: any) => {
+  if (!node || !Array.isArray(node.children)) return;
+  for (let i = 0; i < node.children.length; i++) {
+    const child = node.children[i];
+    if (child.type === 'element' && child.tagName === 'table') {
+      node.children[i] = {
+        type: 'element',
+        tagName: 'div',
+        properties: { className: ['tbl-scroll'], tabIndex: 0, role: 'region', ariaLabel: 'Tabella scorrevole' },
+        children: [child],
+      };
+    } else wrapTables(child);
+  }
 };
+export const responsiveTablesRehypePlugin: RehypePlugin = () => (tree) => wrapTables(tree);
 
 /**
  * Riquadri (callout) in Markdown, sintassi tipo GitHub:

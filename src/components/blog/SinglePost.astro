@@ -191,7 +191,23 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
             a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
           };
           bar.appendChild(c); bar.appendChild(d);
-          var host = t.parentElement && t.parentElement.style.overflow === 'auto' ? t.parentElement : t;
+          if (!(t.parentElement && t.parentElement.classList.contains('tbl-scroll'))) {
+            var w = document.createElement('div');
+            w.className = 'tbl-scroll'; w.tabIndex = 0; w.setAttribute('role', 'region'); w.setAttribute('aria-label', 'Tabella scorrevole');
+            t.parentElement.insertBefore(w, t); w.appendChild(t);
+          }
+          var host = t.parentElement;
+          if (t.rows[0] && t.rows[0].cells.length >= 4) host.classList.add('tbl-sticky');
+          if (host !== t) {
+            var upd = function () {
+              var max = host.scrollWidth - host.clientWidth;
+              host.classList.toggle('shadow-r', max > 1 && host.scrollLeft < max - 1);
+              host.classList.toggle('shadow-l', host.scrollLeft > 1);
+            };
+            host.addEventListener('scroll', upd, { passive: true });
+            window.addEventListener('resize', upd);
+            upd();
+          }
           host.parentElement.insertBefore(bar, host);
         });
       })();
@@ -431,6 +447,18 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
   .prose .faq details p {
     margin: 0.4rem 0 0;
   }
+  /* Tabelle larghe: scorrimento orizzontale */
+  .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: rgb(127 127 127 / 45%) transparent; margin: 1em 0; position: relative; }
+  .tbl-scroll::-webkit-scrollbar { height: 6px; }
+  .tbl-scroll::-webkit-scrollbar-thumb { background: rgb(127 127 127 / 45%); border-radius: 3px; }
+  .tbl-scroll > table { margin: 0 !important; min-width: 100%; }
+  .tbl-scroll.shadow-r { box-shadow: inset -14px 0 10px -10px rgb(0 0 0 / 28%); }
+  .tbl-scroll.shadow-l { box-shadow: inset 14px 0 10px -10px rgb(0 0 0 / 28%); }
+  .tbl-scroll.shadow-l.shadow-r { box-shadow: inset 14px 0 10px -10px rgb(0 0 0 / 28%), inset -14px 0 10px -10px rgb(0 0 0 / 28%); }
+  .tbl-scroll:focus-visible { outline: 2px solid var(--aw-color-primary); outline-offset: 2px; }
+  .tbl-sticky th:first-child, .tbl-sticky td:first-child { position: sticky; left: 0; z-index: 1; background: var(--aw-color-bg-page, #fff); }
+  .tbl-sticky th:first-child { background: color-mix(in srgb, var(--aw-color-bg-page, #fff) 92%, #808080); }
+  @media (max-width: 640px) { .prose .tbl-scroll th, .prose .tbl-scroll td { min-width: 7rem; } }
   .tbl-tools { display: flex; justify-content: flex-end; gap: 0.4rem; margin: 1em 0 -0.6em; }
   .tbl-btn { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.8rem; padding: 0.25rem 0.45rem; border: 1px solid rgb(127 127 127 / 30%); border-radius: 3px; background: transparent; color: inherit; opacity: 0.75; cursor: pointer; }
   .tbl-btn:hover, .tbl-btn:focus-visible { opacity: 1; border-color: var(--aw-color-primary); color: var(--aw-color-primary); }
