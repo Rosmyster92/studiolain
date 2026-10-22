@@ -40,7 +40,7 @@ _Fonte della tabella: INPS, messaggio n. 2325/2026; il codice CF05 è stato isti
 
 ## Il ruolo della COVIP
 
-Il messaggio richiama le **direttive COVIP del 19 giugno 2026**. Se il lavoratore sceglie espressamente di mantenere il TFR in azienda, il TFR maturando dalla data di assunzione non va alla previdenza complementare e resta disciplinato dall'art. 2120 c.c., con applicazione del Fondo di Tesoreria se ne ricorrono i presupposti (aziende con almeno 50 dipendenti, come previsto dalla legge n. 296/2006).
+Il messaggio richiama le **direttive COVIP del 19 giugno 2026**. Se il lavoratore sceglie espressamente di mantenere il TFR in azienda, il TFR maturando dalla data di assunzione non va alla previdenza complementare e resta disciplinato dall'art. 2120 c.c., con applicazione del Fondo di Tesoreria se ne ricorrono i presupposti.
 
 Per i lavoratori **non di prima assunzione**, il messaggio rinvia al comma 9-bis dell'art. 8: il datore informa il lavoratore che può indicare entro 60 giorni il fondo a cui destinare il TFR; in mancanza scatta l'adesione automatica. Secondo la COVIP, se il lavoratore dichiara di non avere adesioni in corso con conferimento del TFR, il nuovo datore gestisce il TFR secondo l'art. 2120 c.c.
 

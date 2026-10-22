@@ -42,7 +42,6 @@ Le istruzioni sulle singole misure si trovano nelle circolari INPS n. 90 e n. 91
 
 ## Cosa significa per le imprese venete
 
-Per un'azienda della provincia di Vicenza la misura rilevante era soprattutto il **Bonus Giovani** con il limite di **500 euro al mese**. Bonus ZES e maggiorazioni territoriali riguardano solo sedi nelle regioni del Mezzogiorno indicate.
 
 ## Cosa fare per l'azienda
 
