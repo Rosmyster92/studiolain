@@ -39,11 +39,18 @@ const metadata = {
     </p>
   </section>
 
-  {CHIARO && (
-    <section class="px-4 sm:px-6 max-w-7xl mx-auto pb-4">
-      <img src={base + 'images/studio/studio-about.webp'} alt="Lo Studio" class="w-full h-[22rem] md:h-[28rem] object-cover" loading="lazy" />
-    </section>
-  )}
+  {
+    CHIARO && (
+      <section class="px-4 sm:px-6 max-w-7xl mx-auto pb-4">
+        <img
+          src={base + 'images/studio/studio-about.webp'}
+          alt="Lo Studio"
+          class="w-full h-[22rem] md:h-[28rem] object-cover"
+          loading="lazy"
+        />
+      </section>
+    )
+  }
 
   <People />
 

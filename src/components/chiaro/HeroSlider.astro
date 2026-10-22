@@ -83,23 +83,121 @@ const slides = [
 </section>
 
 <style>
-  .hs { position: relative; width: 100%; color: #fff; overflow: hidden; }
-  .hs-track { position: relative; min-height: 34rem; }
-  .hs-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility .7s; display: flex; align-items: center; }
-  .hs-slide[data-active='true'] { opacity: 1; visibility: visible; }
-  .hs-inner { max-width: 80rem; margin: 0 auto; padding: 5rem 1.5rem 9rem; width: 100%; }
-  .hs-kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; font-weight: 600; opacity: .85; margin-bottom: 1.25rem; }
-  .hs-title { font-size: clamp(2.25rem, 5vw, 4.25rem); line-height: 1.05; font-weight: 600; max-width: 18ch; margin-bottom: 1.5rem; letter-spacing: -.02em; }
-  .hs-text { font-size: clamp(1.05rem, 1.6vw, 1.3rem); max-width: 42rem; opacity: .9; margin-bottom: 2.25rem; line-height: 1.55; }
-  .hs-cta { display: inline-block; border: 2px solid #fff; padding: .85rem 1.6rem; font-weight: 600; transition: background .2s, color .2s; }
-  .hs-cta:hover, .hs-cta:focus-visible { background: #fff; color: #1a1a1a; }
-  .hs-controls { position: absolute; left: 0; right: 0; bottom: 2rem; max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; display: flex; gap: .75rem; align-items: center; }
-  .hs-dots { display: flex; gap: .5rem; }
-  .hs-dot { width: 2.5rem; height: 4px; background: rgba(255,255,255,.4); border: 0; cursor: pointer; }
-  .hs-dot[aria-selected='true'] { background: #fff; }
-  .hs-btn { width: 2.5rem; height: 2.5rem; border: 1px solid rgba(255,255,255,.6); color: #fff; background: transparent; font-size: 1.1rem; line-height: 1; cursor: pointer; }
-  .hs-btn:hover, .hs-btn:focus-visible, .hs-dot:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-  @media (prefers-reduced-motion: reduce) { .hs-slide { transition: none; } }
+  .hs {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+  }
+  .hs-track {
+    position: relative;
+    min-height: 34rem;
+  }
+  .hs-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.7s ease,
+      visibility 0.7s;
+    display: flex;
+    align-items: center;
+  }
+  .hs-slide[data-active='true'] {
+    opacity: 1;
+    visibility: visible;
+  }
+  .hs-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 9rem;
+    width: 100%;
+  }
+  .hs-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 1.25rem;
+  }
+  .hs-title {
+    font-size: clamp(2.25rem, 5vw, 4.25rem);
+    line-height: 1.05;
+    font-weight: 600;
+    max-width: 18ch;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .hs-text {
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    max-width: 42rem;
+    opacity: 0.9;
+    margin-bottom: 2.25rem;
+    line-height: 1.55;
+  }
+  .hs-cta {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 0.85rem 1.6rem;
+    font-weight: 600;
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .hs-cta:hover,
+  .hs-cta:focus-visible {
+    background: #fff;
+    color: #1a1a1a;
+  }
+  .hs-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .hs-dots {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .hs-dot {
+    width: 2.5rem;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 0;
+    cursor: pointer;
+  }
+  .hs-dot[aria-selected='true'] {
+    background: #fff;
+  }
+  .hs-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    background: transparent;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .hs-btn:hover,
+  .hs-btn:focus-visible,
+  .hs-dot:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hs-slide {
+      transition: none;
+    }
+  }
 </style>
 
 <script>
@@ -120,17 +218,34 @@ const slides = [
       });
       dots.forEach((d, i) => d.setAttribute('aria-selected', String(i === cur)));
     };
-    const stop = () => { if (timer) clearInterval(timer); timer = undefined; };
-    const start = () => { stop(); if (!paused) timer = window.setInterval(() => show(cur + 1), 6500); };
+    const stop = () => {
+      if (timer) clearInterval(timer);
+      timer = undefined;
+    };
+    const start = () => {
+      stop();
+      if (!paused) timer = window.setInterval(() => show(cur + 1), 6500);
+    };
     const setPaused = (p: boolean) => {
       paused = p;
       pause.textContent = p ? '▶' : '❚❚';
       pause.setAttribute('aria-label', p ? 'Riprendi lo scorrimento' : 'Metti in pausa lo scorrimento');
       start();
     };
-    root.querySelector('.hs-prev')!.addEventListener('click', () => { show(cur - 1); start(); });
-    root.querySelector('.hs-next')!.addEventListener('click', () => { show(cur + 1); start(); });
-    dots.forEach((d) => d.addEventListener('click', () => { show(Number(d.dataset.i)); start(); }));
+    root.querySelector('.hs-prev')!.addEventListener('click', () => {
+      show(cur - 1);
+      start();
+    });
+    root.querySelector('.hs-next')!.addEventListener('click', () => {
+      show(cur + 1);
+      start();
+    });
+    dots.forEach((d) =>
+      d.addEventListener('click', () => {
+        show(Number(d.dataset.i));
+        start();
+      })
+    );
     pause.addEventListener('click', () => setPaused(!paused));
     root.addEventListener('mouseenter', stop);
     root.addEventListener('mouseleave', start);

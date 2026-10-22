@@ -16,7 +16,7 @@ Questo formato vale per ogni articolo prodotto dalla routine giornaliera. Il rif
 
 ## 3. Frontmatter
 
-```yaml
+```text
 ---
 publishDate: 2026-10-20T08:00:00Z     # data dell'atto (o della notizia, per i CCNL)
 author: "Studio Lain & Partners"   # il template mostra comunque la firma del Dott. Alessandro Roso

@@ -142,65 +142,105 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
       }
     </div>
 
-    {
-      showToc && (
-        <script is:inline>
-          (function () {
-            var t = document.getElementById('post-toc');
-            if (!t) return;
-            var b = t.parentElement;
-            var h = b.querySelector(':scope > h2, :scope > h3');
-            if (h) b.insertBefore(t, h);
-          })();
-        </script>
-      )
-    }
-
+    <script is:inline>
+      (function () {
+        const t = document.getElementById('post-toc');
+        if (!t) return;
+        const b = t.parentElement;
+        const h = b.querySelector(':scope > h2, :scope > h3');
+        if (h) b.insertBefore(t, h);
+      })();
+    </script>
 
     <script is:inline>
       (function () {
-        var COPY = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>';
-        var OK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>';
-        var DL = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>';
-        var rows = function (t) {
+        const COPY =
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>';
+        const OK =
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>';
+        const DL =
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>';
+        const rows = function (t) {
           return Array.prototype.map.call(t.rows, function (r) {
-            return Array.prototype.map.call(r.cells, function (c) { return c.innerText.replace(/\s+/g, ' ').trim(); });
+            return Array.prototype.map.call(r.cells, function (c) {
+              return c.innerText.replace(/\s+/g, ' ').trim();
+            });
           });
         };
         document.querySelectorAll('article .prose table').forEach(function (t, i) {
-          var bar = document.createElement('div');
+          const bar = document.createElement('div');
           bar.className = 'tbl-tools not-prose';
-          var c = document.createElement('button');
-          c.type = 'button'; c.className = 'tbl-btn'; c.innerHTML = COPY;
-          c.setAttribute('aria-label', 'Copia tabella'); c.title = 'Copia tabella';
+          const c = document.createElement('button');
+          c.type = 'button';
+          c.className = 'tbl-btn';
+          c.innerHTML = COPY;
+          c.setAttribute('aria-label', 'Copia tabella');
+          c.title = 'Copia tabella';
           c.onclick = function () {
-            var txt = rows(t).map(function (r) { return r.join('\t'); }).join('\n');
+            const txt = rows(t)
+              .map(function (r) {
+                return r.join('\t');
+              })
+              .join('\n');
             navigator.clipboard.writeText(txt).then(function () {
-              c.innerHTML = OK; c.title = 'Copiata'; c.setAttribute('aria-label', 'Tabella copiata');
-              setTimeout(function () { c.innerHTML = COPY; c.title = 'Copia tabella'; c.setAttribute('aria-label', 'Copia tabella'); }, 1800);
+              c.innerHTML = OK;
+              c.title = 'Copiata';
+              c.setAttribute('aria-label', 'Tabella copiata');
+              setTimeout(function () {
+                c.innerHTML = COPY;
+                c.title = 'Copia tabella';
+                c.setAttribute('aria-label', 'Copia tabella');
+              }, 1800);
             });
           };
-          var d = document.createElement('button');
-          d.type = 'button'; d.className = 'tbl-btn'; d.innerHTML = DL + '<span>CSV</span>';
-          d.setAttribute('aria-label', 'Scarica tabella (CSV)'); d.title = 'Scarica tabella (CSV)';
+          const d = document.createElement('button');
+          d.type = 'button';
+          d.className = 'tbl-btn';
+          d.innerHTML = DL + '<span>CSV</span>';
+          d.setAttribute('aria-label', 'Scarica tabella (CSV)');
+          d.title = 'Scarica tabella (CSV)';
           d.onclick = function () {
-            var csv = rows(t).map(function (r) { return r.map(function (v) { return '"' + v.replace(/"/g, '""') + '"'; }).join(';'); }).join('\r\n');
-            var a = document.createElement('a');
+            const csv = rows(t)
+              .map(function (r) {
+                return r
+                  .map(function (v) {
+                    return '"' + v.replace(/"/g, '""') + '"';
+                  })
+                  .join(';');
+              })
+              .join('\r\n');
+            const a = document.createElement('a');
             a.href = URL.createObjectURL(new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8' }));
-            a.download = (document.title.split('|')[0].trim().replace(/[^\w\u00C0-\u017F]+/g, '-').slice(0, 60) || 'tabella') + '-' + (i + 1) + '.csv';
-            a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+            a.download =
+              (document.title
+                .split('|')[0]
+                .trim()
+                .replace(/[^\w\u00C0-\u017F]+/g, '-')
+                .slice(0, 60) || 'tabella') +
+              '-' +
+              (i + 1) +
+              '.csv';
+            a.click();
+            setTimeout(function () {
+              URL.revokeObjectURL(a.href);
+            }, 1000);
           };
-          bar.appendChild(c); bar.appendChild(d);
+          bar.appendChild(c);
+          bar.appendChild(d);
           if (!(t.parentElement && t.parentElement.classList.contains('tbl-scroll'))) {
-            var w = document.createElement('div');
-            w.className = 'tbl-scroll'; w.tabIndex = 0; w.setAttribute('role', 'region'); w.setAttribute('aria-label', 'Tabella scorrevole');
-            t.parentElement.insertBefore(w, t); w.appendChild(t);
+            const w = document.createElement('div');
+            w.className = 'tbl-scroll';
+            w.tabIndex = 0;
+            w.setAttribute('role', 'region');
+            w.setAttribute('aria-label', 'Tabella scorrevole');
+            t.parentElement.insertBefore(w, t);
+            w.appendChild(t);
           }
-          var host = t.parentElement;
+          const host = t.parentElement;
           if (t.rows[0] && t.rows[0].cells.length >= 4) host.classList.add('tbl-sticky');
           if (host !== t) {
-            var upd = function () {
-              var max = host.scrollWidth - host.clientWidth;
+            const upd = function () {
+              const max = host.scrollWidth - host.clientWidth;
               host.classList.toggle('shadow-r', max > 1 && host.scrollLeft < max - 1);
               host.classList.toggle('shadow-l', host.scrollLeft > 1);
             };
@@ -448,18 +488,80 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
     margin: 0.4rem 0 0;
   }
   /* Tabelle larghe: scorrimento orizzontale */
-  .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: rgb(127 127 127 / 45%) transparent; margin: 1em 0; position: relative; }
-  .tbl-scroll::-webkit-scrollbar { height: 6px; }
-  .tbl-scroll::-webkit-scrollbar-thumb { background: rgb(127 127 127 / 45%); border-radius: 3px; }
-  .tbl-scroll > table { margin: 0 !important; min-width: 100%; }
-  .tbl-scroll.shadow-r { box-shadow: inset -14px 0 10px -10px rgb(0 0 0 / 28%); }
-  .tbl-scroll.shadow-l { box-shadow: inset 14px 0 10px -10px rgb(0 0 0 / 28%); }
-  .tbl-scroll.shadow-l.shadow-r { box-shadow: inset 14px 0 10px -10px rgb(0 0 0 / 28%), inset -14px 0 10px -10px rgb(0 0 0 / 28%); }
-  .tbl-scroll:focus-visible { outline: 2px solid var(--aw-color-primary); outline-offset: 2px; }
-  .tbl-sticky th:first-child, .tbl-sticky td:first-child { position: sticky; left: 0; z-index: 1; background: var(--aw-color-bg-page, #fff); }
-  .tbl-sticky th:first-child { background: color-mix(in srgb, var(--aw-color-bg-page, #fff) 92%, #808080); }
-  @media (max-width: 640px) { .prose .tbl-scroll th, .prose .tbl-scroll td { min-width: 7rem; } }
-  .tbl-tools { display: flex; justify-content: flex-end; gap: 0.4rem; margin: 1em 0 -0.6em; }
-  .tbl-btn { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.8rem; padding: 0.25rem 0.45rem; border: 1px solid rgb(127 127 127 / 30%); border-radius: 3px; background: transparent; color: inherit; opacity: 0.75; cursor: pointer; }
-  .tbl-btn:hover, .tbl-btn:focus-visible { opacity: 1; border-color: var(--aw-color-primary); color: var(--aw-color-primary); }
+  .tbl-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(127 127 127 / 45%) transparent;
+    margin: 1em 0;
+    position: relative;
+  }
+  .tbl-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+  .tbl-scroll::-webkit-scrollbar-thumb {
+    background: rgb(127 127 127 / 45%);
+    border-radius: 3px;
+  }
+  .tbl-scroll > table {
+    margin: 0 !important;
+    min-width: 100%;
+  }
+  .tbl-scroll.shadow-r {
+    box-shadow: inset -14px 0 10px -10px rgb(0 0 0 / 28%);
+  }
+  .tbl-scroll.shadow-l {
+    box-shadow: inset 14px 0 10px -10px rgb(0 0 0 / 28%);
+  }
+  .tbl-scroll.shadow-l.shadow-r {
+    box-shadow:
+      inset 14px 0 10px -10px rgb(0 0 0 / 28%),
+      inset -14px 0 10px -10px rgb(0 0 0 / 28%);
+  }
+  .tbl-scroll:focus-visible {
+    outline: 2px solid var(--aw-color-primary);
+    outline-offset: 2px;
+  }
+  .tbl-sticky th:first-child,
+  .tbl-sticky td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--aw-color-bg-page, #fff);
+  }
+  .tbl-sticky th:first-child {
+    background: color-mix(in srgb, var(--aw-color-bg-page, #fff) 92%, #808080);
+  }
+  @media (max-width: 640px) {
+    .prose .tbl-scroll th,
+    .prose .tbl-scroll td {
+      min-width: 7rem;
+    }
+  }
+  .tbl-tools {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    margin: 1em 0 -0.6em;
+  }
+  .tbl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.45rem;
+    border: 1px solid rgb(127 127 127 / 30%);
+    border-radius: 3px;
+    background: transparent;
+    color: inherit;
+    opacity: 0.75;
+    cursor: pointer;
+  }
+  .tbl-btn:hover,
+  .tbl-btn:focus-visible {
+    opacity: 1;
+    border-color: var(--aw-color-primary);
+    color: var(--aw-color-primary);
+  }
 </style>
