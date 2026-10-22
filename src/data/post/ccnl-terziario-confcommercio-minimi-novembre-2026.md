@@ -19,7 +19,7 @@ metadata:
 
 Dal **1° novembre 2026** entra in vigore una nuova tranche di aumenti per i dipendenti delle aziende che applicano il **CCNL Terziario, Distribuzione e Servizi** firmato da Confcommercio e da Filcams-CGIL, Fisascat-CISL e Uiltucs-UIL. Gli incrementi derivano dall'accordo di rinnovo del 22 marzo 2024, integrato dal verbale del 28 marzo 2024, e vanno applicati già con la **retribuzione di novembre**.
 
-È la penultima tranche prevista dal rinnovo: l'ultima arriverà il 1° febbraio 2027. Il contratto scade il 31 marzo 2027, e le organizzazioni sindacali hanno già avviato la discussione sulla piattaforma per il nuovo rinnovo.
+È la penultima tranche prevista dal rinnovo: l'ultima arriverà il 1° febbraio 2027. Il contratto scade il 31 marzo 2027.
 
 ## In sintesi
 
