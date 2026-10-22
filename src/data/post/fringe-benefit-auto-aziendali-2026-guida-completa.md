@@ -94,7 +94,7 @@ Si usano le tabelle nazionali che l'**Automobile Club d'Italia elabora entro il 
 | Elettrico a batteria (BEV)                                               |                         10% |                                          15% |
 | Accessori o allestimenti non valorizzati ACI e non pagati dal lavoratore |             + 5% sul valore |                              + 5% sul valore |
 
-_Fonte della tabella: art. 51, comma 4, lett. a), TUIR, come sostituito dall'art. 2, comma 1, D.Lgs. 148/2026; percentuali dopo il quinto anno come riportate nella [circolare Studio Lain & Partners del 31/08/2026 "Auto ad uso promiscuo – calcolo fringe benefit"](/circolari/2026-09-01-auto-novita-fringe-benefit.pdf)._
+_Fonte della tabella: art. 51, comma 4, lett. a), TUIR, come sostituito dall'art. 2, comma 1, D.Lgs. 148/2026._
 
 ## Quando scatta la maggiorazione del 50% per anzianità?
 
@@ -140,7 +140,7 @@ Il regime transitorio dura **fino al 31 dicembre del quinto anno successivo a qu
 | oltre 160 e fino a 190 g/km            |                         50% |                                          75% |
 | oltre 190 g/km                         |                         60% |                                          90% |
 
-_Fonte della tabella: scaglioni CO₂ e incremento del 50% come riportati nella [circolare Studio Lain & Partners del 31/08/2026](/circolari/2026-09-01-auto-novita-fringe-benefit.pdf) (art. 51, c. 4, lett. a), TUIR, nel testo vigente al 31/12/2024; art. 1, c. 48-bis, L. 207/2024). I valori 37,5% e 90% sono il risultato aritmetico dell'incremento del 50% previsto dalla norma sugli scaglioni 25% e 60%._
+_Fonte della tabella: art. 51, comma 4, lett. a), TUIR, nel testo vigente al 31/12/2024 ([Agenzia delle Entrate, circolare n. 10/E del 3 luglio 2025](https://www.agenziaentrate.gov.it/portale/documents/20143/8405056/CIRCOLARE_TASSAZIONE_AUTO_USO_PROMISCUO+n.+10+del+3+luglio+2025/ccaf6f15-2ab8-add4-2283-04a56070acec), che riporta il testo vigente al 31/12/2024); art. 1, comma 48-bis, L. 207/2024, come sostituito dall'art. 2, comma 3, D.Lgs. 148/2026 (incremento del 50%)._
 
 ## Cosa succede se l'auto viene riassegnata a un altro dipendente?
 
@@ -180,4 +180,3 @@ _Fonte: art. 2, commi 1, 3, 4 e 5, D.Lgs. 148/2026._
 ## Approfondimenti dello studio
 
 - [Fringe benefit auto aziendali: le nuove regole del D.Lgs. n. 148/2026](/fringe-benefit-auto-aziendali-dlgs-148-2026) (news del 7 agosto 2026)
-- [Circolare dello studio: Auto in uso promiscuo, novità sui fringe benefit](/circolare-2026-09-01-auto-novita-fringe-benefit) (31 agosto 2026)

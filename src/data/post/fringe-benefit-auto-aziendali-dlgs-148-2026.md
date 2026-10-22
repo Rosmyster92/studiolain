@@ -55,7 +55,7 @@ Il regime transitorio vale fino al 31 dicembre del quinto anno successivo alla p
 | oltre 160 e fino a 190 g/km          |             50% |
 | oltre 190 g/km                       |             60% |
 
-_Fonte della tabella: [circolare Studio Lain & Partners del 31/08/2026 "Auto ad uso promiscuo – calcolo fringe benefit"](/circolari/2026-09-01-auto-novita-fringe-benefit.pdf), che riporta gli scaglioni CO₂ in vigore al 31/12/2024 (art. 51, c. 4, lett. a, TUIR, nel testo previgente)._
+_Fonte della tabella: art. 51, comma 4, lett. a), TUIR, nel testo vigente al 31/12/2024 ([Agenzia delle Entrate, circolare n. 10/E del 3 luglio 2025](https://www.agenziaentrate.gov.it/portale/documents/20143/8405056/CIRCOLARE_TASSAZIONE_AUTO_USO_PROMISCUO+n.+10+del+3+luglio+2025/ccaf6f15-2ab8-add4-2283-04a56070acec), che riporta il testo vigente al 31/12/2024)._
 
 ## Cosa fare per l'azienda
 
