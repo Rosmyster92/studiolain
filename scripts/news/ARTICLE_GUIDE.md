@@ -57,7 +57,7 @@ Modello: le circolari dello studio (punti elenco + tabelle), con questa sequenza
    - `> [!NOTA]` precisazioni (Nota bene);
    - `> [!AZIENDA]` "Cosa deve fare l'azienda": checklist di 3-6 azioni concrete (sostituisce la vecchia sezione "Cosa fare per l'azienda").
 7. **FAQ**: 4-8 domande nel campo `faq` del frontmatter (il template le mostra in fondo e genera il FAQPage JSON-LD). Non ripeterle nel testo.
-8. Fonte, firma dell'autore, indice (oltre 1.000 parole) e CTA vengono aggiunti in automatico dal template.
+8. Fonte, firma dell'autore, indice (oltre 1.000 parole, inserito dopo apertura e riquadro "In breve", prima del primo H2) e CTA vengono aggiunti in automatico dal template. L'`excerpt` non è mostrato nella pagina dell'articolo: serve solo per elenchi e meta description, quindi l'apertura deve essere autosufficiente.
 
 **Riferimenti precisi, sempre:** articolo, comma e lettera; numero e data dell'atto; G.U. (numero, data, eventuale S.O.) o numero e data della circolare/messaggio; data di entrata in vigore e decorrenza degli effetti.
 

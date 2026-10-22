@@ -83,11 +83,7 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
       >
         {post.title}
       </h1>
-      <p
-        class="max-w-3xl mx-auto mt-4 mb-8 px-4 sm:px-6 text-xl md:text-2xl text-muted dark:text-slate-400 text-pretty"
-      >
-        {post.excerpt}
-      </p>
+      <div class="mb-8"></div>
 
       {
         post.image ? (
@@ -112,13 +108,13 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
     </header>
     <div
       class:list={[
-        post.category?.title === 'Circolari Studio' ? 'circolare-body' : 'lg:prose-xl',
+        post.category?.title === 'Circolari Studio' ? 'circolare-body' : 'article-body',
         'mx-auto px-6 sm:px-6 max-w-3xl prose dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0',
       ]}
     >
       {
         showToc && (
-          <nav class="toc not-prose" aria-label="Indice">
+          <nav class="toc not-prose" id="post-toc" aria-label="Indice">
             <p class="toc-title">Indice</p>
             <ol>
               {post.headings!.map((h) => (
@@ -145,6 +141,20 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
         ) : null
       }
     </div>
+
+    {
+      showToc && (
+        <script is:inline>
+          (function () {
+            var t = document.getElementById('post-toc');
+            if (!t) return;
+            var b = t.parentElement;
+            var h = b.querySelector(':scope > h2, :scope > h3');
+            if (h) b.insertBefore(t, h);
+          })();
+        </script>
+      )
+    }
 
     {
       post.pdf && (
