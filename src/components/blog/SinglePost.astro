@@ -6,7 +6,7 @@ import PostTags from '~/components/blog/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
 import Button from '~/components/ui/Button.astro';
 
-import { getPermalink } from '~/utils/permalinks';
+import { getPermalink, getAsset } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 import type { Post } from '~/types';
@@ -90,6 +90,38 @@ const { post, url } = Astro.props;
     >
       <slot />
     </div>
+
+    {
+      post.pdf && (
+        <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8">
+          <Button
+            variant="primary"
+            text="Scarica la circolare (PDF)"
+            href={getAsset(post.pdf)}
+            icon="tabler:file-download"
+            target="_blank"
+          />
+        </div>
+      )
+    }
+
+    {
+      post.source && (
+        <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-10">
+          <p class="border-t border-slate-200 dark:border-slate-700 pt-4 text-sm sm:text-base">
+            <strong>Fonte:</strong> {post.source.name} —{' '}
+            <a
+              href={post.source.url}
+              target="_blank"
+              rel="noopener"
+              class="text-primary dark:text-blue-400 underline break-words"
+            >
+              {post.source.url.replace(/^https?:\/\//, '').split('/')[0]} (testo ufficiale)
+            </a>
+          </p>
+        </div>
+      )
+    }
 
     <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-12">
       <div

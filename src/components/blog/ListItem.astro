@@ -33,7 +33,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
       {
         post.category && (
           <a
-            class="ml-1 align-middle inline-block rounded bg-gray-100 dark:bg-slate-700 px-1.5 py-0.5 text-[11px] font-medium uppercase tracking-wide text-muted hover:text-primary"
+            class="ml-1 align-middle inline-block rounded bg-gray-100 dark:bg-slate-700 px-1.5 py-0.5 text-xs font-medium text-muted hover:text-primary"
             href={getPermalink(post.category.slug, 'category')}
           >
             {post.category.title}

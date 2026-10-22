@@ -49,25 +49,34 @@ const metadataDefinition = () =>
 
 const postCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
-  schema: z.object({
-    publishDate: z.date().optional(),
-    updateDate: z.date().optional(),
-    draft: z.boolean().optional(),
+  schema: z
+    .object({
+      publishDate: z.date().optional(),
+      updateDate: z.date().optional(),
+      draft: z.boolean().optional(),
 
-    title: z.string(),
-    excerpt: z.string().optional(),
-    image: z.string().optional(),
-    /** Alternative text for the cover image. Leave empty for decorative stock photos. */
-    imageAlt: z.string().optional(),
+      title: z.string(),
+      excerpt: z.string().optional(),
+      image: z.string().optional(),
+      /** Alternative text for the cover image. Leave empty for decorative stock photos. */
+      imageAlt: z.string().optional(),
 
-    category: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    author: z.string().optional(),
-    /** Fonte primaria ufficiale (per citation / isBasedOn). */
-    source: z.object({ name: z.string(), url: z.url() }).optional(),
+      category: z.string().optional(),
+      tags: z.array(z.string()).optional(),
+      author: z.string().optional(),
+      /** Fonte primaria ufficiale (per citation / isBasedOn). */
+      /** Fonte primaria ufficiale: obbligatoria per le news (non per 'Circolari Studio'). */
+      source: z.object({ name: z.string(), url: z.url() }).optional(),
+      /** PDF della circolare in public/circolari/ (es. /circolari/2026-01.pdf). */
+      pdf: z.string().optional(),
 
-    metadata: metadataDefinition(),
-  }),
+      metadata: metadataDefinition(),
+    })
+    .superRefine((d, ctx) => {
+      if (d.category !== 'Circolari Studio' && !d.source) {
+        ctx.addIssue({ code: 'custom', path: ['source'], message: 'source {name, url} obbligatoria per le news' });
+      }
+    }),
 });
 
 export const collections = {
