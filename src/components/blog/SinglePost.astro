@@ -163,7 +163,7 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
         const rows = function (t) {
           return Array.prototype.map.call(t.rows, function (r) {
             return Array.prototype.map.call(r.cells, function (c) {
-              return c.innerText.replace(/\s+/g, ' ').trim();
+              return c.innerText.replace(/\s+/g, ' ').replace(/\t/g, ' ').trim();
             });
           });
         };
@@ -182,7 +182,27 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
                 return r.join('\t');
               })
               .join('\n');
-            navigator.clipboard.writeText(txt).then(function () {
+            const esc = function (v) {
+              return v.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            };
+            const html =
+              '<table border="1" cellspacing="0" cellpadding="4">' +
+              rows(t)
+                .map(function (r, ri) {
+                  const tag = ri === 0 && t.tHead ? 'th' : 'td';
+                  return (
+                    '<tr>' +
+                    r
+                      .map(function (v) {
+                        return '<' + tag + '>' + esc(v) + '</' + tag + '>';
+                      })
+                      .join('') +
+                    '</tr>'
+                  );
+                })
+                .join('') +
+              '</table>';
+            const done = function () {
               c.innerHTML = OK;
               c.title = 'Copiata';
               c.setAttribute('aria-label', 'Tabella copiata');
@@ -191,7 +211,22 @@ const authorHref = getPermalink('/chi-siamo') + '#' + AUTHOR.anchor;
                 c.title = 'Copia tabella';
                 c.setAttribute('aria-label', 'Copia tabella');
               }, 1800);
-            });
+            };
+            if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) {
+              navigator.clipboard
+                .write([
+                  new ClipboardItem({
+                    'text/html': new Blob([html], { type: 'text/html' }),
+                    'text/plain': new Blob([txt], { type: 'text/plain' }),
+                  }),
+                ])
+                .then(done)
+                .catch(function () {
+                  navigator.clipboard.writeText(txt).then(done);
+                });
+            } else {
+              navigator.clipboard.writeText(txt).then(done);
+            }
           };
           const d = document.createElement('button');
           d.type = 'button';
