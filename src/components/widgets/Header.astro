@@ -310,7 +310,14 @@ const persistKey = `header-${Array.from(
 
 <style is:global>
   @media (min-width: 1024px) {
-    .nav-sep { display: flex; align-items: center; }
-    .nav-sep + .nav-sep::before { content: '|'; color: #b5b5b5; font-weight: 300; }
+    .nav-sep {
+      display: flex;
+      align-items: center;
+    }
+    .nav-sep + .nav-sep::before {
+      content: '|';
+      color: #b5b5b5;
+      font-weight: 300;
+    }
   }
 </style>
