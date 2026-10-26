@@ -4,6 +4,7 @@ author: 'Studio Lain & Partners'
 title: 'Imprese artigiane edili e impiantisti: limiti dimensionali e codice 5G (msg. INPS 3145/2026)'
 excerpt: "L'INPS chiarisce quale limite di dipendenti si applica alle imprese artigiane dell'edilizia e consente agli impiantisti non prevalentemente edili di passare dal CA 5G ai CA 4X e 5C con dichiarazione dal 23 ottobre 2026."
 category: 'Previdenza'
+updateDate: 2026-10-23T08:00:00Z
 source:
   name: 'INPS, messaggio n. 3145 del 5 ottobre 2026'
   url: 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.10.messaggio-numero-3145-del-05-10-2026_16385.html'
@@ -49,9 +50,19 @@ Per le **nuove iscrizioni** il questionario della procedura automatizzata contie
 
 Quando un'impresa svolge più attività con matricole distinte, l'inquadramento nell'**Artigianato** può essere riconosciuto **solo alla matricola** relativa all'attività esercitata in modo personale e professionale dal titolare o dalla maggioranza dei soci. Le altre matricole vanno classificate in **Industria** o **Terziario** secondo l'attività effettiva. Le sedi INPS riclassificano le matricole errate con decorrenza dalla data del provvedimento.
 
+## Aggiornamento: i chiarimenti del messaggio n. 3422 del 23 ottobre 2026
+
+Con il **messaggio n. 3422 del 23 ottobre 2026** l'INPS ricorda che lo Smart Task "Limiti impresa impiantistica artigiana" è disponibile **dal 23 ottobre 2026** nella sezione "Contatti" del Cassetto previdenziale per le imprese artigiane con CSC **4.13.06, 4.13.07 e 4.13.08**, e che può essere usato **in qualsiasi momento** della vita aziendale per aggiornare la dichiarazione quando cambia l'attività esercitata. Il messaggio chiarisce anche quando l'impresa impiantistica **non** lavora in prevalenza nell'ambito della costruzione di edifici:
+
+- l'attività impiantistica (riparazione, sostituzione, manutenzione o ristrutturazione) deve essere svolta in prevalenza in **immobili civili o industriali già esistenti**;
+- la **demolizione integrale e successiva ricostruzione** di un immobile non rientra nella nozione di "immobile già esistente";
+- la prevalenza c'è quando **almeno il 51% del fatturato** deriva da attività di riparazione, sostituzione, manutenzione o adeguamento di impianti in immobili già esistenti.
+
+Per le dichiarazioni rese senza Smart Task e per la decorrenza delle variazioni restano valide le indicazioni del messaggio n. 3145/2026. Il testo è disponibile sul [sito INPS](https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.10.messaggio-numero-3422-del-23-10-2026_16400.html).
+
 ## Cosa fare per l'azienda
 
 - **Verificare il CSC e i codici di autorizzazione** presenti sulla matricola nel Cassetto previdenziale.
-- Per gli **impiantisti** che non lavorano in prevalenza nell'edilizia: valutare l'invio dello Smart Task dal 23 ottobre 2026, con decorrenza 1° luglio 2026.
+- Per gli **impiantisti** che non lavorano in prevalenza nell'edilizia: valutare l'invio dello Smart Task dal 23 ottobre 2026, con decorrenza 1° luglio 2026, verificando che almeno il 51% del fatturato derivi da interventi su immobili già esistenti.
 - **Contare i dipendenti** in modo corretto (apprendisti compresi) prima di nuove assunzioni, per non superare il limite.
 - In presenza di **più matricole**, controllare che solo quella dell'attività principale sia in Artigianato.
