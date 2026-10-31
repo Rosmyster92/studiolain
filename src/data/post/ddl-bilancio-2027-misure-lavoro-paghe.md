@@ -29,10 +29,10 @@ metadata:
   description: 'Disegno di legge di bilancio 2027, non ancora approvato dal Parlamento: esoneri assunzioni al 2027, imposta 5% sui rinnovi, fringe benefit 2.000 euro under 30, congedo parentale.'
 ---
 
-Il **28 ottobre 2026** il Consiglio dei Ministri ha approvato il **disegno di legge di bilancio per il 2027** e per il triennio 2027-2029. **Non è ancora legge:** il testo deve essere esaminato e approvato dal Parlamento e **le misure possono cambiare** durante l'esame. Di seguito riportiamo solo le misure su paghe e lavoro, così come descritte nel comunicato stampa del Consiglio dei Ministri n. 195.
-
 > [!ATTENZIONE]
-> Questo articolo descrive un **disegno di legge**, non una norma in vigore. Lo **aggiorneremo dopo la pubblicazione della legge di bilancio in Gazzetta Ufficiale**, con i riferimenti definitivi (articoli, commi e decorrenze).
+> **Attenzione: disegno di legge** – il testo può cambiare durante l'esame parlamentare fino all'approvazione definitiva e alla pubblicazione in Gazzetta Ufficiale. Aggiorneremo l'articolo con il testo definitivo.
+
+Il **28 ottobre 2026** il Consiglio dei Ministri ha approvato il **disegno di legge di bilancio per il 2027** e per il triennio 2027-2029. **Non è ancora legge:** il testo deve essere esaminato e approvato dal Parlamento e **le misure possono cambiare** durante l'esame. Di seguito riportiamo solo le misure su paghe e lavoro, così come descritte nel comunicato stampa del Consiglio dei Ministri n. 195.
 
 > [!INBREVE]
 > Il disegno di legge di bilancio 2027 prevede la proroga al 31 dicembre 2027 degli esoneri contributivi per le assunzioni a tempo indeterminato di donne, giovani e lavoratori nelle ZES, conferma l'imposta sostitutiva del 5% sugli aumenti dei rinnovi contrattuali nel privato, porta a 2.000 euro il limite esente dei fringe benefit per i lavoratori fino a 30 anni e allunga il congedo parentale retribuito all'80%. Introduce anche un'imposta sostitutiva dell'1% sugli incrementi di reddito dei giovani lavoratori dipendenti e rende strutturale il bonus mamme. Tutto è ancora soggetto all'approvazione del Parlamento.
