@@ -27,7 +27,7 @@ faq:
   - q: 'Quali auto restano nel vecchio sistema basato sulle emissioni di CO₂?'
     a: "I veicoli concessi in uso promiscuo dal 1° luglio 2020 al 31 dicembre 2024 e quelli ordinati entro il 31 dicembre 2024 e concessi nel 2025, fino al 31 dicembre del quinto anno successivo alla prima immatricolazione; dopo tale data il valore è incrementato del 50% (art. 1, comma 48-bis, L. 207/2024, come sostituito dall'art. 2, comma 3, D.Lgs. 148/2026)."
   - q: "Se l'auto in regime transitorio passa a un altro dipendente cambia il regime?"
-    a: 'No. Il nuovo comma 48-bis prevede espressamente che le regole del regime transitorio si applicano anche quando il veicolo è concesso in uso promiscuo ad altro dipendente.'
+    a: "No. Il nuovo comma 48-bis stabilisce che le regole del regime transitorio, compreso l'incremento del 50% dopo il quinto anno, si applicano anche quando il veicolo è concesso in uso promiscuo ad altro dipendente: si continua a usare il coefficiente basato sulle emissioni di CO₂."
   - q: 'Le somme pagate dal dipendente riducono il benefit?'
     a: 'Sì. Il valore si assume al netto delle somme eventualmente trattenute al dipendente in relazione alla concessione del veicolo, incluse quelle relative ad accessori e allestimenti.'
 metadata:
@@ -136,18 +136,18 @@ Il regime transitorio dura **fino al 31 dicembre del quinto anno successivo a qu
 | Emissioni di CO₂ (testo al 31/12/2024) | % del costo ACI (15.000 km) | Dopo il 5° anno dalla prima immatricolazione |
 | -------------------------------------- | --------------------------: | -------------------------------------------: |
 | fino a 60 g/km                         |                         25% |                                        37,5% |
-| oltre 60 e fino a 160 g/km             |                         30% |                                          45% |
-| oltre 160 e fino a 190 g/km            |                         50% |                                          75% |
+| da 61 a 160 g/km                       |                         30% |                                          45% |
+| da 161 a 190 g/km                      |                         50% |                                          75% |
 | oltre 190 g/km                         |                         60% |                                          90% |
 
 _Fonte della tabella: art. 51, comma 4, lett. a), TUIR, nel testo vigente al 31/12/2024 ([Agenzia delle Entrate, circolare n. 10/E del 3 luglio 2025](https://www.agenziaentrate.gov.it/portale/documents/20143/8405056/CIRCOLARE_TASSAZIONE_AUTO_USO_PROMISCUO+n.+10+del+3+luglio+2025/ccaf6f15-2ab8-add4-2283-04a56070acec), che riporta il testo vigente al 31/12/2024); art. 1, comma 48-bis, L. 207/2024, come sostituito dall'art. 2, comma 3, D.Lgs. 148/2026 (incremento del 50%)._
 
 ## Cosa succede se l'auto viene riassegnata a un altro dipendente?
 
-Per i veicoli del regime transitorio il nuovo comma 48-bis stabilisce espressamente che le regole **si applicano anche quando il veicolo è concesso in uso promiscuo ad altro dipendente**. La riassegnazione non fa quindi passare il veicolo al nuovo sistema per alimentazione.
+L'ultimo periodo del nuovo comma 48-bis prevede che le disposizioni del regime transitorio (primo e secondo periodo) **si applicano anche nei casi in cui i veicoli siano concessi in uso promiscuo ad altro dipendente**. Se un'auto del regime transitorio passa a un nuovo assegnatario, quindi, si continua ad applicare il TUIR nel testo vigente al 31 dicembre 2024, con il coefficiente legato alle emissioni di CO₂, e dopo il quinto anno dalla prima immatricolazione l'incremento del 50%.
 
 > [!NOTA]
-> Anche la decorrenza della maggiorazione del 50% resta ancorata alla **prima immatricolazione** del veicolo: cambiare l'assegnatario non sposta la data.
+> Secondo la lettura condivisa dalla stampa specializzata, conta la **concessione in uso promiscuo** prevista dall'accordo tra azienda e dipendente, non la semplice consegna fisica del veicolo. Una sostituzione temporanea dell'auto (per esempio per fermo macchina o in attesa della consegna del veicolo ordinato) non costituirebbe quindi una nuova concessione, salvo diversi accordi tra le parti. In caso di ritardo nella consegna iniziale, la tassazione decorrerebbe dall'effettiva disponibilità del veicolo. Sono interpretazioni non scritte nella norma: in attesa di chiarimenti ufficiali conviene documentare accordi e date di consegna.
 
 ## Che cosa cambia per le auto concesse nel 2025?
 
