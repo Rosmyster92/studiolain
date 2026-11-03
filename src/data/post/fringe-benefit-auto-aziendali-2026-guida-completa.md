@@ -35,7 +35,9 @@ faq:
   - q: 'Per il regime conta la data di immatricolazione?'
     a: "No. Il regime dipende dalla data di concessione in uso promiscuo; l'immatricolazione rileva solo per l'incremento del 50% dopo il 31 dicembre del quinto anno successivo."
   - q: 'Cosa succede alle auto concesse fino al 30 giugno 2020?'
-    a: 'Resta il 30% del costo ACI per 15.000 km, senza incremento del 50% né maggiorazione del 5%. Per le auto immatricolate entro il 30/6/2020 ma concesse dopo, la prassi (ris. 46/E/2020) indicava il valore normale: oggi la soluzione è incerta e va valutata caso per caso.'
+    a: 'Resta il 30% del costo ACI per 15.000 km, senza incremento del 50% né maggiorazione del 5%. '
+  - q: 'E le auto immatricolate entro il 30 giugno 2020 ma concesse dopo?'
+    a: "Se concesse dal 2026 (o nel 2025 fuori dal regime transitorio) si applica la nuova lettera a), che non richiede più requisiti di immatricolazione: 50% / 20% / 10% del costo ACI con l'incremento del 50%. Se concesse dal 1° luglio 2020 al 31 dicembre 2024 la norma non è chiara: la lettura prudente è proseguire con il valore normale indicato dalla ris. 46/E del 14 agosto 2020, documentando la scelta, in attesa di chiarimenti dell'Agenzia delle Entrate."
   - q: "Entro quando le trattenute rilevano per l'anno?"
     a: "Per il principio di cassa allargato, se perfezionate entro il 12 gennaio dell'anno successivo."
   - q: 'Le somme pagate dal dipendente riducono il benefit?'
@@ -188,7 +190,20 @@ La norma non indica quale documento provi l'ordine. Conviene conservare la docum
 
 Per i veicoli **concessi in uso promiscuo fino al 30 giugno 2020** resta la percentuale del **30%** del costo ACI per 15.000 km, **senza** l'incremento del 50% e **senza** la maggiorazione del 5%: il D.Lgs. 148/2026 non modifica questi veicoli.
 
-Per i veicoli **immatricolati entro il 30 giugno 2020 ma concessi dopo** tale data, la prassi dell'Agenzia delle Entrate (risoluzione n. 46/E del 4 agosto 2020) indicava il **valore normale** (art. 51, comma 1, e art. 9 TUIR). Con le nuove regole la soluzione è **incerta**: va valutata caso per caso.
+### E le auto immatricolate entro il 30 giugno 2020 ma concesse dopo?
+
+Il problema nasce dal testo introdotto dalla legge di bilancio 2020 (art. 1, comma 632, L. 160/2019), che si applicava ai veicoli **«di nuova immatricolazione»** concessi con contratti dal 1° luglio 2020. L'Agenzia delle Entrate ([risoluzione n. 46/E del 14 agosto 2020](https://www.agenziaentrate.gov.it/portale/documents/20143/2624555/Risoluzione+n.+46+del+14+agosto+2020.pdf/9f7a6f4e-8dc6-49b7-f23c-2e6d4773005f)) ha letto quella locuzione come «immatricolati dal 1° luglio 2020»: un'auto immatricolata prima e concessa dopo non rientrava né nella vecchia regola del 30% né in quella nuova, e il benefit andava quindi determinato al **valore normale** (art. 51, comma 3, e art. 9 TUIR), cioè analiticamente per la sola quota di uso privato. La [circolare n. 10/E del 3 luglio 2025](https://www.agenziaentrate.gov.it/portale/documents/20143/8405056/CIRCOLARE_TASSAZIONE_AUTO_USO_PROMISCUO+n.+10+del+3+luglio+2025/ccaf6f15-2ab8-add4-2283-04a56070acec) ha confermato il valore normale per i casi non coperti da un criterio forfetario.
+
+Con il D.Lgs. 148/2026 occorre distinguere in base alla **data di concessione**.
+
+**Concessione dal 1° gennaio 2026 (o nel 2025 fuori dal regime transitorio): la questione è risolta.** La nuova lettera a) si riferisce ai veicoli «concessi in uso promiscuo» senza alcun requisito di immatricolazione: la prima immatricolazione serve solo per l'incremento del 50%. Il vuoto che giustificava il valore normale non esiste più, perché la norma fornisce ora un criterio forfetario per tutti i veicoli (art. 2, commi 1 e 5, D.Lgs. 148/2026). Si applica quindi il 50% / 20% / 10% del costo ACI, e un'auto immatricolata entro il 2020 è già oltre il quinto anno: **incremento del 50%** (per esempio 75% per un'auto termica), più l'eventuale 5% per accessori.
+
+**Concessione dal 1° luglio 2020 al 31 dicembre 2024: resta un dubbio vero.** Il nuovo comma 48-bis della L. 207/2024 mantiene per i veicoli concessi in quel periodo la lettera a) «nel testo vigente al 31 dicembre 2024». Quel testo, però, è proprio quello che, secondo la risoluzione 46/E, non copre le auto immatricolate prima del 1° luglio 2020. Le letture possibili sono due:
+
+- **Lettura 1 (continuità con la prassi):** il comma 48-bis «tiene ferma» la disciplina previgente così come applicata, quindi per queste auto si resta al **valore normale** indicato dalla risoluzione 46/E, anche dopo il 2025 e in caso di riassegnazione.
+- **Lettura 2 (forfait nuovo):** il testo al 31/12/2024 non si applica a queste auto, che quindi non rientrano tra i veicoli «di cui al comma 48-bis». Dal periodo d'imposta 2026 ricadono nella **nuova lettera a)**, che non pone più requisiti di immatricolazione: 50% / 20% / 10% del costo ACI, con l'incremento del 50%.
+
+La **lettura 1** è la più prudente sul piano del metodo, perché poggia su un documento di prassi dell'Agenzia mai revocato. La lettura 2 ha un solido appoggio nel testo della nuova norma, ma nessun documento ufficiale l'ha ancora confermata. In busta paga conviene: per le auto concesse dal 2026 applicare il forfait nuovo con l'incremento del 50%; per le auto concesse tra il 1° luglio 2020 e il 2024 proseguire con il valore normale già utilizzato, con criteri documentati di ripartizione tra uso privato e uso aziendale, e annotare la scelta nella car policy, in attesa di chiarimenti dell'Agenzia delle Entrate.
 
 ## Cosa succede se l'auto viene riassegnata a un altro dipendente?
 
