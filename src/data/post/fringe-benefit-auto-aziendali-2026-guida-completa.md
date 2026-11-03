@@ -115,6 +115,16 @@ L'opzione A produce un imponibile uguale o più alto ed espone a un rischio mino
 
 Se l'auto è disponibile solo per una parte del periodo d'imposta, il valore annuo si **ragguaglia ai giorni di effettiva disponibilità** del veicolo. La data di inizio (e di fine) deve risultare con **data certa**, per esempio dal **verbale di consegna** firmato dal dipendente.
 
+Malattia, ferie o altre assenze **non interrompono** di per sé il benefit: conta la disponibilità dell'auto, non il suo utilizzo effettivo.
+
+| Situazione                                                    | Auto disponibile? | Benefit                                     |
+| ------------------------------------------------------------- | ----------------- | ------------------------------------------- |
+| Ferie, permessi, malattia o infortunio brevi                  | Sì                | Prosegue                                    |
+| Assenza lunga senza ritiro dell'auto                          | Sì                | Prosegue                                    |
+| Assenza lunga con restituzione e sospensione formale dell'uso | No                | Si interrompe dal giorno della restituzione |
+
+Se l'auto viene **revocata** e sostituita da una somma in busta paga, quella somma è retribuzione ordinaria in denaro (art. 51, comma 1, TUIR): non si applica più il valore forfetario ACI.
+
 ### Quali tabelle ACI si usano?
 
 Si usano le tabelle nazionali che l'**Automobile Club d'Italia elabora entro il 30 novembre** di ogni anno e comunica al Ministero dell'economia e delle finanze, che le **pubblica entro il 31 dicembre** con effetto dal periodo d'imposta successivo. Le tabelle sono consultabili sul [sito ACI](https://www.aci.it/i-servizi/normative/fringe-benefit.html).
@@ -217,6 +227,15 @@ L'art. 2, comma 5, del D.Lgs. 148/2026 prevede che le nuove regole (commi 1 e 2)
 
 Il valore del benefit si assume **al netto delle somme eventualmente trattenute al dipendente in relazione alla concessione del veicolo**, comprese quelle relative ad **accessori e allestimenti**. Le trattenute vanno quindi documentate (accordo di assegnazione, car policy, voce in cedolino) e sottratte dal valore convenzionale.
 
+| Somma a carico del dipendente                    | Riduce il benefit?                               |
+| ------------------------------------------------ | ------------------------------------------------ |
+| Trattenuta per la concessione dell'auto          | Sì                                               |
+| Trattenuta per accessori e allestimenti          | Sì (art. 2, comma 1, D.Lgs. 148/2026)            |
+| Addebito di carburante o energia per uso privato | No (Agenzia delle Entrate, risposta n. 237/2025) |
+| Multe, franchigie e danni                        | No: non riguardano la concessione del veicolo    |
+
+Sugli accessori la nuova norma supera l'indicazione della [risposta n. 233/2025](https://www.agenziaentrate.gov.it/portale/documents/20143/9295119/Risposta+n.+233_2025/1911a327-4d32-2215-c6c7-a04bfede1d5e), che escludeva la riduzione. Resta invece valida la [risposta n. 237/2025](https://www.agenziaentrate.gov.it/portale/documents/20143/9295119/Risposta+n.+237_2025.pdf/24ad0a75-e92d-6f51-cd6e-6ee8fc3304f5): l'energia per la ricarica fornita dall'azienda non è un benefit aggiuntivo, perché è già compresa nel costo ACI.
+
 ## Riepilogo dei regimi per data di assegnazione
 
 | Data di concessione in uso promiscuo                      | Regime fino al 5° anno dalla prima immatricolazione | Dopo il 5° anno  | Accessori non ACI        |
@@ -228,6 +247,19 @@ Il valore del benefit si assume **al netto delle somme eventualmente trattenute 
 
 _Fonte: art. 2, commi 1, 3, 4 e 5, D.Lgs. 148/2026._
 
+### Casi pratici per il 2026
+
+| Caso                                                        | Regime 2026                       | +50% nel 2026?                                        |
+| ----------------------------------------------------------- | --------------------------------- | ----------------------------------------------------- |
+| Auto concessa fino al 30/6/2020                             | 30% del costo ACI                 | No                                                    |
+| Immatricolata nel 2020 e concessa tra 1/7/2020 e 31/12/2024 | Scaglioni CO₂                     | Sì                                                    |
+| Immatricolata dal 2021 e concessa tra 1/7/2020 e 31/12/2024 | Scaglioni CO₂                     | Dal 1° gennaio del sesto anno dopo l'immatricolazione |
+| Ordinata entro il 31/12/2024 e concessa nel 2025            | Scaglioni CO₂                     | Dipende dall'immatricolazione                         |
+| Concessa nel 2025 senza ordine entro il 2024, o dal 2026    | 50% / 20% / 10% per alimentazione | Dipende dall'immatricolazione                         |
+| Riassegnata nel 2026 ad altro dipendente                    | Lo stesso regime del veicolo      | Dipende dall'immatricolazione                         |
+
+Per le auto immatricolate prima del 1° luglio 2020 e concesse dopo, vale quanto indicato nella sezione dedicata.
+
 > [!AZIENDA]
 >
 > - **Censire il parco auto** in uso promiscuo: per ogni veicolo data dell'ordine, data di concessione, data di prima immatricolazione, alimentazione, emissioni di CO₂ (per i veicoli in regime transitorio) e accessori.
@@ -236,11 +268,12 @@ _Fonte: art. 2, commi 1, 3, 4 e 5, D.Lgs. 148/2026._
 > - **Verificare gli accessori** non valorizzati nelle tabelle ACI e chi li ha acquistati, per la maggiorazione del 5% (dal 2026 anche per i veicoli in regime transitorio).
 > - **Aggiornare le trattenute** previste dalla car policy, che riducono il valore imponibile.
 > - **Ricalcolare il benefit 2026** con le nuove regole e sistemare le differenze con il **conguaglio di fine anno**, riconciliando i **giorni di effettiva disponibilità** di ogni veicolo.
+> - **Disciplinare nella car policy** assenze lunghe e revoca: restituzione dell'auto, data certa e sospensione effettiva dell'uso personale.
 > - **Scegliere e documentare l'ordine di calcolo** delle trattenute (opzione A prudenziale o opzione B letterale), in attesa di chiarimenti dell'Agenzia delle Entrate.
 
 ## Come si gestisce il conguaglio di fine anno?
 
-Vale il **principio di cassa allargato** (art. 51, comma 1, TUIR): le trattenute e gli addebiti al dipendente per l'auto rilevano per il periodo d'imposta 2026 se **perfezionati entro il 12 gennaio 2027**. Nel conguaglio di dicembre conviene riconciliare i giorni di disponibilità, le trattenute effettive e le eventuali maggiorazioni maturate.
+Vale il **principio di cassa allargato** (art. 51, comma 1, TUIR): le trattenute e gli addebiti al dipendente per l'auto rilevano per il periodo d'imposta 2026 se **perfezionati entro il 12 gennaio 2027**. Le trattenute effettuate dopo quella data valgono per il 2027. Nel conguaglio di dicembre conviene riconciliare i giorni di disponibilità, le trattenute effettive e le eventuali maggiorazioni maturate.
 
 ## Approfondimenti dello studio
 
