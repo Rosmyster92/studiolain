@@ -54,16 +54,16 @@ Questa guida riunisce in un unico punto le regole in vigore dal **periodo d'impo
 > [!INBREVE]
 > Dal periodo d'imposta 2026 il fringe benefit dell'auto in uso promiscuo è pari al 50% del costo chilometrico ACI per 15.000 km annui, ridotto al 20% per gli ibridi plug-in e al 10% per gli elettrici a batteria, al netto delle somme trattenute al dipendente. Il valore aumenta del 50% dopo il 31 dicembre del quinto anno successivo alla prima immatricolazione e del 5% se ci sono accessori non valorizzati nelle tabelle ACI e non acquistati dal lavoratore. I veicoli concessi dal 1° luglio 2020 al 31 dicembre 2024 (o ordinati entro il 2024 e concessi nel 2025) restano nel sistema CO₂.
 
-| Regola                                                | Valore                             | Riferimento                               |
-| ----------------------------------------------------- | ---------------------------------- | ----------------------------------------- |
-| Base di calcolo                                       | Costo chilometrico ACI × 15.000 km | Art. 51, c. 4, lett. a), TUIR, 1° periodo |
-| Veicoli termici e ibridi non plug-in                  | 50%                                | Art. 51, c. 4, lett. a), TUIR, 1° periodo |
-| Ibridi plug-in                                        | 20%                                | Art. 51, c. 4, lett. a), TUIR, 2° periodo |
-| Elettrici a batteria                                  | 10%                                | Art. 51, c. 4, lett. a), TUIR, 2° periodo |
-| Veicolo oltre il 5° anno dalla prima immatricolazione | Valore + 50%                       | Art. 51, c. 4, lett. a), TUIR, 3° periodo |
-| Accessori/allestimenti non valorizzati ACI            | Valore + 5%                        | Art. 51, c. 4, lett. a), TUIR, 4° periodo |
-| Somme trattenute al dipendente                        | Si sottraggono dal valore          | Art. 51, c. 4, lett. a), TUIR, 1° periodo |
-| Decorrenza                                            | Periodo d'imposta 2026             | Art. 2, c. 5, D.Lgs. 148/2026             |
+| Regola                                                | Valore                             | Riferimento                   |
+| ----------------------------------------------------- | ---------------------------------- | ----------------------------- |
+| Base di calcolo                                       | Costo chilometrico ACI × 15.000 km | Art. 51, c. 4, lett. a), TUIR |
+| Veicoli termici e ibridi non plug-in                  | 50%                                | Art. 51, c. 4, lett. a), TUIR |
+| Ibridi plug-in                                        | 20%                                | Art. 51, c. 4, lett. a), TUIR |
+| Elettrici a batteria                                  | 10%                                | Art. 51, c. 4, lett. a), TUIR |
+| Veicolo oltre il 5° anno dalla prima immatricolazione | Valore + 50%                       | Art. 51, c. 4, lett. a), TUIR |
+| Accessori/allestimenti non valorizzati ACI            | Valore + 5%                        | Art. 51, c. 4, lett. a), TUIR |
+| Somme trattenute al dipendente                        | Si sottraggono dal valore          | Art. 51, c. 4, lett. a), TUIR |
+| Decorrenza                                            | Periodo d'imposta 2026             | Art. 2, c. 5, D.Lgs. 148/2026 |
 
 ## Quali veicoli sono interessati?
 
@@ -80,7 +80,7 @@ La stessa regola, con testo identico, è stata inserita dall'art. 2, comma 2, de
 
 ## Come si calcola il fringe benefit dal 2026?
 
-Il calcolo segue i quattro periodi della nuova lettera a), nell'ordine in cui la norma li scrive.
+Il calcolo segue i quattro passaggi della nuova lettera a), nell'ordine in cui la norma li scrive.
 
 1. **Valore base:** si assume il **50%** dell'importo corrispondente a una percorrenza convenzionale di **15.000 km**, calcolato sul costo chilometrico di esercizio delle **tabelle nazionali ACI**.
 2. **Percentuali ridotte:** la percentuale scende al **10%** per i veicoli a batteria a trazione esclusivamente elettrica e al **20%** per i veicoli elettrici ibridi plug-in.
@@ -98,7 +98,7 @@ In tutti i casi il valore si assume **al netto delle somme eventualmente tratten
 
 **Fringe benefit = [costo km ACI × 15.000 × percentuale (50%, 20% o 10%) × 1,50 se oltre il 5° anno × 1,05 se accessori non ACI] − somme trattenute al dipendente**
 
-**Opzione B (letterale):** si sottraggono prima le trattenute dal valore base e poi si applicano le maggiorazioni, seguendo l'ordine dei periodi della lettera a), che collega il "valore" al netto delle trattenute.
+**Opzione B (letterale):** si sottraggono prima le trattenute dal valore base e poi si applicano le maggiorazioni, seguendo l'ordine in cui la lettera a) scrive le regole, che collega il "valore" al netto delle trattenute.
 
 **Fringe benefit = [costo km ACI × 15.000 × percentuale − somme trattenute al dipendente] × 1,50 se oltre il 5° anno × 1,05 se accessori non ACI**
 
@@ -140,19 +140,19 @@ La maggiorazione opera **dopo il 31 dicembre del quinto anno successivo** a quel
 | 2022                           | 2027                   | 1° gennaio 2028           |
 | 2023                           | 2028                   | 1° gennaio 2029           |
 
-_La tabella applica alla lettera il terzo periodo dell'art. 51, comma 4, lett. a), TUIR ("dopo il 31 dicembre del quinto anno successivo a quello di prima immatricolazione")._
+_La tabella applica alla lettera l'art. 51, comma 4, lett. a), TUIR ("dopo il 31 dicembre del quinto anno successivo a quello di prima immatricolazione")._
 
 > [!ATTENZIONE]
 > La maggiorazione riguarda **tutte** le alimentazioni, comprese le auto elettriche e le ibride plug-in: la norma incrementa i valori determinati sia con il 50% sia con le percentuali ridotte del 10% e del 20%. Lo stesso veicolo, assegnato allo stesso dipendente, può quindi avere un benefit più alto da un anno all'altro.
 
 ## Quando si applica la maggiorazione del 5% per accessori e allestimenti?
 
-Il quarto periodo della nuova lettera a) prevede l'incremento del **5%** quando ricorrono **entrambe** le condizioni:
+La nuova lettera a) prevede l'incremento del **5%** quando ricorrono **entrambe** le condizioni:
 
 - gli accessori o allestimenti **non sono valorizzati** nelle tabelle ACI;
 - **non sono stati direttamente acquistati dal lavoratore**.
 
-Il 5% si calcola sul valore già determinato secondo i periodi primo, secondo e terzo, cioè dopo l'eventuale maggiorazione per anzianità.
+Il 5% si calcola sul valore già determinato con la percentuale per alimentazione e dopo l'eventuale maggiorazione per anzianità.
 
 Non fanno quindi scattare il 5% gli accessori già compresi nel costo chilometrico ACI né quelli acquistati direttamente dal lavoratore. Le somme **trattenute al dipendente per gli accessori** riducono il valore del benefit (si veda sopra l'ordine dei calcoli, in attesa di chiarimenti).
 
@@ -204,7 +204,7 @@ Conta la **data di concessione**:
 
 ## Cosa succede se l'auto viene riassegnata a un altro dipendente?
 
-L'ultimo periodo del nuovo comma 48-bis prevede che le disposizioni del regime transitorio (primo e secondo periodo) **si applicano anche nei casi in cui i veicoli siano concessi in uso promiscuo ad altro dipendente**. Se un'auto del regime transitorio passa a un nuovo assegnatario, quindi, si continua ad applicare il TUIR nel testo vigente al 31 dicembre 2024, con il coefficiente legato alle emissioni di CO₂, e dopo il quinto anno dalla prima immatricolazione l'incremento del 50%.
+La norma (nuovo comma 48-bis) prevede che le regole transitorie per le auto concesse dal 1° luglio 2020 al 31 dicembre 2024, o ordinate entro il 31 dicembre 2024 e consegnate nel 2025, compreso l'incremento del 50% dopo il quinto anno, **si applichino anche in caso di riassegnazione ad altro dipendente**. Se un'auto del regime transitorio passa a un nuovo assegnatario, quindi, si continua ad applicare il TUIR nel testo vigente al 31 dicembre 2024, con il coefficiente legato alle emissioni di CO₂, e dopo il quinto anno dalla prima immatricolazione l'incremento del 50%.
 
 > [!NOTA]
 > Secondo la lettura condivisa dalla stampa specializzata, conta la **concessione in uso promiscuo** prevista dall'accordo tra azienda e dipendente, non la semplice consegna fisica del veicolo. Una sostituzione temporanea dell'auto (per esempio per fermo macchina o in attesa della consegna del veicolo ordinato) non costituirebbe quindi una nuova concessione, salvo diversi accordi tra le parti. In caso di ritardo nella consegna iniziale, la tassazione decorrerebbe dall'effettiva disponibilità del veicolo. Sono interpretazioni non scritte nella norma: in attesa di chiarimenti ufficiali conviene documentare accordi e date di consegna.
