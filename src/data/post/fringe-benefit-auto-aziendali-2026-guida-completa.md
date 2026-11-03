@@ -188,14 +188,14 @@ La norma non indica quale documento provi l'ordine. Conviene conservare la docum
 
 ### E le auto concesse fino al 30 giugno 2020?
 
-Per i veicoli **concessi in uso promiscuo con contratti stipulati entro il 30 giugno 2020** il 30% non deriva dalla nuova lettera a), che è stata sostituita integralmente e non lo prevede più. Sopravvive in forza di una norma transitoria distinta: l'**art. 1, comma 633, L. 160/2019**, secondo cui per questi contratti continua ad applicarsi la lettera a) **nel testo vigente al 31 dicembre 2019**, cioè il **30%** del costo ACI per 15.000 km. Il D.Lgs. 148/2026 non abroga né modifica il comma 633: sostituisce la lettera a) (art. 2, comma 1) e il comma 48-bis della L. 207/2024 (art. 2, comma 3), ma non tocca la norma del 2019, che come disposizione speciale continua a prevalere sulla regola generale.
+Per i veicoli **concessi in uso promiscuo con contratti stipulati entro il 30 giugno 2020** il 30% non deriva dalla nuova lettera a), che è stata sostituita integralmente e non lo prevede più. Sopravvive in forza di una norma transitoria distinta: l'**art. 1, comma 633, L. 160/2019**, secondo cui «resta ferma l'applicazione» della lettera a) **nel testo vigente al 31 dicembre 2019** per i veicoli concessi in uso promiscuo con contratti stipulati entro il 30 giugno 2020, cioè il **30%** del costo ACI per 15.000 km. Il D.Lgs. 148/2026 non abroga né modifica il comma 633: sostituisce la lettera a) (art. 2, comma 1) e il comma 48-bis della L. 207/2024 (art. 2, comma 3), ma non tocca la norma del 2019, che come disposizione speciale continua a prevalere sulla regola generale.
 
 Ne derivano due conseguenze:
 
 - **niente incremento del 50%**: la nuova lettera a) lo applica ai valori determinati con il 50%, 20% o 10%, e il comma 48-bis solo ai veicoli concessi dal 1° luglio 2020; il testo del 2019 non lo prevede;
 - **niente maggiorazione del 5%**: l'art. 2, comma 4, la estende espressamente ai soli veicoli del comma 48-bis, non a quelli del comma 633.
 
-Il regime vale solo finché dura il **contratto originario** stipulato entro il 30 giugno 2020. Una nuova concessione (nuovo contratto, riassegnazione ad altro dipendente) segue le norme vigenti alla data della nuova concessione, come chiarito dalla circolare n. 10/E del 2025: dal 2026 quindi la nuova lettera a), con l'incremento del 50% e l'eventuale 5%. Se l'auto è ancora al 30%, conviene conservare il contratto di assegnazione con data certa anteriore al 1° luglio 2020.
+Il regime vale finché dura il **contratto originario** stipulato entro il 30 giugno 2020, comprese le sue **proroghe**: per la circolare n. 10/E del 2025 la proroga è una «mera estensione della sua durata» e resta applicabile «la disciplina fiscale relativa al momento della sottoscrizione dell'originario contratto». In caso di **riassegnazione ad altro dipendente con un nuovo contratto**, invece, la stessa circolare indica che la disciplina «debba essere individuata sulla base delle disposizioni vigenti al momento della riassegnazione»: per una riassegnazione dal 2026 quindi la nuova lettera a), con l'incremento del 50% e l'eventuale 5%. Se l'auto è ancora al 30%, conviene conservare il contratto di assegnazione con data certa anteriore al 1° luglio 2020.
 
 ### E le auto immatricolate entro il 30 giugno 2020 ma concesse dopo?
 
