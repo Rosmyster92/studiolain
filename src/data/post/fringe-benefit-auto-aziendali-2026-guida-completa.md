@@ -37,7 +37,7 @@ faq:
   - q: 'Cosa succede alle auto concesse fino al 30 giugno 2020?'
     a: 'Resta il 30% del costo ACI per 15.000 km (art. 1, c. 633, L. 160/2019), senza incremento del 50% né 5%, per il contratto originario e le proroghe. Con una riassegnazione si applicano le regole vigenti: dal 2026 la nuova lettera a).'
   - q: 'E le auto immatricolate entro il 30 giugno 2020 ma concesse dopo?'
-    a: "Se concesse dal 2026 (o nel 2025 fuori dal transitorio): 50% / 20% / 10% del costo ACI con l'incremento del 50% ed eventuale 5%. Se concesse dal 1° luglio 2020 al 2024: in via prudenziale valore normale (ris. 46/E/2020), documentato nella car policy, in attesa di chiarimenti dell'Agenzia delle Entrate."
+    a: "Se concesse dal 2026 (o nel 2025 fuori dal transitorio): 50% / 20% / 10% del costo ACI con l'incremento del 50% ed eventuale 5%. Se concesse dal 1° luglio 2020 al 31 dicembre 2024: nessun forfait ACI, si applica il valore normale (artt. 9 e 51, c. 3, TUIR; ris. 46/E del 14 agosto 2020), cioè il valore di mercato dell'auto meno la quota di uso aziendale."
   - q: "Entro quando le trattenute rilevano per l'anno?"
     a: "Per il principio di cassa allargato, se perfezionate entro il 12 gennaio dell'anno successivo."
   - q: 'Le somme pagate dal dipendente riducono il benefit?'
@@ -210,7 +210,15 @@ Per i veicoli concessi con **contratti stipulati entro il 30 giugno 2020** resta
 Conta la **data di concessione**:
 
 - **Concessione dal 2026** (o nel 2025 fuori dal regime transitorio): forfait nuovo 50% / 20% / 10% del costo ACI, con l'**incremento del 50%** perché l'auto è oltre il quinto anno (per esempio 75% per un'auto termica), più l'eventuale 5% per accessori (art. 2, commi 1 e 5, D.Lgs. 148/2026).
-- **Concessione dal 1° luglio 2020 al 31 dicembre 2024**: la norma non è chiara. La scelta prudente è **proseguire con il valore normale** ([risoluzione n. 46/E del 14 agosto 2020](https://www.agenziaentrate.gov.it/portale/documents/20143/2624555/Risoluzione+n.+46+del+14+agosto+2020.pdf/9f7a6f4e-8dc6-49b7-f23c-2e6d4773005f)), con criteri documentati di ripartizione tra uso privato e aziendale e la scelta annotata nella car policy. La lettura alternativa (forfait nuovo dal 2026) non è confermata: in attesa di chiarimenti dell'Agenzia delle Entrate.
+- **Concessione dal 1° luglio 2020 al 31 dicembre 2024**: **nessun forfait ACI**. Si applica il **valore normale** (artt. 9 e 51, comma 3, TUIR), come chiarito dall'Agenzia delle Entrate con la [risoluzione n. 46/E del 14 agosto 2020](https://www.agenziaentrate.gov.it/portale/documents/20143/2624555/Risoluzione+n.+46+del+14+agosto+2020.pdf/9f7a6f4e-8dc6-49b7-f23c-2e6d4773005f).
+
+In pratica serve un **calcolo analitico**:
+
+1. si parte dal **valore di mercato** del servizio, per esempio il costo commerciale di un noleggio a lungo termine a parità di condizioni;
+2. si toglie la **quota di uso aziendale**, sulla base di rendicontazioni o di criteri chiari di ripartizione;
+3. il dipendente è tassato solo sul vantaggio dell'**uso privato**.
+
+Dal 2026 manca un chiarimento aggiornato dell'Agenzia delle Entrate su queste auto: conviene un'analisi prudenziale caso per caso.
 
 ## Cosa succede se l'auto viene riassegnata a un altro dipendente?
 
@@ -249,16 +257,17 @@ _Fonte: art. 2, commi 1, 3, 4 e 5, D.Lgs. 148/2026._
 
 ### Casi pratici per il 2026
 
-| Caso                                                        | Regime 2026                       | +50% nel 2026?                                        |
-| ----------------------------------------------------------- | --------------------------------- | ----------------------------------------------------- |
-| Auto concessa fino al 30/6/2020                             | 30% del costo ACI                 | No                                                    |
-| Immatricolata nel 2020 e concessa tra 1/7/2020 e 31/12/2024 | Scaglioni CO₂                     | Sì                                                    |
-| Immatricolata dal 2021 e concessa tra 1/7/2020 e 31/12/2024 | Scaglioni CO₂                     | Dal 1° gennaio del sesto anno dopo l'immatricolazione |
-| Ordinata entro il 31/12/2024 e concessa nel 2025            | Scaglioni CO₂                     | Dipende dall'immatricolazione                         |
-| Concessa nel 2025 senza ordine entro il 2024, o dal 2026    | 50% / 20% / 10% per alimentazione | Dipende dall'immatricolazione                         |
-| Riassegnata nel 2026 ad altro dipendente                    | Lo stesso regime del veicolo      | Dipende dall'immatricolazione                         |
+| Caso                                                                          | Regime 2026                       | +50% nel 2026?                                        |
+| ----------------------------------------------------------------------------- | --------------------------------- | ----------------------------------------------------- |
+| Auto concessa fino al 30/6/2020                                               | 30% del costo ACI                 | No                                                    |
+| Immatricolata entro il 30/6/2020 e concessa tra 1/7/2020 e 31/12/2024         | Valore normale (no forfait ACI)   | Non si applica                                        |
+| Immatricolata dal 1/7/2020 al 31/12/2020 e concessa tra 1/7/2020 e 31/12/2024 | Scaglioni CO₂                     | Sì                                                    |
+| Immatricolata dal 2021 e concessa tra 1/7/2020 e 31/12/2024                   | Scaglioni CO₂                     | Dal 1° gennaio del sesto anno dopo l'immatricolazione |
+| Ordinata entro il 31/12/2024 e concessa nel 2025                              | Scaglioni CO₂                     | Dipende dall'immatricolazione                         |
+| Concessa nel 2025 senza ordine entro il 2024, o dal 2026                      | 50% / 20% / 10% per alimentazione | Dipende dall'immatricolazione                         |
+| Riassegnata nel 2026 ad altro dipendente                                      | Lo stesso regime del veicolo      | Dipende dall'immatricolazione                         |
 
-Per le auto immatricolate prima del 1° luglio 2020 e concesse dopo, vale quanto indicato nella sezione dedicata.
+Per il calcolo del valore normale vedi la sezione sulle auto immatricolate entro il 30 giugno 2020 ma concesse dopo.
 
 > [!AZIENDA]
 >
