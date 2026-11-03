@@ -28,6 +28,16 @@ faq:
     a: "I veicoli concessi in uso promiscuo dal 1° luglio 2020 al 31 dicembre 2024 e quelli ordinati entro il 31 dicembre 2024 e concessi nel 2025, fino al 31 dicembre del quinto anno successivo alla prima immatricolazione; dopo tale data il valore è incrementato del 50% (art. 1, comma 48-bis, L. 207/2024, come sostituito dall'art. 2, comma 3, D.Lgs. 148/2026)."
   - q: "Se l'auto in regime transitorio passa a un altro dipendente cambia il regime?"
     a: "No. Il nuovo comma 48-bis stabilisce che le regole del regime transitorio, compreso l'incremento del 50% dopo il quinto anno, si applicano anche quando il veicolo è concesso in uso promiscuo ad altro dipendente: si continua a usare il coefficiente basato sulle emissioni di CO₂."
+  - q: 'Le trattenute si sottraggono prima o dopo le maggiorazioni del 50% e del 5%?'
+    a: "La norma non è univoca e si è in attesa di chiarimenti dell'Agenzia delle Entrate. Opzione A (prudenziale): maggiorazioni prima, trattenute dopo (benefit 4.000, trattenuta 4.000, +50%: 2.000 euro). Opzione B (letterale): trattenute prima, maggiorazioni dopo (stesso caso: 0 euro)."
+  - q: "Come si calcola se l'auto è disponibile solo per una parte dell'anno?"
+    a: 'Si ragguaglia il valore annuo ai giorni di effettiva disponibilità, con data certa risultante dal verbale di consegna.'
+  - q: 'Per il regime conta la data di immatricolazione?'
+    a: "No. Il regime dipende dalla data di concessione in uso promiscuo; l'immatricolazione rileva solo per l'incremento del 50% dopo il 31 dicembre del quinto anno successivo."
+  - q: 'Cosa succede alle auto concesse fino al 30 giugno 2020?'
+    a: 'Resta il 30% del costo ACI per 15.000 km, senza incremento del 50% né maggiorazione del 5%. Per le auto immatricolate entro il 30/6/2020 ma concesse dopo, la prassi (ris. 46/E/2020) indicava il valore normale: oggi la soluzione è incerta e va valutata caso per caso.'
+  - q: "Entro quando le trattenute rilevano per l'anno?"
+    a: "Per il principio di cassa allargato, se perfezionate entro il 12 gennaio dell'anno successivo."
   - q: 'Le somme pagate dal dipendente riducono il benefit?'
     a: 'Sì. Il valore si assume al netto delle somme eventualmente trattenute al dipendente in relazione alla concessione del veicolo, incluse quelle relative ad accessori e allestimenti.'
 metadata:
@@ -77,9 +87,31 @@ Il calcolo segue i quattro periodi della nuova lettera a), nell'ordine in cui la
 
 In tutti i casi il valore si assume **al netto delle somme eventualmente trattenute al dipendente** in relazione alla concessione del veicolo, comprese quelle per accessori e allestimenti.
 
-In formula, come risulta dal testo della norma:
+### In che ordine si sottraggono le trattenute?
 
-**Fringe benefit = costo km ACI × 15.000 × percentuale (50%, 20% o 10%) [× 1,50 se oltre il 5° anno] [× 1,05 se accessori non ACI] − somme trattenute al dipendente**
+> [!ATTENZIONE]
+> **In attesa di chiarimenti dell'Agenzia delle Entrate.** La norma non dice in modo univoco se le somme trattenute al dipendente si sottraggono prima o dopo le maggiorazioni del 50% (anzianità) e del 5% (accessori). Esistono due letture possibili, con risultati diversi: fino a un chiarimento ufficiale la scelta va valutata e documentata.
+
+**Opzione A (prudenziale):** si applicano prima le maggiorazioni e poi si sottraggono le trattenute.
+
+**Fringe benefit = [costo km ACI × 15.000 × percentuale (50%, 20% o 10%) × 1,50 se oltre il 5° anno × 1,05 se accessori non ACI] − somme trattenute al dipendente**
+
+**Opzione B (letterale):** si sottraggono prima le trattenute dal valore base e poi si applicano le maggiorazioni, seguendo l'ordine dei periodi della lettera a), che collega il "valore" al netto delle trattenute.
+
+**Fringe benefit = [costo km ACI × 15.000 × percentuale − somme trattenute al dipendente] × 1,50 se oltre il 5° anno × 1,05 se accessori non ACI**
+
+| Caso                          | Valore base | Trattenuta | Maggiorazione | Opzione A (prudenziale)               | Opzione B (letterale)                   |
+| ----------------------------- | ----------: | ---------: | ------------- | ------------------------------------- | --------------------------------------- |
+| Veicolo oltre il 5° anno      |  4.000 euro | 4.000 euro | + 50%         | 4.000 × 1,50 − 4.000 = **2.000 euro** | (4.000 − 4.000) × 1,50 = **0 euro**     |
+| Accessori non valorizzati ACI |  4.000 euro | 1.000 euro | + 5%          | 4.000 × 1,05 − 1.000 = **3.200 euro** | (4.000 − 1.000) × 1,05 = **3.150 euro** |
+
+_Esempi di calcolo su importi ipotetici; fonte delle regole: art. 51, comma 4, lett. a), TUIR, come sostituito dall'art. 2, comma 1, D.Lgs. 148/2026._
+
+L'opzione A produce un imponibile uguale o più alto ed espone a un rischio minore in caso di controllo; l'opzione B è più favorevole al dipendente ma, fino al chiarimento dell'Agenzia delle Entrate, va adottata con cautela.
+
+### Come si calcola per una parte dell'anno?
+
+Se l'auto è disponibile solo per una parte del periodo d'imposta, il valore annuo si **ragguaglia ai giorni di effettiva disponibilità** del veicolo. La data di inizio (e di fine) deve risultare con **data certa**, per esempio dal **verbale di consegna** firmato dal dipendente.
 
 ### Quali tabelle ACI si usano?
 
@@ -120,6 +152,8 @@ Il quarto periodo della nuova lettera a) prevede l'incremento del **5%** quando 
 
 Il 5% si calcola sul valore già determinato secondo i periodi primo, secondo e terzo, cioè dopo l'eventuale maggiorazione per anzianità.
 
+Non fanno quindi scattare il 5% gli accessori già compresi nel costo chilometrico ACI né quelli acquistati direttamente dal lavoratore. Le somme **trattenute al dipendente per gli accessori** riducono il valore del benefit (si veda sopra l'ordine dei calcoli, in attesa di chiarimenti).
+
 **Veicoli del regime transitorio.** L'art. 2, comma 4, del D.Lgs. 148/2026 estende la maggiorazione del 5%, **dal 1° gennaio 2026**, anche ai veicoli che restano nel sistema CO₂ (comma 48-bis della L. 207/2024).
 
 **Comportamenti fino al 2025.** Sono fatti salvi i comportamenti adottati dai datori di lavoro **fino al 31 dicembre 2025** sulla tassazione di accessori e allestimenti; **non si dà luogo al rimborso** delle maggiori imposte eventualmente versate.
@@ -141,6 +175,20 @@ Il regime transitorio dura **fino al 31 dicembre del quinto anno successivo a qu
 | oltre 190 g/km                         |                         60% |                                          90% |
 
 _Fonte della tabella: art. 51, comma 4, lett. a), TUIR, nel testo vigente al 31/12/2024 ([Agenzia delle Entrate, circolare n. 10/E del 3 luglio 2025](https://www.agenziaentrate.gov.it/portale/documents/20143/8405056/CIRCOLARE_TASSAZIONE_AUTO_USO_PROMISCUO+n.+10+del+3+luglio+2025/ccaf6f15-2ab8-add4-2283-04a56070acec), che riporta il testo vigente al 31/12/2024); art. 1, comma 48-bis, L. 207/2024, come sostituito dall'art. 2, comma 3, D.Lgs. 148/2026 (incremento del 50%)._
+
+### Conta la data di concessione o di immatricolazione?
+
+Per individuare il regime conta la **data di concessione in uso promiscuo** al dipendente (e, per il 2025, la data dell'ordine), **non la data di immatricolazione**. La prima immatricolazione rileva solo per stabilire quando scatta l'**incremento del 50%**, cioè dopo il 31 dicembre del quinto anno successivo.
+
+### Come si dimostra l'ordine entro il 31 dicembre 2024?
+
+La norma non indica quale documento provi l'ordine. Conviene conservare la documentazione con **data certa** (ordine o contratto firmato, conferma del fornitore o della società di noleggio, comunicazioni con data verificabile). **Se la data dell'ordine non è documentabile**, si applica il **regime nuovo** per alimentazione.
+
+### E le auto concesse fino al 30 giugno 2020?
+
+Per i veicoli **concessi in uso promiscuo fino al 30 giugno 2020** resta la percentuale del **30%** del costo ACI per 15.000 km, **senza** l'incremento del 50% e **senza** la maggiorazione del 5%: il D.Lgs. 148/2026 non modifica questi veicoli.
+
+Per i veicoli **immatricolati entro il 30 giugno 2020 ma concessi dopo** tale data, la prassi dell'Agenzia delle Entrate (risoluzione n. 46/E del 4 agosto 2020) indicava il **valore normale** (art. 51, comma 1, e art. 9 TUIR). Con le nuove regole la soluzione è **incerta**: va valutata caso per caso.
 
 ## Cosa succede se l'auto viene riassegnata a un altro dipendente?
 
@@ -175,7 +223,12 @@ _Fonte: art. 2, commi 1, 3, 4 e 5, D.Lgs. 148/2026._
 > - **Segnare a calendario** il 31 dicembre del quinto anno successivo alla prima immatricolazione: dall'anno seguente il valore aumenta del 50%.
 > - **Verificare gli accessori** non valorizzati nelle tabelle ACI e chi li ha acquistati, per la maggiorazione del 5% (dal 2026 anche per i veicoli in regime transitorio).
 > - **Aggiornare le trattenute** previste dalla car policy, che riducono il valore imponibile.
-> - **Ricalcolare il benefit 2026** con le nuove regole e sistemare le differenze con il **conguaglio di fine anno**.
+> - **Ricalcolare il benefit 2026** con le nuove regole e sistemare le differenze con il **conguaglio di fine anno**, riconciliando i **giorni di effettiva disponibilità** di ogni veicolo.
+> - **Scegliere e documentare l'ordine di calcolo** delle trattenute (opzione A prudenziale o opzione B letterale), in attesa di chiarimenti dell'Agenzia delle Entrate.
+
+## Come si gestisce il conguaglio di fine anno?
+
+Vale il **principio di cassa allargato** (art. 51, comma 1, TUIR): le trattenute e gli addebiti al dipendente per l'auto rilevano per il periodo d'imposta 2026 se **perfezionati entro il 12 gennaio 2027**. Nel conguaglio di dicembre conviene riconciliare i giorni di disponibilità, le trattenute effettive e le eventuali maggiorazioni maturate.
 
 ## Approfondimenti dello studio
 
