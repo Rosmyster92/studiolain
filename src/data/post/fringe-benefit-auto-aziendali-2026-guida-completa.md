@@ -1,5 +1,6 @@
 ---
 publishDate: 2026-10-22T08:00:00Z
+updateDate: 2026-11-06T08:00:00Z
 author: 'Studio Lain & Partners'
 title: 'Fringe benefit auto aziendali 2026: guida completa'
 excerpt: "Auto aziendale in uso promiscuo dal 2026: percentuali sul costo ACI per 15.000 km (50%, 20%, 10%), maggiorazione del 50% dopo il quinto anno dall'immatricolazione, +5% per accessori non valorizzati, regime transitorio CO₂, riassegnazioni e trattenute."
@@ -25,15 +26,15 @@ faq:
   - q: 'Quando si applica la maggiorazione del 5% per accessori e allestimenti?'
     a: 'Quando sul veicolo ci sono accessori o allestimenti non valorizzati nelle tabelle ACI e non direttamente acquistati dal lavoratore. Dal 1° gennaio 2026 vale anche per i veicoli del regime transitorio (art. 2, comma 4, D.Lgs. 148/2026).'
   - q: 'Quali auto restano nel vecchio sistema basato sulle emissioni di CO₂?'
-    a: "I veicoli concessi in uso promiscuo dal 1° luglio 2020 al 31 dicembre 2024 e quelli ordinati entro il 31 dicembre 2024 e concessi nel 2025, fino al 31 dicembre del quinto anno successivo alla prima immatricolazione; dopo tale data il valore è incrementato del 50% (art. 1, comma 48-bis, L. 207/2024, come sostituito dall'art. 2, comma 3, D.Lgs. 148/2026)."
+    a: "I veicoli immatricolati dal 1° luglio 2020 concessi in uso promiscuo dal 1° luglio 2020 al 31 dicembre 2024, e quelli immatricolati dal 1° luglio 2020 ordinati entro il 31 dicembre 2024 e concessi nel 2025, fino al 31 dicembre del quinto anno successivo alla prima immatricolazione; dopo tale data il valore è incrementato del 50% (art. 1, comma 48-bis, L. 207/2024, come sostituito dall'art. 2, comma 3, D.Lgs. 148/2026). Le auto immatricolate entro il 30 giugno 2020 e concesse dal 1° luglio 2020 al 31 dicembre 2024 restano al valore normale, senza forfait ACI."
   - q: "Se l'auto in regime transitorio passa a un altro dipendente cambia il regime?"
-    a: "No. Il nuovo comma 48-bis stabilisce che le regole del regime transitorio, compreso l'incremento del 50% dopo il quinto anno, si applicano anche quando il veicolo è concesso in uso promiscuo ad altro dipendente: si continua a usare il coefficiente basato sulle emissioni di CO₂."
+    a: "No. Il nuovo comma 48-bis stabilisce che le regole del regime transitorio, compreso l'incremento del 50% dopo il quinto anno, si applicano anche quando il veicolo è concesso in uso promiscuo ad altro dipendente. Per i veicoli immatricolati dal 1° luglio 2020 si continua a usare il coefficiente basato sulle emissioni di CO₂."
   - q: 'Le trattenute si sottraggono prima o dopo le maggiorazioni del 50% e del 5%?'
     a: "La norma non è univoca e si è in attesa di chiarimenti dell'Agenzia delle Entrate. Opzione A (prudenziale): maggiorazioni prima, trattenute dopo (benefit 4.000, trattenuta 4.000, +50%: 2.000 euro). Opzione B (letterale): trattenute prima, maggiorazioni dopo (stesso caso: 0 euro)."
   - q: "Come si calcola se l'auto è disponibile solo per una parte dell'anno?"
     a: 'Si ragguaglia il valore annuo ai giorni di effettiva disponibilità, con data certa risultante dal verbale di consegna.'
   - q: 'Per il regime conta la data di immatricolazione?'
-    a: "No. Il regime dipende dalla data di concessione in uso promiscuo; l'immatricolazione rileva solo per l'incremento del 50% dopo il 31 dicembre del quinto anno successivo."
+    a: "Per i veicoli immatricolati dal 1° luglio 2020 il regime dipende dalla data di concessione in uso promiscuo; l'immatricolazione rileva per l'incremento del 50% dopo il 31 dicembre del quinto anno successivo. Per le auto immatricolate entro il 30 giugno 2020 e concesse dal 1° luglio 2020 al 31 dicembre 2024 si applica il valore normale, senza forfait ACI."
   - q: 'Cosa succede alle auto concesse fino al 30 giugno 2020?'
     a: 'Resta il 30% del costo ACI per 15.000 km (art. 1, c. 633, L. 160/2019), senza incremento del 50% né 5%, per il contratto originario e le proroghe. Con una riassegnazione si applicano le regole vigenti: dal 2026 la nuova lettera a).'
   - q: 'E le auto immatricolate entro il 30 giugno 2020 ma concesse dopo?'
@@ -52,7 +53,7 @@ Il **D.Lgs. 7 agosto 2026, n. 148** (correttivo in materia di imposte sui reddit
 Questa guida riunisce in un unico punto le regole in vigore dal **periodo d'imposta 2026**: come si calcola il benefit, quali percentuali si applicano, quando scattano le maggiorazioni, quali veicoli restano nel vecchio sistema basato sulle emissioni di CO₂ e cosa deve controllare l'azienda prima del conguaglio di fine anno.
 
 > [!INBREVE]
-> Dal periodo d'imposta 2026 il fringe benefit dell'auto in uso promiscuo è pari al 50% del costo chilometrico ACI per 15.000 km annui, ridotto al 20% per gli ibridi plug-in e al 10% per gli elettrici a batteria, al netto delle somme trattenute al dipendente. Il valore aumenta del 50% dopo il 31 dicembre del quinto anno successivo alla prima immatricolazione e del 5% se ci sono accessori non valorizzati nelle tabelle ACI e non acquistati dal lavoratore. I veicoli concessi dal 1° luglio 2020 al 31 dicembre 2024 (o ordinati entro il 2024 e concessi nel 2025) restano nel sistema CO₂.
+> Dal periodo d'imposta 2026 il fringe benefit dell'auto in uso promiscuo è pari al 50% del costo chilometrico ACI per 15.000 km annui, ridotto al 20% per gli ibridi plug-in e al 10% per gli elettrici a batteria, al netto delle somme trattenute al dipendente. Il valore aumenta del 50% dopo il 31 dicembre del quinto anno successivo alla prima immatricolazione e del 5% se ci sono accessori non valorizzati nelle tabelle ACI e non acquistati dal lavoratore. Restano nel sistema CO₂, se immatricolati dal 1° luglio 2020, i veicoli concessi dal 1° luglio 2020 al 31 dicembre 2024 o ordinati entro il 2024 e concessi nel 2025.
 
 | Regola                                                | Valore                             | Riferimento                   |
 | ----------------------------------------------------- | ---------------------------------- | ----------------------------- |
@@ -177,6 +178,8 @@ L'art. 2, comma 3, del D.Lgs. 148/2026 sostituisce l'**art. 1, comma 48-bis, del
 - i veicoli **concessi in uso promiscuo dal 1° luglio 2020 al 31 dicembre 2024**;
 - i veicoli **ordinati dai datori di lavoro entro il 31 dicembre 2024** e **concessi in uso promiscuo nell'anno 2025**.
 
+Gli scaglioni di CO₂ della tabella seguente si applicano ai veicoli **immatricolati dal 1° luglio 2020** che rientrano in questi due casi. Le auto immatricolate entro il 30 giugno 2020 e concesse dal 1° luglio 2020 al 31 dicembre 2024 non rientrano in questi scaglioni: si applica il valore normale, come nella sezione seguente.
+
 Il regime transitorio dura **fino al 31 dicembre del quinto anno successivo a quello di prima immatricolazione**. Dopo tale data il valore determinato con il vecchio sistema è **incrementato del 50%**.
 
 | Emissioni di CO₂ (testo al 31/12/2024) | % del costo ACI (15.000 km) | Dopo il 5° anno dalla prima immatricolazione |
@@ -190,7 +193,7 @@ _Fonte della tabella: art. 51, comma 4, lett. a), TUIR, nel testo vigente al 31/
 
 ### Conta la data di concessione o di immatricolazione?
 
-Per individuare il regime conta la **data di concessione in uso promiscuo** al dipendente (e, per il 2025, la data dell'ordine), **non la data di immatricolazione**. La prima immatricolazione rileva solo per stabilire quando scatta l'**incremento del 50%**, cioè dopo il 31 dicembre del quinto anno successivo.
+Per i veicoli **immatricolati dal 1° luglio 2020** il regime si individua con la **data di concessione in uso promiscuo** al dipendente (e, per il 2025, la data dell'ordine). La prima immatricolazione rileva per stabilire quando scatta l'**incremento del 50%**, cioè dopo il 31 dicembre del quinto anno successivo.
 
 ### Come si dimostra l'ordine entro il 31 dicembre 2024?
 
@@ -222,7 +225,7 @@ Dal 2026 manca un chiarimento aggiornato dell'Agenzia delle Entrate su queste au
 
 ## Cosa succede se l'auto viene riassegnata a un altro dipendente?
 
-La norma (nuovo comma 48-bis) prevede che le regole transitorie per le auto concesse dal 1° luglio 2020 al 31 dicembre 2024, o ordinate entro il 31 dicembre 2024 e consegnate nel 2025, compreso l'incremento del 50% dopo il quinto anno, **si applichino anche in caso di riassegnazione ad altro dipendente**. Se un'auto del regime transitorio passa a un nuovo assegnatario, quindi, si continua ad applicare il TUIR nel testo vigente al 31 dicembre 2024, con il coefficiente legato alle emissioni di CO₂, e dopo il quinto anno dalla prima immatricolazione l'incremento del 50%.
+La norma (nuovo comma 48-bis) prevede che le regole transitorie per le auto concesse dal 1° luglio 2020 al 31 dicembre 2024, o ordinate entro il 31 dicembre 2024 e consegnate nel 2025, compreso l'incremento del 50% dopo il quinto anno, **si applichino anche in caso di riassegnazione ad altro dipendente**. Se un'auto del regime transitorio passa a un nuovo assegnatario, quindi, si continua ad applicare il TUIR nel testo vigente al 31 dicembre 2024. Per i veicoli immatricolati dal 1° luglio 2020 resta il coefficiente legato alle emissioni di CO₂ e, dopo il quinto anno dalla prima immatricolazione, l'incremento del 50%.
 
 > [!NOTA]
 > Secondo la lettura condivisa dalla stampa specializzata, conta la **concessione in uso promiscuo** prevista dall'accordo tra azienda e dipendente, non la semplice consegna fisica del veicolo. Una sostituzione temporanea dell'auto (per esempio per fermo macchina o in attesa della consegna del veicolo ordinato) non costituirebbe quindi una nuova concessione, salvo diversi accordi tra le parti. In caso di ritardo nella consegna iniziale, la tassazione decorrerebbe dall'effettiva disponibilità del veicolo. Sono interpretazioni non scritte nella norma: in attesa di chiarimenti ufficiali conviene documentare accordi e date di consegna.
@@ -246,26 +249,26 @@ Sugli accessori la nuova norma supera l'indicazione della [risposta n. 233/2025]
 
 ## Riepilogo dei regimi per data di assegnazione
 
-| Data di concessione in uso promiscuo                      | Regime fino al 5° anno dalla prima immatricolazione | Dopo il 5° anno  | Accessori non ACI        |
-| --------------------------------------------------------- | --------------------------------------------------- | ---------------- | ------------------------ |
-| 1° luglio 2020 – 31 dicembre 2024                         | Scaglioni CO₂ (testo al 31/12/2024)                 | Valore CO₂ + 50% | + 5% dal 1° gennaio 2026 |
-| Ordinati entro il 31/12/2024 e concessi nel 2025          | Scaglioni CO₂ (testo al 31/12/2024)                 | Valore CO₂ + 50% | + 5% dal 1° gennaio 2026 |
-| Concessi nel 2025 fuori dal regime transitorio (dal 2026) | 50% / 20% / 10% per alimentazione                   | Valore + 50%     | + 5%                     |
-| Concessi dal 2026                                         | 50% / 20% / 10% per alimentazione                   | Valore + 50%     | + 5%                     |
+| Data di concessione in uso promiscuo                                               | Regime fino al 5° anno dalla prima immatricolazione | Dopo il 5° anno  | Accessori non ACI        |
+| ---------------------------------------------------------------------------------- | --------------------------------------------------- | ---------------- | ------------------------ |
+| 1° luglio 2020 – 31 dicembre 2024, immatricolate dal 1° luglio 2020                | Scaglioni CO₂ (testo al 31/12/2024)                 | Valore CO₂ + 50% | + 5% dal 1° gennaio 2026 |
+| Ordinati entro il 31/12/2024 e concessi nel 2025, immatricolati dal 1° luglio 2020 | Scaglioni CO₂ (testo al 31/12/2024)                 | Valore CO₂ + 50% | + 5% dal 1° gennaio 2026 |
+| Concessi nel 2025 fuori dal regime transitorio (dal 2026)                          | 50% / 20% / 10% per alimentazione                   | Valore + 50%     | + 5%                     |
+| Concessi dal 2026                                                                  | 50% / 20% / 10% per alimentazione                   | Valore + 50%     | + 5%                     |
 
 _Fonte: art. 2, commi 1, 3, 4 e 5, D.Lgs. 148/2026._
 
 ### Casi pratici per il 2026
 
-| Caso                                                                          | Regime 2026                       | +50% nel 2026?                                        |
-| ----------------------------------------------------------------------------- | --------------------------------- | ----------------------------------------------------- |
-| Auto concessa fino al 30/6/2020                                               | 30% del costo ACI                 | No                                                    |
-| Immatricolata entro il 30/6/2020 e concessa tra 1/7/2020 e 31/12/2024         | Valore normale (no forfait ACI)   | Non si applica                                        |
-| Immatricolata dal 1/7/2020 al 31/12/2020 e concessa tra 1/7/2020 e 31/12/2024 | Scaglioni CO₂                     | Sì                                                    |
-| Immatricolata dal 2021 e concessa tra 1/7/2020 e 31/12/2024                   | Scaglioni CO₂                     | Dal 1° gennaio del sesto anno dopo l'immatricolazione |
-| Ordinata entro il 31/12/2024 e concessa nel 2025                              | Scaglioni CO₂                     | Dipende dall'immatricolazione                         |
-| Concessa nel 2025 senza ordine entro il 2024, o dal 2026                      | 50% / 20% / 10% per alimentazione | Dipende dall'immatricolazione                         |
-| Riassegnata nel 2026 ad altro dipendente                                      | Lo stesso regime del veicolo      | Dipende dall'immatricolazione                         |
+| Caso                                                                               | Regime 2026                       | +50% nel 2026?                                        |
+| ---------------------------------------------------------------------------------- | --------------------------------- | ----------------------------------------------------- |
+| Auto concessa fino al 30/6/2020                                                    | 30% del costo ACI                 | No                                                    |
+| Immatricolata entro il 30/6/2020 e concessa tra 1/7/2020 e 31/12/2024              | Valore normale (no forfait ACI)   | Non si applica                                        |
+| Immatricolata dal 1/7/2020 al 31/12/2020 e concessa tra 1/7/2020 e 31/12/2024      | Scaglioni CO₂                     | Sì                                                    |
+| Immatricolata dal 2021 e concessa tra 1/7/2020 e 31/12/2024                        | Scaglioni CO₂                     | Dal 1° gennaio del sesto anno dopo l'immatricolazione |
+| Immatricolata dal 1° luglio 2020, ordinata entro il 31/12/2024 e concessa nel 2025 | Scaglioni CO₂                     | Dipende dall'immatricolazione                         |
+| Concessa nel 2025 senza ordine entro il 2024, o dal 2026                           | 50% / 20% / 10% per alimentazione | Dipende dall'immatricolazione                         |
+| Riassegnata nel 2026 ad altro dipendente                                           | Lo stesso regime del veicolo      | Dipende dall'immatricolazione                         |
 
 Per il calcolo del valore normale vedi la sezione sulle auto immatricolate entro il 30 giugno 2020 ma concesse dopo.
 
