@@ -36,17 +36,17 @@ Con il **messaggio n. 3575 del 4 novembre 2026** l'INPS completa il percorso avv
 > [!INBREVE]
 > Da novembre 2026 i lavoratori parasubordinati tornano a ricevere su MyINPS l'avviso di raggiungimento del massimale annuo 2026, calcolato sui dati Uniemens. Nello stesso mese partono le comunicazioni, a lavoratori e committenti, degli importi contributivi in eccedenza disponibili per il 2024 e il 2025. Sono esclusi, in questo primo invio, gli sportivi dilettantistici. Chi ha già presentato domanda di rimborso non deve reinviarla: si usa la Domanda Rimborso Unico e si attende la liquidazione della sede territoriale.
 
-| Elemento                         | Regola                                                                                          |
-| -------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Atto                             | messaggio INPS n. 3575 del 4 novembre 2026                                                      |
-| Canale informative massimale     | MyINPS, lavoratori parasubordinati                                                              |
-| Anno del massimale monitorato    | 2026 (controllo mensile su Uniemens)                                                            |
-| Comunicazioni importi a disposizione | da novembre 2026, anni 2024 e 2025                                                          |
-| Destinatari importi eccedenti    | lavoratore parasubordinato e committente/i                                                      |
-| Esclusione temporanea            | lavoratori sportivi dilettantistici iscritti alla Gestione separata                             |
-| Quota rimborso lavoratore        | 1/3 del contributo versato in eccedenza                                                         |
-| Quota rimborso committente       | 2/3 del contributo versato in eccedenza                                                         |
-| Domanda                          | Domanda Rimborso Unico (messaggio n. 3247/2026)                                                 |
+| Elemento                             | Regola                                                              |
+| ------------------------------------ | ------------------------------------------------------------------- |
+| Atto                                 | messaggio INPS n. 3575 del 4 novembre 2026                          |
+| Canale informative massimale         | MyINPS, lavoratori parasubordinati                                  |
+| Anno del massimale monitorato        | 2026 (controllo mensile su Uniemens)                                |
+| Comunicazioni importi a disposizione | da novembre 2026, anni 2024 e 2025                                  |
+| Destinatari importi eccedenti        | lavoratore parasubordinato e committente/i                          |
+| Esclusione temporanea                | lavoratori sportivi dilettantistici iscritti alla Gestione separata |
+| Quota rimborso lavoratore            | 1/3 del contributo versato in eccedenza                             |
+| Quota rimborso committente           | 2/3 del contributo versato in eccedenza                             |
+| Domanda                              | Domanda Rimborso Unico (messaggio n. 3247/2026)                     |
 
 _Fonte della tabella: INPS, messaggio n. 3575 del 4 novembre 2026 e notizia istituzionale del 4 novembre 2026._
 
