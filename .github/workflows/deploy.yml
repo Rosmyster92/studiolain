@@ -36,12 +36,14 @@ jobs:
       - name: Install
         run: npm ci
 
+      # Tema chiaro (rosso) come tema principale del sito: non cambiare
       - name: Compile site
         run: npm run build
         env:
           SITE_PREVIEW: ${{ env.SITE_PREVIEW }}
+          THEME: chiaro
 
-      # Variante grafica chiara (fork), servita sotto /chiaro accanto al tema attuale
+      # Copia del tema chiaro anche sotto /chiaro, per i link già condivisi
       - name: Compile tema chiaro
         if: env.SITE_PREVIEW == 'true'
         run: |
