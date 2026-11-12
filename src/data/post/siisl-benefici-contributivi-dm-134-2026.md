@@ -4,6 +4,7 @@ author: 'Studio Lain & Partners'
 title: 'Bonus assunzioni e SIISL: dal 1° dicembre 2026 pubblicazione preventiva obbligatoria'
 excerpt: "Il D.M. n. 134/2026 subordina i benefici contributivi alla pubblicazione della posizione di lavoro sul SIISL. Fino al 30 novembre è facoltativa; dal 1° dicembre va fatta prima o al momento dell'assunzione e indicata in UniEmens."
 category: 'Lavoro'
+updateDate: 2026-11-12T08:00:00Z
 source:
   name: 'Ministero del Lavoro e delle Politiche Sociali, comunicato 8 ottobre 2026 sul D.M. n. 134 del 5 ottobre 2026'
   url: 'https://www.lavoro.gov.it/notizie/pagine/bonus-assunzioni-e-siisl-firmato-il-decreto-attuativo'
@@ -49,4 +50,4 @@ Per le **comunicazioni obbligatorie** (assunzione, proroga, trasformazione e ces
 - **Programmare le assunzioni agevolate** di dicembre 2026 e del 2027: la posizione va pubblicata sul SIISL prima della data di assunzione.
 - **Comunicare per tempo allo Studio** ogni assunzione per cui si vuole usare un incentivo (ad esempio giovani, donne, over 50 o percettori di ADI), così da gestire la pubblicazione e il codice per UniEmens.
 - **Abilitare l'accesso al SIISL** per l'azienda o delegare lo Studio come intermediario.
-- **Seguire le istruzioni INPS** sul nuovo campo UniEmens, attese con un prossimo messaggio o circolare.
+- **Seguire le istruzioni INPS** sul nuovo campo UniEmens, fornite con il messaggio n. 3661 del 10 novembre 2026: si veda [Incentivi assunzioni e SIISL: id vacancy in Uniemens dal 1° dicembre](/inps-siisl-id-vacancy-uniemens-benefici-assunzioni-msg-3661-2026).
